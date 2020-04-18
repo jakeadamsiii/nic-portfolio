@@ -47,6 +47,9 @@
 
 <style scss>
 
+  @import url(//fonts.googleapis.com/css?family=Roboto:400,700&display=swap);
+
+
   html, body {
     cursor: url(../images/mouse.png), default;
     overflow-x: hidden;

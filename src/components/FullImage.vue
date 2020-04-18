@@ -68,14 +68,18 @@
     grid-template-columns: repeat(1, 100%);
   }
 
-  ul.one li {
-    display: flex;
-  }
-
   img {
     width: 100%;
     height: auto;
   }
+
+    @media only screen and (max-width: 768px) {
+
+      ul.one li img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
 
   @media only screen and (min-width: 768px) {
 
@@ -83,6 +87,10 @@
       height: 100vh;
       min-height: 500px;
       max-height: 800px;
+    }
+
+    ul.one li {
+      display: flex;
     }
 
     ul {
