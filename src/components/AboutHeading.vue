@@ -3,12 +3,11 @@
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-4">
+          <div class="col-6">
             <h1 data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
           </div>
-          <div class="col-5" >
+          <div class="col-4" >
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
-            <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
             <ul data-aos="fade" data-aos-duration="1000" class="list" v-if="$props.list">
               <li v-for="item in $props.list" >
                 {{item}}
@@ -36,7 +35,6 @@
     props: {
       title: String,
       sub: String,
-      para: String,
       bg: String,
       list: Array,
       listTwo: Array
@@ -67,18 +65,13 @@
 
 
   .sub {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-size: 35px;
     float: left;
     width: 100%;
     margin: 45px 0 0 ;
-  }
-
-  .para {
-    font-size: 12px;
-    float: right;
-    width: 100%;
-    margin: 30px 0 0 ;
   }
 
   .list, .list-two  {
@@ -108,13 +101,13 @@
     font-size: 55px;
   }
 
-  .sub, .list {
+  .list {
     width: 50%;
     margin: 0;
     float: left;
   }
 
-  .para, .list-two {
+  .list-two {
     width: 40%;
     margin: 0;
     float: right;

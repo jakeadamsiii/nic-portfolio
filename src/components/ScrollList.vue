@@ -42,19 +42,21 @@
 <style scoped>
 
   h1 {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
     font-size: 55px;
     margin: 0 0 70px;
   }
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-170px * 13))}
+	100% { transform: translateX(calc(-250px * 13))}
 }
 
 .slider {
 	background: white;
-	height: 30px;
+	height: 45px;
 	margin: auto;
 	overflow:hidden;
 	position: relative;
@@ -65,15 +67,17 @@
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(170px * 26);
+  width: calc(250px * 26);
   list-style: none;
 }
 	
 .slide {
-  height: 30px;
-  width: 170px;
-  font-family: 'Roboto-bold', sans-serif;
-  font-size: 20px;
+  height: 45px;
+  width: 250px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  font-size: 35px;
   text-align: center;
 }
 

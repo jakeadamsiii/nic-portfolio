@@ -172,7 +172,7 @@
           this.isDesktop = true;
           document.addEventListener('mousemove', function(e) {
             document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
-            document.querySelector('.follower').style.top = ( e.pageY + 20) + "px";
+            document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
           });
         }
       }
@@ -205,8 +205,10 @@
   }
 
   h1 {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 55px;
+    letter-spacing: -0.04em;
     margin: 55px 0 0;
     position: relative;
     z-index: 2;
@@ -227,7 +229,7 @@
   li {
     font-family: 'Roboto-medium', sans-serif;
     margin: 0 0 75vh;
-    font-size: 30px;
+    font-size: 24px;
     opacity: 1;
     transition: opacity 1s ease;
     position: relative;
@@ -235,8 +237,10 @@
   }
 
   li p {
-    font-family: 'Roboto-medium', sans-serif;
-    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-size: 45px;
     display: inline;
   }
 
@@ -307,19 +311,19 @@
   }
 
   .asos.work {
-    background-color: #C8C1BB;
+    background-color: #D6BDAE;
   }
 
   .made.work {
-    background-color: #C8C1BB;
+    background-color: #B7B6BB;
   }
 
   .warehouse.work {
-    background-color: #C8C1BB;
+    background-color: #AB9389;
   }
 
   .rollacoaster.work {
-    background-color: #C8C1BB;
+    background-color: #D6BDAE;
   }
 
   .selfridges.work {
@@ -335,7 +339,7 @@
   }
 
   .magazine.work {
-    background-color: #C8C1BB;
+    background-color: #AB9389;
   }
   
 
@@ -390,7 +394,7 @@
     }
 
     li, li:last-of-type {
-      margin: 0 0 80px 0;
+      margin: 0 0 160px 0;
       width: 50%;
       box-sizing: border-box;
     }

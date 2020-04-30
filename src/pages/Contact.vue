@@ -5,8 +5,13 @@
 
       <div class="row">
         <div class="col-1 hidden-sm"></div>
-        <div class="col-10">
+        <div class="col-5">
           <h1 data-aos="fade" data-aos-duration="1000">Contact.</h1>
+        </div>
+        <div class="col-6">
+          <div class="hidden-sm link-container">
+            <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address">hello@nicroberts.co.uk</a>
+          </div>
         </div>
       </div>
 
@@ -14,14 +19,6 @@
         <div class="col-1 hidden-sm"></div>
         <div class="col-3">
           <p class="text" data-aos="fade" data-aos-duration="1000">I am always interested in hearing about exciting projects so please feel free to get in touch to discuss.</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-5">
-          <p data-aos="fade" data-aos-duration="1000" class="subhead">Email.</p>
-          <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address">hello@nicroberts.co.uk</a>
         </div>
       </div>
 
@@ -59,10 +56,13 @@
 
 
   h1 {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
     font-size: 55px;
     margin: 150px 0 90px;
   }
+
 
   .text {
     font-family: 'Roboto-bold', sans-serif;
@@ -81,8 +81,10 @@
   }
 
   .address {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 26px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 55px;
+    font-weight: 400;
+    letter-spacing: -0.04em;
     color: #000;
     text-decoration: none;
   }
@@ -104,11 +106,15 @@
     }
 
     .address {
-      font-size: 30px;
+      font-size: 55px;
     }
 
     .col-5 {
       margin-bottom: 85px!important;
+    }
+
+    .link-container {
+      margin: 150px 0 90px;
     }
   }
 

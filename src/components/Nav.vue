@@ -142,7 +142,8 @@
     color: #000;
     font-size: 35px;
     padding: 20px;
-    font-family: 'Roboto-medium', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.04em;
     cursor: url(../images/hover.png), pointer;
   }
 
