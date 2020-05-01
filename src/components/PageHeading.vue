@@ -1,21 +1,21 @@
 <template>
-  <div class="page-heading" v-bind:style="{ backgroundColor:  $props.bg }">
+  <div class="page-heading" :class="{hover: $props.hover}" v-bind:style="{ backgroundColor:  $props.bg }">
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-4">
-            <h1 data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
+            <h1 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
           </div>
           <div class="col-5" >
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
             <ul data-aos="fade" data-aos-duration="1000" class="list" v-if="$props.list">
-              <li v-for="item in $props.list" >
+              <li class="change" v-for="item in $props.list" >
                 {{item}}
               </li>
             </ul>
             <ul data-aos="fade" data-aos-duration="1000" class="list-two" v-if="$props.list && $props.listTwo">
-              <li v-for="item in $props.listTwo" >
+              <li class="change" v-for="item in $props.listTwo" >
                 {{item}}
               </li>
             </ul>
@@ -35,6 +35,7 @@
     },
     props: {
       title: String,
+      hover: Boolean, 
       sub: String,
       para: String,
       bg: String,
@@ -53,8 +54,7 @@
 
   .page-heading {
     width: 100%;
-    padding: 80px 0 100px;
-    margin: 90px 0 0 0;
+    padding: 170px 0 100px;
   }
 
   h1 {
@@ -100,7 +100,12 @@
 @media only screen and (min-width: 768px) {
 
   .page-heading {
-    padding: 150px 0 150px;
+    padding: 240px 0 150px;
+    transition: background 1s ease; 
+  }
+
+  .hover.page-heading {
+    background: #D6BDAE;
   }
 
   h1 {
@@ -118,6 +123,15 @@
     width: 40%;
     margin: 0;
     float: right;
+  }
+
+  .change {
+    color: #000;
+    transition: all 1s ease;
+  }
+
+  .hover .change {
+    color: #FFDBC5;
   }
 }
 

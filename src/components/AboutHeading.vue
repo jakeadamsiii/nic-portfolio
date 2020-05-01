@@ -3,21 +3,14 @@
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-6">
+          <div class="col-4">
             <h1 data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
+          </div>
+          <div class="col-2 hidden-sm">
+            <div data-aos="fade" data-aos-duration="1000" class="line"></div>
           </div>
           <div class="col-4" >
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
-            <ul data-aos="fade" data-aos-duration="1000" class="list" v-if="$props.list">
-              <li v-for="item in $props.list" >
-                {{item}}
-              </li>
-            </ul>
-            <ul data-aos="fade" data-aos-duration="1000" class="list-two" v-if="$props.list && $props.listTwo">
-              <li v-for="item in $props.listTwo" >
-                {{item}}
-              </li>
-            </ul>
           </div>
         </div>
     </div>
@@ -89,7 +82,6 @@
   }
 
 
-
 @media only screen and (min-width: 768px) {
 
   .page-heading {
@@ -112,6 +104,14 @@
     margin: 0;
     float: right;
   }
+
+  .line {
+    height: 3px;
+    width: 90%;
+    background: #000;
+    margin-top: 50px;
+  }
+
 }
 
 </style>
