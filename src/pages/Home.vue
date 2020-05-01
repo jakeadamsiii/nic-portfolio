@@ -7,82 +7,174 @@
 
     <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover}">  
         
-      <PageHeading 
-        :title="`Hey I'm Nic.`"
-        :sub="'A london based senior designer specialising in creating digital experiences for fashion, luxury and lifestyle brands.'"
-        :para="'With over eight years experience, I create beautiful and compelling design solutions based on strong UX practices and principles. My background of experience is diverse with projects also in print and publication design, art direction and visual identity.'"
-        :bg="'#fff'"
-      />
+      <div class="first">
+        <FallingImage 
+          :left= "'0'"
+          :delay= "'.5s'"
+          :duration= "'1s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'10%'"
+          :delay= "'.75s'"
+          :duration= "'2s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'22%'"
+          :delay= "'1s'"
+          :duration= "'1.5s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'70%'"
+          :delay= "'.5s'"
+          :duration= "'1.1s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'66%'"
+          :delay= "'.5s'"
+          :duration= "'1.8s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'43%'"
+          :delay= "'1.5s'"
+          :duration= "'2s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'82%'"
+          :delay= "'1.1s'"
+          :duration= "'1.8s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'70%'"
+          :delay= "'2.5s'"
+          :duration= "'2.25s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'35%'"
+          :delay= "'.8s'"
+          :duration= "'2s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'89%'"
+          :delay= "'2.9s'"
+          :duration= "'2.7s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'92%'"
+          :delay= "'1.5s'"
+          :duration= "'1.2s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'21%'"
+          :delay= "'.5s'"
+          :duration= "'3s'"
+          :hp="true"
+          :mob="true"
+        />
+        <FallingImage 
+          :left= "'53%'"
+          :delay= "'.65s'"
+          :duration= "'2.2s'"
+          :hp="true"
+        />
+        <FallingImage 
+          :left= "'15%'"
+          :delay= "'.8s'"
+          :duration= "'1.9s'"
+          :hp="true"
+        />
+
+        <div class="container hp-text">
+          <div class="row">
+            <div class="col-1 hidden-sm"></div>
+            <div class="col-10" data-aos="fade-in" data-aos-duration="1000">
+              <h1>Hey I'm Nic</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-5 hidden-sm"></div>
+            <div class="col-5 fade" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
+              <p>A london based senior designer specialising in creating digital experiences for fashion, luxury and lifestyle brands.</p>
+            </div>
+          </div>
+        </div>
+
+        <img class="hp-image" src="../images/hero-hp.gif" alt="my work" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
+
+      </div>
+
+      <div class="spacer"></div>
+
       
-
-
       <div class="second">
 
-        <div class="mask ui-mask"></div>
-        <div class="mask print-mask"></div>
-        <div class="mask publication-mask"></div>
-        <div class="mask vi-mask"></div>
-        <div class="mask ad-mask"></div>
-        <div class="mask motion-mask"></div>
+        <img src="../images/uihero.gif" class="mask ui-mask"></img>
+        <img src="../images/printhero.gif" class="mask print-mask"></img>
+        <img src="../images/publicationhero.gif" class="mask publication-mask"></img>
+        <img class="mask motion-mask"></img>
      
         <div class="container">
           <div class="row flex">
             <div class="col-1 hidden-sm"></div>
             <div class="col-10 fade" data-aos="fade-in" data-aos-duration="1000">
-              <p>My experience includes:</p>
-              <ul class="experience-list">
-                   <div class="slider">
-          <ul class="slide-track">
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-            <li class="coming slide">
-              coming soon
-            </li>
-            <li class="slide">
-              Art direction
-            </li>
-          </ul>
-        </div>
-                <li class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">UI design.</li>
-                <li class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography.</li>
-                <li class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Publication design.</li>
-                <li class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Print design.</li>
-                <li class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction.</li>
-                <li class="motion-li" @mouseover="motionHover = true" @mouseleave="motionHover = false">Motion design.</li>
+              <ul class="experience-list hidden-desk">
+                <li class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">UI design</li>
+                <li class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography</li>
+                <li class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Publication design</li>
+                <li class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Print design</li>
+                <li class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction</li>
+                <li class="motion-li" @mouseover="motionHover = true" @mouseleave="motionHover = false">Motion design</li>
               </ul>
 
-              
-             
+              <div class="experience-list hidden-sm">
+                <div class="rows">
+                  <div class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">UI design</div>
+                  <div class="line"></div>
+                  <div class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography</div>
+                </div>
+                <div class="rows offset">
+                  <div class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Publication design</div>
+                  <div class="line"></div>
+                  <div class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Print design</div>
+                </div>
+                <div class="rows no-margin">
+                  <div class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction</div>
+                  <div class="line"></div>
+                  <div class="motion-li" @mouseover="motionHover = true" @mouseleave="motionHover = false">Motion design</div>
+                </div>
+              </div>
 
             </div>
+            <div class="coming-soon one">coming soon</div>
+            <div class="coming-soon two">coming soon</div> 
+            <div class="coming-soon three">coming soon</div> 
+            <div class="coming-soon four">coming soon</div> 
+            <div class="coming-soon five">coming soon</div> 
+            <div class="coming-soon six">coming soon</div> 
+            <div class="coming-soon seven">coming soon</div> 
+            <div class="coming-soon eight">coming soon</div> 
+            <div class="coming-soon nine">coming soon</div> 
+            <div class="coming-soon ten">coming soon</div> 
+            <div class="coming-soon eleven">coming soon</div>
+
+
+
              <svg class="one" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;" xml:space="preserve">
                 <path class="st0" d="M22.79,4.22c0-0.29-0.13-0.56-0.32-0.75c-0.19-0.19-0.46-0.31-0.75-0.3l-0.21,0L21.35,3.3L14.2,9.16
@@ -464,6 +556,7 @@
   import VueScrollSnap from "vue-scroll-snap";
   import passwordProtect from "../components/PasswordProtect.vue"
   import PageHeading from '../components/PageHeading.vue'
+  import FallingImage from '../components/FallingImage.vue'
 
   export default {
     data: function () {
@@ -482,7 +575,7 @@
       }
     },
     components: {
-      MainLayout, Nav, VueScrollSnap, passwordProtect, PageHeading
+      MainLayout, Nav, VueScrollSnap, passwordProtect, PageHeading, FallingImage
     },
      methods: {
        scroll: function() {
@@ -593,9 +686,9 @@
           that.checkDesktop();
         });
 
-       setTimeout(function(){ 
-         document.querySelector('.flex-container').classList.add('aos-animate');
-         document.querySelector('.fade').classList.add('aos-animate');
+        setTimeout(function(){ 
+         document.querySelector('.fade').classList.add('aos-animate')
+         document.querySelector('.hp-image').classList.add('aos-animate');
        }, 200);
 
        // intro aniamtion for local storage
@@ -626,44 +719,73 @@
     margin: 0 auto;
   }
 
-  .first h1{
-    color: white;
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 30px;
-    margin: 0 0 30px;
-    text-align: center;
+  .row {
+    width: unset;
+    height: unset;
   }
 
-  .first h1 span {
-    width: 21px;
-    height: 21px;
-    display: inline-block;
-    background: url('../images/smile.png')
-  }
-
-  .first h2 {
-    color: white;
-    text-align: center;
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 30px;
-    margin: 0 0 30px;
-  }
-
-  .first p {
-    color: white;
-    text-align: center;
-    font-size: 12px;
-    margin: 0;
-  }
-
+  
   .main {
     padding: 0;
     overflow-x: hidden;
   }
 
   .first {
-    background-color: #C8C1BB;
+    background-color: #AB9389;
     height: 100vh;
+    overflow: hidden;
+  }
+
+  .first h1 {
+    font-size: 40px;
+    color: #FFDBC5;
+    position: relative;
+    margin:0;
+  }
+
+  .first h1:after {
+    content: '';
+    background: #FFDBC5;
+    position: absolute;
+    height: 3px;
+    width: 25%;
+    max-width: 300px;
+    top: 50%;
+    margin: 0 0 0 50px;
+    display: none;
+  }
+  
+  .first p {
+    color: #FFDBC5;
+    font-size: 20px;
+    margin: 30px 0 0 0 ;
+  }
+
+  .first .hp-image {
+    position: absolute;
+    z-index: 2;
+    bottom: -20%;
+    transform: translateX(-50%);
+    left: 50%;
+    width: 90%;
+    max-width: 574px;
+  }
+
+  .first .hp-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: unset;
+  }
+
+  .spacer {
+    height: 230px;
+    background: #AB9389;
+  }
+
+  .experience-list.hidden-desk {
+    display: block;
   }
 
   .flex {
@@ -704,24 +826,18 @@
   /*redesign section*/ 
 
 
-    .arrow {
-      transform: rotate(90deg) translate(-50%);
-      position: absolute;
-      left: 50%;
-      bottom: 20px;
-      height: 20px;
-      width: 20px;
-      fill: #fff;
-      stroke: #fff;
-      cursor: url('../images/hover.png'), pointer;
-      opacity: 1;
-    }
+
 
   .experience-list {
     list-style: none;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    margin: 300px 0 0 0;
+  }
+
+  .experience-list.hidden-sm {
+    display: none;
   }
 
   .experience-list li {
@@ -743,7 +859,7 @@
   }
 
   svg {
-    fill: #fff;
+    fill: #000;
   }
 
   .second svg {
@@ -752,14 +868,13 @@
 
   .mask {
     position: fixed;
-    height: 100vh;
-    width: 100vw;
     z-index: 0;
     opacity: 0;
-    top: 0;
     transition: opacity 1s ease;
-    background-size: cover;
-    background-position: center;
+    max-width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   .second ul {
@@ -769,29 +884,7 @@
   .second {
       position: relative;
       z-index: 1;
-      background: #C8C1BB;
       transition: background 1s ease;
-    }
-
-    .ui-mask {
-      background-image: url('../images/ui-bg.jpg');
-    }
-
-    .print-mask {
-      background-image: url('../images/print-bg.jpg');
-    }
-
-    .vi-mask {
-      background-image: url('../images/vi-bg.jpg');
-      background-position: right;
-    }
-
-    .publication-mask {
-      background-image: url('../images/publication-design-bg.jpg');
-    }
-
-    .motion-mask {
-      background-image: url('../images/motion.gif');
     }
 
     .loader {
@@ -821,19 +914,17 @@
       transition: all 1s ease;
     }
 
-    .ui .second h2, 
-    .ui .second p,
-    .ui .arrow,
-    .ui li:not(.ui-li) {
-      opacity: 0;
+
+    .ui .experience-list .rows div:not(.ui-li) {
+      color: #FFDBC5;
     }
 
-    .ui .ui-li {
-      color: white;
+    .ui .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
     .ui .second {
-      background: transparent;
+      background: #D6BDAE;
     }
 
     .ui .ui-mask {
@@ -843,18 +934,16 @@
     /*  ===== icon effects ======= */
 
 
-    .icons .second h2, 
-    .icons .second p,
-    .icons li:not(.icon-li) {
-      opacity: 0;
-    }
-
     .icons .second {
-      background-color: #3c3c3c;
+      background-color: #C8C1BB;
     }
 
-    .icons .icon-li {
-      color: white;
+    .icons .experience-list .rows div:not(.icon-li) {
+      color: #FFDBC5;
+    }
+
+    .icons .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
     svg {
@@ -863,130 +952,130 @@
       width: 30px;
       opacity: 0;
       position: absolute;
-      z-index: 2;
+      z-index: -1;
     }
 
-    .icons .one {
+    .icons svg.one {
       animation: fade-in .25s ease forwards;
       top: 20%;
       left: 70%;
     }
-    .icons .two {
+    .icons svg.two {
       animation: fade-in .25s ease .25s forwards;
       top: 80%;
       left: 25%;
     }
-    .icons .three {
+    .icons svg.three {
       animation: fade-in .25s ease .5s forwards;
       top: 30%;
       left: 47%;
     }
-    .icons .four {
+    .icons svg.four {
       animation: fade-in .25s ease .75s forwards;
       top: 78%;
       left: 49%;
     }
-    .icons .five {
+    .icons svg.five {
       animation: fade-in .25s ease 1s forwards;
       top: 12%;
       left: 33%;
     }
-    .icons .six {
+    .icons svg.six {
       animation: fade-in .25s ease 1.25s forwards;
       top: 69%;
       left: 79%;
     }
-    .icons .seven {
+    .icons svg.seven {
       animation: fade-in .25s ease 1.5s forwards;
       top: 91%;
       left: 88%;
     }
-    .icons .eight {
+    .icons svg.eight {
       animation: fade-in .25s ease 1.75s forwards;
       top: 31%;
       left: 79%;
     }
-    .icons .nine {
+    .icons svg.nine {
       animation: fade-in .25s ease 2s forwards;
       top: 10%;
       left: 90%;
     }
-    .icons .ten {
+    .icons svg.ten {
       animation: fade-in .25s ease 2.25s forwards;
       top: 23%;
       left: 87%;
     }
-    .icons .eleven {
+    .icons svg.eleven {
       animation: fade-in .25s ease 2.5s forwards;
       top: 43%;
       left: 17%;
     }
-    .icons .twelve {
+    .icons svg.twelve {
       animation: fade-in .25s ease 2.75s forwards;
       top: 62%;
       left: 24%;
     }
-    .icons .thirteen {
+    .icons svg.thirteen {
       animation: fade-in .25s ease 3s forwards;
       top: 14%;
       left: 31%;
     }
-    .icons .fourteen {
+    .icons svg.fourteen {
       animation: fade-in .25s ease 3.25s forwards;
       top: 54%;
       left: 6%;
     }
-    .icons .fifteen {
+    .icons svg.fifteen {
       animation: fade-in .25s ease 3.5s forwards;
       top: 48%;
       left: 73%;
     }
-    .icons .sixteen {
+    .icons svg.sixteen {
       animation: fade-in .25s ease 3.75s forwards;
       top: 25%;
       left: 5%;
     }
-    .icons .seventeen {
+    .icons svg.seventeen {
       animation: fade-in .25s ease 4s forwards;
       top: 80%;
       left: 50%;
     }
-    .icons .eighteen {
+    .icons svg.eighteen {
       animation: fade-in .25s ease 4.25s forwards;
       top: 19%;
       left: 79%;
     }
-    .icons .nineteen {
+    .icons svg.nineteen {
       animation: fade-in .25s ease 4.5s forwards;
       top: 86%;
       left: 9%;
     }
-    .icons .twenty {
+    .icons svg.twenty {
       animation: fade-in .25s ease 4.75s forwards;
       top: 78%;
       left: 35%;
     }
-    .icons .twentyone {
+    .icons svg.twentyone {
       animation: fade-in .25s ease 5s forwards;
       top: 12%;
       left: 3%;
     }
-    .icons .twentytwo {
+    .icons svg.twentytwo {
       animation: fade-in .25s ease 5.25s forwards;
       top: 22%;
       left: 80%;
     }
-    .icons .twentythree {
+    .icons svg.twentythree {
       animation: fade-in .25s ease 5.5s forwards;
       top: 15%;
       left: 15%;
     }
-    .icons .twentyfour {
+    .icons svg.twentyfour {
       animation: fade-in .25s ease 5.75s forwards;
       top: 72%;
       left: 2%;
     }
-    .icons .twentyfive {
+    .icons svg.twentyfive {
       animation: fade-in .25s ease 6s forwards;
       top: 66%;
       left: 66%;
@@ -994,38 +1083,35 @@
 
     /*prints*/
 
-    .prints .second h2, 
-    .prints .second p,
-    .prints li:not(.print-li) {
-      opacity: 0;
+    .prints .experience-list .rows div:not(.print-li) {
+      color: #FFDBC5;
     }
 
-    .prints .print-li {
-      color: white;
+    .prints .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
     .prints .second {
-      background: transparent;
+      background: #B7B6BB; 
     }
 
     .prints .print-mask {
       opacity: 1;
     }
 
+
     /*publication */
 
-    .publications .second h2, 
-    .publications .second p,
-    .publications li:not(.publication-li) {
-      opacity: 0;
+    .publications .experience-list .rows div:not(.publication-li) {
+      color: #FFDBC5;
     }
 
-    .publications .publication-li {
-      color: white;
+    .publications .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
     .publications .second {
-      background: transparent;
+      background: #AB9389;
     }
 
     .publications .publication-mask {
@@ -1045,44 +1131,104 @@
     }
 
     .vi .second {
-      background: transparent;
-    }
-
-    .vi .vi-mask {
-      opacity: 1;
+      background: #C8C1BB;
     }
 
     /* motion */
 
-    .motion .second h2, 
-    .motion .second p,
-    .motion li:not(.motion-li) {
-      opacity: 0;
+    .motion .experience-list .rows div:not(.motion-li) {
+      color: #FFDBC5;
     }
 
-    .motion .motion-li {
-      color: white;
+    .motion .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
     .motion .second {
-      background: transparent;
-    }
-
-    .motion .motion-mask {
-      opacity: 1;
+      background: #AB9389;
     }
 
     /* art direction */
 
-    .ad .second h2, 
-    .ad .second p,
-    .ad li:not(.slide) {
+    .coming-soon {
+      color: #A7836D;
       opacity: 0;
+      font-size: 20px;
+      font-family: 'Roboto-italic', sans-serif;
+      position: fixed;
+      z-index: -1;
+    }
+
+    .ad .coming-soon.one {
+      animation: fade-in .25s ease forwards;
+      top: 20%;
+      left: 45%;
+    }
+    .ad .coming-soon.two {
+      animation: fade-in .25s ease .25s forwards;
+      top: 80%;
+      left: 25%;
+    }
+    .ad .coming-soon.three {
+      animation: fade-in .25s ease .5s forwards;
+      top: 50%;
+      left: 60%;
+    }
+    .ad .coming-soon.four {
+      animation: fade-in .25s ease .75s forwards;
+      top: 78%;
+      left: 75%;
+    }
+    .ad .coming-soon.five {
+      animation: fade-in .25s ease 1s forwards;
+      top: 12%;
+      left: 11%;
+    }
+    .ad .coming-soon.six {
+      animation: fade-in .25s ease 1.25s forwards;
+      top: 69%;
+      left: 31%;
+    }
+    .ad .coming-soon.seven {
+      animation: fade-in .25s ease 1.5s forwards;
+      top: 91%;
+      left: 42%;
+    }
+    .ad .coming-soon.eight {
+      animation: fade-in .25s ease 1.75s forwards;
+      top: 31%;
+      left: 9%;
+    }
+    .ad .coming-soon.nine {
+      animation: fade-in .25s ease 2s forwards;
+      top: 45%;
+      left: 50%;
+    }
+    .ad .coming-soon.ten {
+      animation: fade-in .25s ease 2.25s forwards;
+      top: 23%;
+      left: 63%;
+    }
+    .ad .coming-soon.eleven {
+      animation: fade-in .25s ease 2.5s forwards;
+      top: 43%;
+      left: 17%;
+    }
+
+
+  
+
+    .ad .experience-list .rows div:not(.ad-li) {
+      color: #FFDBC5;
+    }
+
+    .ad .experience-list .rows div.line {
+      background: #FFDBC5;
     }
 
 
     .ad .second {
-      background-color: #3C3C3C;
+      background-color: #C8C1BB;
     }
 
     .slider {
@@ -1093,10 +1239,6 @@
       bottom: 130vh;
       opacity: 0;
       transition: opacity 1s ease;
-    }
-
-    .ad .slider {
-      opacity: 1;
     }
       
     .slide-track {
@@ -1120,6 +1262,13 @@
       color: rgba(366, 366, 366, 0.4);
     }
 
+
+  @media only screen and (min-width: 600px) {
+    .first .hp-image {
+      bottom:-30%;
+    }
+  }
+
   @media only screen and (min-width: 768px) {
 
 
@@ -1127,8 +1276,39 @@
       height: 100vh;
     }
 
+    .first .hp-text {
+      position: relative;
+      height: 100%;
+    }
+
+    .first h1 {
+      font-size: 55px;
+      margin: 170px 0 0 0;
+    }
+
+    .first p {
+      font-size: 35px;
+    }
+
+    .first h1:after {
+      display: inline;
+    }
+
+    .first .hp-image {
+      bottom: -270px;
+    }
+
+    .spacer {
+      height: 270px;
+      background: #fff;;
+    }
+
     .col-2 {
       height: 152px;
+    }
+
+    .coming-soon {
+      position: absolute;
     }
 
     p {
@@ -1139,12 +1319,71 @@
       margin: 0 0 40px;
     }
 
+    .experience-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      margin: 0;
+    }
+
     .experience-list li {
       margin: 0 0 20px;
+      font-size: 55px;
+    }
+
+    .experience-list .line {
+      height: 3px;
+      width: 100%; 
+      background: #000;
+      
     }
 
     .experience-list li:last-of-type {
       margin: 0;
+    }
+
+    .experience-list.hidden-desk {
+      display: none;
+    }
+
+    .experience-list.hidden-sm {
+      display: block;
+    }
+
+    .experience-list .rows {
+      display: flex;
+      position: relative;
+    }
+
+    .experience-list .rows div {
+      margin: 0 0 125px;
+      font-size: 40px;
+      color: black;
+      transition: all 1s ease;
+      position: relative;
+      z-index: 1;
+      width: fit-content;
+      font-family: 'Roboto', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    .experience-list .rows .line {
+      max-width: 500px;
+      width: 25%;
+      height: 3px;
+      margin: 20px 30px;
+      background: #000;
+    }
+
+    .experience-list .rows.offset {
+      margin: 0 0 0 70px;
+    }
+
+    .experience-list .rows.no-margin div {
+      margin: 0;
+    }
+
+    .experience-list .rows.no-margin div.line {
+      margin: 20px 30px;
     }
 
     .hp-image-mob {
@@ -1155,17 +1394,15 @@
       display: block;
     }
 
-
     .mask {
       position: absolute;
-      height: 100vh;
-      width: 100vw;
       top: 0;
       z-index: 0;
       opacity: 0;
       transition: opacity 1s ease;
-      background-size: cover;
-      background-position: center;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
 
     span {
@@ -1188,10 +1425,29 @@
 
   }
 
+  @media only screen and (min-width: 1200px) {
+    .first p {
+        margin: 70px 0 0 0 ;
+    }
+  }
+
+  @media only screen and (min-width: 1400px) {
+
+    .experience-list .rows div {
+      font-size: 50px;
+    }
+
+    .experience-list .rows .line,
+    .experience-list .rows.no-margin div.line  {
+      margin: 30px;
+    }
+  }
+
   @keyframes scroll {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-210px * 6))}
   }
+
 
 </style>
 

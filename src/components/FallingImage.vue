@@ -1,5 +1,5 @@
 <template>
-  <div class="falling-image" v-bind:style="{left: $props.left}">
+  <div class="falling-image" v-bind:style="{left: $props.left}" :class="{home: $props.hp, mob: $props.mob}">
   </div>
 </template>
 
@@ -14,13 +14,14 @@
     props: {
       left: String,
       duration: String,
-      delay: String
+      hp: Boolean,
+      delay: String,
+      mob: Boolean
     },
     components: {
     },
     mounted: function() {
       var animate = "fall infinite linear " + this.$props.duration + " " + this.$props.delay;
-      console.log(animate)
       this.$el.style.animation = animate
     }
   }
@@ -35,8 +36,22 @@
     left: 0;
     background-image: url("../images/bad.png");
     background-size: contain;
-    z-index: -1;
+    z-index: 0;
+  }
 
+  .falling-image.home {
+    background-image: url("../images/smile1.png");
+  }
+
+  .falling-image.mob {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    
+      .falling-image.mob {
+        display: block;
+      }
   }
   
   @keyframes fall {
