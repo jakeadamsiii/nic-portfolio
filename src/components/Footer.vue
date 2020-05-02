@@ -57,6 +57,8 @@
 
 .footer {
   background: #E2DCD4;
+  position: relative;
+  z-index: 1;
 }
 
 .svg-container svg {

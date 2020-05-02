@@ -291,6 +291,7 @@
     opacity: 0;
     transition: opacity ease .5s;
     max-width: 90%;
+    z-index: 0;
   }
 
   .list .line {
@@ -585,7 +586,7 @@
       width: 442px;
       position: absolute;
       float: left;
-      opacity: 0 ;
+      opacity: 0;
       transition: opacity 1s ease;
       background-size: contain;
       background-repeat: no-repeat;

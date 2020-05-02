@@ -605,7 +605,7 @@
           var motionY = document.querySelector('.motion-li').getBoundingClientRect().top;
 
           switch (true) {
-            case uiY <= 550 && uiY > 0:
+            case uiY <= 450 && uiY > 0:
                 this.uiHover = true;
                 this.iconHover = false;
                 this.publicationHover = false;
@@ -868,7 +868,7 @@
   }
 
   svg {
-    fill: #000;
+    fill: #A7836D;
   }
 
   .second svg {
@@ -949,8 +949,8 @@
 
     svg {
       display: block;
-      height: 30px;
-      width: 30px;
+      height: 38px;
+      width: 38px;
       opacity: 0;
       position: absolute;
       z-index: -1;
@@ -979,7 +979,7 @@
     .icons svg.five {
       animation: fade-in .25s ease 1s forwards;
       top: 12%;
-      left: 33%;
+      left: 37%;
     }
     .icons svg.six {
       animation: fade-in .25s ease 1.25s forwards;
@@ -1038,13 +1038,13 @@
     }
     .icons svg.seventeen {
       animation: fade-in .25s ease 4s forwards;
-      top: 80%;
+      top: 90%;
       left: 50%;
     }
     .icons svg.eighteen {
       animation: fade-in .25s ease 4.25s forwards;
       top: 19%;
-      left: 79%;
+      left: 75%;
     }
     .icons svg.nineteen {
       animation: fade-in .25s ease 4.5s forwards;
@@ -1392,7 +1392,7 @@
     }
 
     .experience-list .rows.offset {
-      margin: 0 0 0 70px;
+      margin: 0 0 0 120px;
     }
 
     .experience-list .rows.no-margin div {
@@ -1442,6 +1442,17 @@
 
   }
 
+  @media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .experience-list .rows.offset {
+      margin: 0 0 0 70px;
+    }   
+
+    .experience-list .rows div {
+      margin: 0 0 125px;
+      font-size: 30px;
+    }
+  }
+
   @media only screen and (min-width: 1200px) {
     .first p {
         margin: 70px 0 0 0 ;
@@ -1474,6 +1485,12 @@
 
 
 /* view work */
+
+  .view-work {
+    position: relative;
+    z-index: 9;
+  }
+
  .work-container {
     padding: 0 0 150px;
     background: #fff;

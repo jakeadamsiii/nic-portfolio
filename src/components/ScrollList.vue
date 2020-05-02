@@ -1,5 +1,5 @@
 <template>
-  <div class="scroll-list" :class="{hover: $props.hover}" v-bind:style="{ backgroundColor: $props.bg }">
+  <div class="scroll-list" :class="{hover: $props.hover}">
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
@@ -11,7 +11,7 @@
     <div class="slider">
       <ul class="slide-track" v-if="$props.brandList">
         <li class="slide" v-for="item in $props.brandList">
-          <a class="change underline" :href="item.href">{{item.name}}</a>
+          <a class="underline change" :href="item.href">{{item.name}}</a>
         </li>
       </ul>
     </div>
@@ -36,7 +36,7 @@
     },
     mounted: function() {
       const that = this;
-      const clients = document.querySelectorAll("a.change")
+      const clients = document.querySelectorAll("a.underline")
         for (const client of clients) {
           client.addEventListener('mouseenter', function(event) {
             that.$emit('clientHover');
@@ -55,7 +55,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-    font-size: 55px;
+    font-size: 40px;
     margin: 0 0 70px;
   }
 
@@ -95,7 +95,9 @@
 }
 
 .scroll-list {
+  background: #fff;
   transition: background 1s ease; 
+  padding-top: 70px
 }
 
 .hover.scroll-list {
@@ -109,9 +111,10 @@
 
 .hover .change {
   color: #FFDBC5;
+
 }
 
-a.change:hover {
+a.underline:hover {
   color: #000!important;
 }
 
@@ -140,6 +143,14 @@ a.change:hover {
       right: auto;
       width: 100%;
     }
+  @media only screen and (min-width: 768px) {
+    h1 {
+      font-size: 55px;
+    }
 
+    .scroll-list {
+        padding-top: 80px;
+    }
+  }
 
 </style>

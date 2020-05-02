@@ -61,7 +61,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-    font-size: 55px;
+    font-size: 40px;
     margin: 0;
   }
 
@@ -106,7 +106,6 @@
 
   .hover.page-heading {
     background: #D6BDAE;
-    padding: 180px 0 180px;
   }
 
   h1 {

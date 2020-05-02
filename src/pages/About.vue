@@ -129,7 +129,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-    font-size: 55px;
+    font-size: 40px;
     margin: 0;
   }
 
@@ -137,10 +137,10 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-    font-size: 35px;
+    font-size: 30px;
     float: left;
     width: 100%;
-    margin: 45px 0 0 ;
+    margin: 30px 0 0 ;
   }
 
   .list, .list-two  {
@@ -219,6 +219,10 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-image: url('../images/me.jpg');
+  }
+
+  .sub-header {
+    font-size: 35px;
   }
 
   .hover .follower {
