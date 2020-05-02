@@ -14,7 +14,7 @@
           <div class="col-7 hidden-sm"></div>
           <div class="col-4" >
             <a href="/">
-              <p data-aos="fade" data-aos-duration="1000" class="home">Return Home</p>
+              <p data-aos="fade" data-aos-duration="1000" class="home">Return home</p>
             </a>
           </div>
         </div>
@@ -104,6 +104,14 @@
   export default {
     components: {
       MainLayout, Nav, ProjectHeading, VLink, FallingImage
+    },
+    mounted: function() {
+      //deal with animation issue
+      setTimeout(function(){ 
+        
+        document.querySelector('.home').classList.add('aos-animate');
+
+      }, 200);
     }
   }
 </script>
@@ -115,12 +123,14 @@
   text-decoration: underline;
   position: absolute;
   top: -50px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 .main {
   height: 100vh;
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container, .row {
@@ -130,10 +140,19 @@
 a {
   color: black;
   text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
 }
 
 html {
-  overflow-x: hidden;
+  overflow: hidden;
 }
+
+@media only screen and (max-width: 767px) {
+  .sub {
+    margin: 0 0 15px 0!important;
+  }
+}
+
 
 </style>
