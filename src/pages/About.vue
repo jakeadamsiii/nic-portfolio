@@ -1,5 +1,5 @@
 <template>
-  <div :class="{hover: hover, noFollower: noFollower}">
+  <div class="about" :class="{hover: hover, noFollower: noFollower}">
   <main-layout>
     <Nav />
 
@@ -50,7 +50,7 @@
         <div class="col-7 hidden-sm"></div>
         <div class="col-4">
           <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-          <a data-aos="fade" data-aos-duration="1000" class="work" href="/work"><p class="change">View my work here</p></a>
+          <a data-aos="fade" data-aos-duration="1000" class="work" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
         </div>
       </div>
     </div>
@@ -95,6 +95,15 @@
 </script>
 
 <style scoped>
+
+  .about {
+    background: #fff;
+    transition: background 1s ease;
+  }
+
+  .about.hover {
+    background: #D6BDAE;
+  }
 
   .sub {
     font-family: 'Roboto-bold', sans-serif;
@@ -271,6 +280,16 @@
   
   div.line2 {
     margin-right: 30px;
+  }
+
+  .hover .sub-header {
+    color: #000;
+  }
+
+
+
+  .noFollower.hover .work p {
+    color: #000;
   }
 }
 

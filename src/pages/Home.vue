@@ -1,6 +1,5 @@
 <template>
   <main-layout>
-    <div class="loader" :class="{finished: finished}" v-if="!seen"></div>
     <Nav 
       :isHomepage="true"
     />
@@ -127,7 +126,7 @@
         <img src="../images/uihero.gif" class="mask ui-mask"></img>
         <img src="../images/printhero.gif" class="mask print-mask"></img>
         <img src="../images/publicationhero.gif" class="mask publication-mask"></img>
-        <img class="mask motion-mask"></img>
+        <img src="../images/motion.gif" class="mask motion-mask"></img>
      
         <div class="container">
           <div class="row flex">
@@ -569,9 +568,7 @@
         adHover: false,
         motionHover: false,
         isMobile: window.innerWidth <= 768 ? 'fade-right' : '',
-        isDesktop: true,
-        finished: false,
-        seen: false,
+        isDesktop: true
       }
     },
     components: {
@@ -690,19 +687,6 @@
          document.querySelector('.fade').classList.add('aos-animate')
          document.querySelector('.hp-image').classList.add('aos-animate');
        }, 200);
-
-       // intro aniamtion for local storage
-       if (localStorage.getItem("allowed") === null) {
-         //do nothing
-
-       } else if (localStorage.getItem("seen") === 'true') {
-         that.seen = true;
-       } else {
-        localStorage.setItem('seen', 'true');
-        setTimeout(function(){ 
-          that.finished = true;
-        },1500);
-       }
 
      }
   }
@@ -885,23 +869,6 @@
       position: relative;
       z-index: 1;
       transition: background 1s ease;
-    }
-
-    .loader {
-      height: 100vh;
-      width: 100vw;
-      background-image: url('../images/test.gif');
-      background-position: center;
-      background-size: cover;
-      opacity: 1;
-      position: fixed;
-      z-index: 99;
-      transition: opacity 1s ease;
-    }
-
-    .loader.finished {
-      opacity: 0;
-      z-index: 1;
     }
 
     /*  ===== hover effects ======= */
@@ -1146,6 +1113,10 @@
 
     .motion .second {
       background: #AB9389;
+    }
+
+    .motion .motion-mask {
+      opacity: 1;
     }
 
     /* art direction */
@@ -1448,6 +1419,12 @@
     100% { transform: translateX(calc(-210px * 6))}
   }
 
+
+  @media only screen and (max-height: 640px) {
+    .first p {
+      font-size: 30px;
+    }
+  }
 
 </style>
 

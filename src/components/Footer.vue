@@ -6,7 +6,7 @@
           <div class="col-8" >
             <div class="flex">
               <p class="title">Get in touch.</p>
-              <div class="email"><a href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat">hello@nicroberts.co.uk</a></div>
+              <div class="email"><a target="_blank" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat">hello@nicroberts.co.uk</a></div>
             </div>
           </div>
           <div class="col-2">
