@@ -12,14 +12,14 @@
     
     <FullImage 
       :images="ImageArray"
-      :bg="'#B7B6BB'"
+      :bg="'#C8C1BB'"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#C8C1BB'"
+      :imageBg="'#E2DCD4'"
       :image="require('../images/Netflix5.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="'I wanted to create a immersive digital experience, reflective of that in the show, to enhance the shopping journey for the exclusive Stranger Things collection.'"
     />
 
@@ -31,7 +31,7 @@
 
    <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#B7B6BB'"
+      :bg="'#C8C1BB'"
       :bottomLeft="false"
       :bottomRight="false"
      />

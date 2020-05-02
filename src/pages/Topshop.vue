@@ -12,20 +12,20 @@
 
     <FullImage 
       :images="imageArray"
-      :bg="'#B7B6BB'"
+      :bg="'#C8C1BB'"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#C8C1BB'"
+      :imageBg="'#E2DCD4'"
       :image="require('../images/topshop-image.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="'Mobile first approach to all pages, simplifying and cleaning up pages.  Introducing intuitive swipes and expanding accordions, but focusing on immersive imagery and dynamic pages.'"
     />
 
     <TwoCentredImages 
       :images="PLPImageArray"
-      :bg="'#B7B6BB'"
+      :bg="'#C8C1BB'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -38,7 +38,7 @@
 
     <TwoCentredImages 
       :images="PDPImageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#E2DCD4'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -52,7 +52,7 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#B7B6BB'"
+      :imageBg="'#C8C1BB'"
       :image="require('../images/topshop-menu-mob.png')"
       :head="'Improved site navigation and filtering.'"
       :text="'Cleaning up the navigation and filtering elements made a significant difference to the page.  Allowing users to hide and show menus across PLPs so filtering doesn’t interfere with their shopping experience.'"
@@ -60,13 +60,13 @@
 
    <FullImage 
       :images="MenuImageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#E2DCD4'"
     />
 
     <ImageCopy 
       :right="false"
       :alt="true"
-      :imageBg="'#B7B6BB'"
+      :imageBg="'#C8C1BB'"
       :image="require('../images/topshop-editorial.png')"
       :head="'Shoppable content and editorial.'"
       :text="'Finding an integrated and intuitive way to make editorial content stoppable was a key objective of the redesign.  Overlaying functionality to beautifully shot editorial gave a rich and truly integrated experience.'"
@@ -74,7 +74,7 @@
 
    <FullImage 
       :images="EditorialImageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#E2DCD4'"
     />
 
     <NextProject
@@ -107,20 +107,8 @@
       return {
           imageArray: [
           {
-            src: require('../images/topshop-hero1.jpg'),
-            alt: "Topshop Homepage"
-          },
-          {
             src: require('../images/topshop-hero2.jpg'),
-            alt: "Topshop Editorial"
-          },
-          {
-            src: require('../images/topshop-hero3.jpg'),
-            alt: "Topshop PLP"
-          },
-          {
-            src: require('../images/topshop-hero4.jpg'),
-            alt: "Topshop PDP"
+            alt: "Topshop Homepage"
           },
         ],  
           PLPImageArray: [
@@ -135,7 +123,7 @@
           ],
           PDPImageArray: [
             {
-              src: require('../images/topshop-pdp-mob2.png'),
+              src: require('../images/topshop-pdp-mob.png'),
               alt: "Topshop PDP Mobile"
             },
             {
@@ -145,7 +133,7 @@
           ],
             MenuImageArray: [
             {
-              src: require('../images/topshop-menu.png'),
+              src: require('../images/topshop-menu.jpg'),
               alt: "Topshop Filter"
             }
           ],

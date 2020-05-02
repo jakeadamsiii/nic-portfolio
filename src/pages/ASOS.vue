@@ -5,21 +5,21 @@
     <ProjectHeading 
       :title="'ASOS.'"
       :categories="'UI DESIGN  |  UX DESIGN  |  APP DESIGN  |  ICONOGRAPHY'"
-      :sub="'AR make-up app design.'"
+      :sub="'Augmented reality app design.'"
       :para="'Augmented reality Make-up App design to co-inside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
       :bg="'#fff'"
     />
 
     <FullImage 
       :images="imageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#D6BDAE'"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#C8C1BB'"
       :image="require('../images/asos-approach.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="'Starting completely from scratch from the user journey, wireframes and finally the applied UI, ensuring a clean and simple experience for the user.'"
     />
 
@@ -31,13 +31,13 @@
 
     <FullImage 
       :images="imageArrayTwo"
-      :bg="'#C8C1BB'"
+      :bg="'#D6BDAE'"
     />
 
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#C8C1BB'"
       :image="require('../images/asos-purchase.png')"
       :head="'Saved and pre-loaded looks.'"
       :text="'To enhance the shopping experience of the app, both curated content and the ability to save user generated content had to be integrated into the experience.  Pre-loaded looks and saved looks really enhance the experience to encourage users to return and always feel there is fresh content.'"

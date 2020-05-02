@@ -12,14 +12,14 @@
 
     <FullImage 
       :images="imageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#B7B6BB'"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#B7B6BB'"
+      :imageBg="'#E2DCD4'"
       :image="require('../images/made-wishlist5.png')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that encourporated a basic wishlist but with enchanced features.'"
     />
 
@@ -32,7 +32,7 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#C8C1BB'"
+      :imageBg="'#B7B6BB'"
       :image="require('../images/made-wishlist6.png')"
       :head="'Exploring augumented reality with a view to add this funcationality in the future.'"
       :text="'Giving users the ability to place products into their rooms using their phone camera. The mobile web application meant that users were not forced to download an app to easily interact with products on Made.com, with the goal of driving conversion through increased confidence and knowledge that the product would be right for them.'"
@@ -40,7 +40,7 @@
 
     <FullImage 
       :images="imageArrayTwo"
-      :bg="'#B7B6BB'"
+      :bg="'#E2DCD4'"
     />
 
    <NextProject

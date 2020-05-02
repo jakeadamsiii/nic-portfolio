@@ -78,7 +78,9 @@
   }
 
   .text {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
     font-size: 28px;
     margin: 40px 0 60px;
   }

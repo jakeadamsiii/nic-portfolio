@@ -4,9 +4,8 @@
       <label for="pass">Enter password</label>
       <div>
         <input type="password" id="pass" name="password" required>
-        <button>Let me in.</button>
       </div>
-      <p :class="{show: $props.tried}">Incorrect, please try again</p>
+      <p :class="{show: $props.tried}">Nope. Please try again.</p>
     </form>
   </div>
 </template>
@@ -44,7 +43,7 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background: #C8C1BB;
+  background: #fff;
   z-index: 100;
 }
 
@@ -54,7 +53,7 @@ form {
   justify-content: center;
   align-items: center;
   height: 100%;
-  max-width: 300px;
+  max-width: 350px;
   margin: 0 auto;
 }
 
@@ -64,38 +63,32 @@ div {
 }
 
 label {
-  font-size: 20px;
-  font-family: 'Roboto-bold', sans-serif;
-  margin: 0 0 10px;
+  font-size: 35px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin: 0 0 20px;
 }
 
 input {
-  width: 70%;
-  height: 40px;
+  width: 100%;
+  height: 50px;
   font-size: 20px;
+  background: #f2f2f2;
+  border:1px solid #f2f2f2;
   padding: 0 0 0 10px;
   margin: 0;
-  border: 1px solid #A0A0A0;
 }
 
 input:focus {
   outline: none;
 }
 
-button {
-  width: 30%;
-  padding: 0;
-  margin: 0;
-  border: 1px solid #A0A0A0;
-  border-left: none;
-  cursor: url(../images/hover.png), pointer; 
-  font-family: 'Roboto-bold', sans-serif;
-}
-
 p {
-  margin: 10px 0 0 0;
-  font-size: 12px;
-  font-family: 'Roboto-bold', sans-serif;
+  margin: 20px 0 0 0;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   opacity: 0;
   transition: opacity .5s ease;
 }

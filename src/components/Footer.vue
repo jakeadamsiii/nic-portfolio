@@ -56,7 +56,7 @@
 <style scoped>
 
 .footer {
-  background: #F5F5F5;
+  background: #E2DCD4;
 }
 
 .svg-container svg {
@@ -73,7 +73,8 @@
 
 .email {
   margin: 0 0 40px;
-  font-family: 'Roboto-bold', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
   font-size: 20px;
 }
 
@@ -91,8 +92,9 @@
 }
 
 .email a {
-  font-family: 'Roboto-bold', sans-serif;
-  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: -0.02em;
+  font-size: 25px;
 }
 
 .connect {

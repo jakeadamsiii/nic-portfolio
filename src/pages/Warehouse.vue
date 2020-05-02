@@ -12,14 +12,14 @@
 
     <FullImage 
       :images="imageArray"
-      :bg="'#B7B6BB'"
+      :bg="'#AB9389'"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#AB9389'"
+      :imageBg="'#B7B6BB'"
       :image="require('../images/warehouse-lookbook-mob.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="'To create a easy to use, yet beautifully designed lookbook for customers to easily view and shop the latest collection from Warehouse.'"
     />
 
@@ -31,7 +31,7 @@
 
     <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#B7B6BB'"
+      :bg="'#AB9389'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -39,7 +39,7 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#AB9389'"
+      :imageBg="'#B7B6BB'"
       :image="require('../images/warehouse-lookbook-mobiles.png')"
       :head="'Simplified mobile journey for a more shoppable experience.'"
       :text="'A simplified experience with swipable imagery and shoppable overlay gave customers a quicker route to shop imagery on a smaller screen.'"

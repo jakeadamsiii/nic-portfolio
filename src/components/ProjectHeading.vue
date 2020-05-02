@@ -8,7 +8,6 @@
           </div>
           <div class="col-2 hidden-sm"></div>
           <div class="col-4" >
-            <p data-aos="fade" data-aos-duration="1000" v-if="$props.categories" class="categories">{{ $props.categories }}</p>
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
           </div>
@@ -27,7 +26,6 @@
     },
     props: {
       title: String,
-      categories: String,
       sub: String,
       para: String,
       bg: String,
@@ -49,24 +47,23 @@
   }
 
   h1 {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-size: 55px;
     margin: 0 0 45px;
   }
 
-  .categories {
-    font-size: 14px;
-    text-transform: uppercase;
-    margin: 0 0 55px 0;
-  }
-
   .sub {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 16px;
-    margin: 0 0 15px 0;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    font-size: 35px;
+    margin: 100px 0 15px 0;
   }
 
   .para {
+    font-family: 'Roboto-bold', sans-serif;
     font-size: 12px;
   }
 
@@ -76,7 +73,7 @@
 @media only screen and (min-width: 768px) {
 
   .page-heading {
-    padding: 150px 0 150px;
+    padding: 100px 0 150px;
   }
 
   h1 {
@@ -84,10 +81,6 @@
     font-size: 55px;
   }
 
-  .categories {
-
-    margin: 0 0 40px 0;
-  }
 
 }
 

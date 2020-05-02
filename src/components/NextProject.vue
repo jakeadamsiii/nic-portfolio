@@ -2,31 +2,13 @@
   <div class="next-project" v-bind:style="{ backgroundColor:  $props.bg }">
     <div class="container" >
       <div class="row">
-          <div class="col-1 hidden-sm"></div>
-          <div class="col-4">
+          <div class="col-9 hidden-sm"></div>
+          <div class="col-3">
             <p v-if="$props.sub" class="sub">{{ $props.sub }}</p>
             <h1>{{ $props.title }}</h1>
           </div>
           <div class="col-2 hidden-sm"></div>
           <div class="col-3 flex" >
-            <p v-if="$props.categories" class="categories">{{ $props.categories }}</p>
-          </div>
-          <div class="col-1 flex">
-
-            <a :href="$props.link">
-              <svg class="arrow" width="48px" height="34px" viewBox="0 0 48 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="square">
-                    <g id="Desktop_Next_Project" transform="translate(-1210.000000, -180.000000)" stroke="#000" stroke-width="2">
-                        <g id="Group-2" transform="translate(1234.000000, 196.500000) rotate(-135.000000) translate(-1234.000000, -196.500000) translate(1217.000000, 180.000000)">
-                            <path d="M22.2469517,32.5667568 L1.24695167,32.5667568" id="Line-2"></path>
-                            <path d="M1.14034996,10.7530483 L1.14034996,31.7530483" id="Line-2"></path>
-                            <path d="M32.9946474,0.708080802 L2.25735931,31.4452928" id="Line-2"></path>
-                        </g>
-                    </g>
-                </g>
-              </svg>
-            </a>
-
           </div>
         </div>
     </div>
@@ -43,9 +25,7 @@
     },
     props: {
       title: String,
-      categories: String,
       sub: String,
-      link: String,
       bg: String,
     },
 
@@ -63,15 +43,11 @@
   }
 
   h1 {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: -0.04em;
     font-size: 40px;
     margin: 0 0 20px 0;
-  }
-
-  .categories {
-    font-size: 15px;
-    text-transform: uppercase;
-    margin: 0 0 45px 0;
   }
 
   .sub {
@@ -80,14 +56,6 @@
     margin: 55px 0 75px 0;
   }
 
-  .arrow {
-    height: 33px;
-    width: 33px;
-  }
-
-  a {
-    padding: 0;
-  }
 
 
 @media only screen and (min-width: 768px) {
@@ -97,7 +65,7 @@
   }
 
   .sub {
-    margin: 0 0 60px;
+    margin: 0 0 40px;
   }
 
 
@@ -106,11 +74,6 @@
 @media only screen and (min-width: 1024px) {
 
     h1 {
-    margin: 0;
-  }
-
-
-  .categories, .arrow {
     margin: 0;
   }
 

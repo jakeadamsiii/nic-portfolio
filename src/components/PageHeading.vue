@@ -106,6 +106,7 @@
 
   .hover.page-heading {
     background: #D6BDAE;
+    padding: 180px 0 180px;
   }
 
   h1 {

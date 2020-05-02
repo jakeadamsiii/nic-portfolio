@@ -19,7 +19,7 @@
       :right="false"
       :imageBg="'#E2DCD4'"
       :image="require('../images/18832.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="`1883's design style is very experiemental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
     />
 

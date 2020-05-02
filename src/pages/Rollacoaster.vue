@@ -12,22 +12,22 @@
 
     <TwoCentredImages 
       :images="ImageArray"
-      :bg="'#E2DCD4'"
+      :bg="'#D6BDAE'"
       :bottomLeft="false"
       :bottomRight="false"
      />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#AB9389'"
+      :imageBg="'#E2DCD4'"
       :image="require('../images/rollacoaster3.jpg')"
-      :head="'The Approach.'"
+      :head="'The Approach'"
       :text="`To give the magazine a 'zine' feel I experimented with typography, materials and techniques to create interesting layouts for the magazine.`"
     />
 
    <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#E2DCD4'"
+      :bg="'#D6BDAE'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -40,7 +40,7 @@
 
    <TwoCentredImages 
       :images="ImageArrayThree"
-      :bg="'#AB9389'"
+      :bg="'#E2DCD4'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -48,7 +48,7 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#D6BDAE'"
       :image="require('../images/rollacoaster8.jpg')"
       :head="'Bringing the final publication together.'"
       :text="'I assisted in the comissioning of photographers and collaborators for the magazine, ensuring they were right for the issue and it all came together cohesively.  Finally I press-passed the final print run to ensure the final result was to high standard.'"
