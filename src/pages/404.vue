@@ -120,7 +120,7 @@
 .main {
   height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container, .row {
