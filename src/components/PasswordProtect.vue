@@ -89,7 +89,7 @@ label {
 }
 
 input {
-  width: 100%;
+  width: 90vw;
   height: 50px;
   font-size: 20px;
   background: #f2f2f2;
@@ -148,6 +148,9 @@ p.show {
 @media only screen and (min-width: 768px) {
   .home-icon {
     left: 2%;
+  }
+  input {
+    width: 355px;
   }
 }
   

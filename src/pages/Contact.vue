@@ -1,40 +1,42 @@
 <template>
   <main-layout>
     <Nav />
-    <div class="container" :class="{hover: hover}">
+    <div class="contact-page" :class="{hover: hover}">
+      <div class="container">
 
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-2">
-          <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact.</h1>
-        </div>
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-2 line-container hidden-sm">
-          <div class="line" data-aos="fade" data-aos-duration="1000"></div>
-        </div>
-        <div class="col-5 hidden-sm">
-          <div class="link-container ">
-            <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address" @mouseover="hover=true" @mouseleave="hover=false">hello@nicroberts.co.uk</a>
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-2">
+            <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact.</h1>
+          </div>
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-2 line-container hidden-sm">
+            <div class="line" data-aos="fade" data-aos-duration="1000"></div>
+          </div>
+          <div class="col-5 hidden-sm">
+            <div class="link-container ">
+              <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address" @mouseover="hover=true" @mouseleave="hover=false">hello@nicroberts.co.uk</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-3">
-          <p class="text" data-aos="fade" data-aos-duration="1000">I am always interested in hearing about exciting projects so please feel free to get in touch to discuss.</p>
-        </div>
-      </div>
-
-       <div class="row hidden-desk">
-        <div class="col-10">
-          <div class="line2" data-aos="fade" data-aos-duration="1000"></div>
-          <div class="link-container">
-            <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address2">hello@nicroberts.co.uk</a>
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-3">
+            <p class="text" data-aos="fade" data-aos-duration="1000">I am always interested in hearing about exciting projects so please feel free to get in touch to discuss.</p>
           </div>
         </div>
-       </div>
 
+        <div class="row hidden-desk">
+          <div class="col-10">
+            <div class="line2" data-aos="fade" data-aos-duration="1000"></div>
+            <div class="link-container">
+              <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address2">hello@nicroberts.co.uk</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
     <Footer />
   </main-layout>
@@ -159,12 +161,14 @@
      margin: 0 0 110px;
   }
 
-  .container {
+  .contact-page {
     background: #fff;
     transition: background 1s ease;
+    width: 100%;
+    height:100%;
   }
 
-  .hover.container {
+  .hover.contact-page {
     background: #C8C1BB;
   }
 

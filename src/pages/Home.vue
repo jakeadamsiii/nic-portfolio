@@ -545,7 +545,21 @@
         </div>
       </div>
 
+      <div class="view-work">
+        <div class="container">
+            <div class="row  work-container">
+                <div class="col-7 hidden-sm"></div>
+                <div class="col-4">
+                <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
+                <a data-aos="fade" data-aos-duration="1000" class="work" href="/work"><p class="change">View my work here</p></a>
+                </div>
+            </div>
+        </div>
     </div>
+
+    </div>
+
+    <Footer />
   </main-layout>
 </template>
 
@@ -556,6 +570,7 @@
   import passwordProtect from "../components/PasswordProtect.vue"
   import PageHeading from '../components/PageHeading.vue'
   import FallingImage from '../components/FallingImage.vue'
+  import Footer from '../components/Footer.vue'
 
   export default {
     data: function () {
@@ -572,7 +587,7 @@
       }
     },
     components: {
-      MainLayout, Nav, VueScrollSnap, passwordProtect, PageHeading, FallingImage
+      MainLayout, Nav, VueScrollSnap, passwordProtect, PageHeading, FallingImage, Footer
     },
      methods: {
        scroll: function() {
@@ -771,6 +786,7 @@
   .spacer {
     height: 230px;
     background: #AB9389;
+    transition: background 1s ease;
   }
 
   .experience-list.hidden-desk {
@@ -831,13 +847,17 @@
 
   .experience-list li {
     font-size: 30px;
-    margin: 0 0 75vh;
+    margin: 0 0 65vh;
     color: black;
     transition: all 1s ease;
     position: relative;
     z-index: 1;
     width: fit-content;
     font-family: 'Roboto-medium', sans-serif;
+  }
+
+  .experience-list li:last-of-type {
+    margin: 0 0 52vh;
   }
 
   .second p {
@@ -861,6 +881,7 @@
     opacity: 0;
     transition: opacity 1s ease;
     max-width: 90%;
+    max-height: 50%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -871,10 +892,10 @@
   }
 
   .second {
-      position: relative;
-      z-index: 1;
-      transition: background 1s ease;
-    }
+    position: relative;
+    z-index: 1;
+    transition: background 1s ease;
+  }
 
     /*  ===== hover effects ======= */
 
@@ -887,15 +908,19 @@
     }
 
 
-    .ui .experience-list .rows div:not(.ui-li) {
+    .ui .experience-list .rows div:not(.ui-li),
+    .ui .work-container p {
       color: #FFDBC5;
     }
 
-    .ui .experience-list .rows div.line {
+    .ui .experience-list .rows div.line,
+    .ui .work-container .line {
       background: #FFDBC5;
     }
 
-    .ui .second {
+    .ui .second,
+    .ui .spacer,
+    .ui .work-container {
       background: #D6BDAE;
     }
 
@@ -906,15 +931,19 @@
     /*  ===== icon effects ======= */
 
 
-    .icons .second {
+    .icons .second,
+    .icons .spacer,
+    .icons .work-container {
       background-color: #C8C1BB;
     }
 
-    .icons .experience-list .rows div:not(.icon-li) {
+    .icons .experience-list .rows div:not(.icon-li),
+    .icons .work-container p  {
       color: #FFDBC5;
     }
 
-    .icons .experience-list .rows div.line {
+    .icons .experience-list .rows div.line,
+    .icons .work-container .lkine  {
       background: #FFDBC5;
     }
 
@@ -1055,15 +1084,19 @@
 
     /*prints*/
 
-    .prints .experience-list .rows div:not(.print-li) {
+    .prints .experience-list .rows div:not(.print-li),
+    .prints .work-container p  {
       color: #FFDBC5;
     }
 
-    .prints .experience-list .rows div.line {
+    .prints .experience-list .rows div.line,
+    .prints .work-container .line  {
       background: #FFDBC5;
     }
 
-    .prints .second {
+    .prints .second,
+    .prints .spacer,
+    .prints .work-container {
       background: #B7B6BB; 
     }
 
@@ -1074,15 +1107,19 @@
 
     /*publication */
 
-    .publications .experience-list .rows div:not(.publication-li) {
+    .publications .experience-list .rows div:not(.publication-li),
+    .publicaions .work-container p  {
       color: #FFDBC5;
     }
 
-    .publications .experience-list .rows div.line {
+    .publications .experience-list .rows div.line,
+    .publications .work-container .line  {
       background: #FFDBC5;
     }
 
-    .publications .second {
+    .publications .second,
+    .publications .spacer,
+    .publications .work-container {
       background: #AB9389;
     }
 
@@ -1108,15 +1145,19 @@
 
     /* motion */
 
-    .motion .experience-list .rows div:not(.motion-li) {
+    .motion .experience-list .rows div:not(.motion-li),
+    .motion .work-container p  {
       color: #FFDBC5;
     }
 
-    .motion .experience-list .rows div.line {
+    .motion .experience-list .rows div.line,
+    .motion .work-container .line {
       background: #FFDBC5;
     }
 
-    .motion .second {
+    .motion .second,
+    .motion .spacer,
+    .motion .work-container {
       background: #AB9389;
     }
 
@@ -1190,20 +1231,20 @@
       top: 43%;
       left: 17%;
     }
-
-
   
-
-    .ad .experience-list .rows div:not(.ad-li) {
+    .ad .experience-list .rows div:not(.ad-li),
+    .ad .work-container p  {
       color: #FFDBC5;
     }
 
-    .ad .experience-list .rows div.line {
+    .ad .experience-list .rows div.line,
+    .ad .work-container .line  {
       background: #FFDBC5;
     }
 
-
-    .ad .second {
+    .ad .second,
+    .ad .spacer,
+    .ad .work-container {
       background-color: #C8C1BB;
     }
 
@@ -1430,6 +1471,62 @@
       font-size: 30px;
     }
   }
+
+
+/* view work */
+ .work-container {
+    padding: 0 0 150px;
+    background: #fff;
+    transition: background 1s ease;
+  }
+
+  .line {
+    height: 3px;
+    width: 90%;
+    background: #000;
+    transition: all 1s ease;
+    margin-top: 50px;
+  }
+
+
+  .work p{
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: 30px;
+    text-decoration: underline;
+    max-width: 160px;
+    margin: 0;
+    transition: all 1s ease;
+  }
+
+  .work p,
+  div.line2 {
+    width: 45%;
+    display: inline-block;
+    float: left;
+  }
+
+  div.line2 {
+    margin-top: 8px;
+    margin-right: 25px;
+  }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    div.line2 {
+      width: 25%;
+      margin-left: 45%;
+    }
+  }
+
+ @media only screen and (min-width: 768px) {
+
+    .work-container {
+        padding: 180px 0 220px;
+    }
+
+  .work-container {
+    padding: 80px 0 220px;
+  }
+ }
 
 </style>
 

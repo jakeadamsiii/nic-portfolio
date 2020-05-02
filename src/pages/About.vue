@@ -286,8 +286,6 @@
     color: #000;
   }
 
-
-
   .noFollower.hover .work p {
     color: #000;
   }
