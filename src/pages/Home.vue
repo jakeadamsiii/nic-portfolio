@@ -1420,7 +1420,7 @@
   }
 
 
-  @media only screen and (max-height: 640px) {
+  @media only screen and (max-height: 640px) and (min-width: 768px) {
     .first p {
       font-size: 30px;
     }
