@@ -738,6 +738,11 @@
     margin: 0 0 0 50px;
     display: none;
   }
+
+  .hp-text {
+    position: relative;
+    z-index: 6;
+  }
   
   .first p {
     color: #FFDBC5;
