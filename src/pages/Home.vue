@@ -548,10 +548,10 @@
       <div class="view-work">
         <div class="container">
             <div class="row  work-container">
-                <div class="col-7 hidden-sm"></div>
-                <div class="col-4">
+                <div class="col-6 hidden-sm"></div>
+                <div class="col-5">
                 <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-                <a data-aos="fade" data-aos-duration="1000" class="work" href="/work"><p class="change">View my work here</p></a>
+                <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work"><p class="change underline">View my work here</p></a>
                 </div>
             </div>
         </div>
@@ -721,7 +721,6 @@
     width: unset;
     height: unset;
   }
-
   
   .main {
     padding: 0;
@@ -730,15 +729,16 @@
 
   .first {
     background-color: #AB9389;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
   }
 
   .first h1 {
-    font-size: 40px;
+    font-size: 30px;
     color: #FFDBC5;
     position: relative;
-    margin:0;
+    margin: 200px 0 0 0;
+    letter-spacing: -0.02em;
   }
 
   .first h1:after {
@@ -762,24 +762,17 @@
     color: #FFDBC5;
     font-size: 20px;
     margin: 30px 0 0 0 ;
+    letter-spacing: -0.02em;
   }
 
   .first .hp-image {
     position: absolute;
     z-index: 2;
-    bottom: -20%;
+    bottom: 0%;
     transform: translateX(-50%);
     left: 50%;
     width: 90%;
     max-width: 574px;
-  }
-
-  .first .hp-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: unset;
   }
 
   .spacer {
@@ -829,9 +822,6 @@
 
   /*redesign section*/ 
 
-
-
-
   .experience-list {
     list-style: none;
     display: flex;
@@ -852,7 +842,8 @@
     position: relative;
     z-index: 1;
     width: fit-content;
-    font-family: 'Roboto-medium', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: -0.02em;
   }
 
   .experience-list li:last-of-type {
@@ -1286,9 +1277,13 @@
   }
 
   @media only screen and (min-width: 768px) {
-
+    
 
     .flex {
+      height: 100vh;
+    }
+
+    .first {
       height: 100vh;
     }
 
@@ -1298,8 +1293,8 @@
     }
 
     .first h1 {
-      font-size: 55px;
-      margin: 170px 0 0 0;
+      font-size: 50px;
+      margin: 190px 0 0 0;
     }
 
     .first p {
@@ -1510,30 +1505,61 @@
   .work p{
     font-family: 'Roboto-regular', sans-serif;
     font-size: 30px;
-    text-decoration: underline;
-    max-width: 160px;
     margin: 0;
     transition: all 1s ease;
   }
 
   .work p,
   div.line2 {
-    width: 45%;
     display: inline-block;
-    float: left;
   }
 
   div.line2 {
     margin-top: 8px;
     margin-right: 25px;
+    width: 30%;
+    float: left;
   }
+
+
+.underline {
+      display: inline;
+      position: relative;
+      overflow: hidden;
+    }
+    .underline:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 0;
+      bottom: -5px;
+      background: #000;
+      height: 3px;
+      transition-property: width;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+    .underline:hover:after,
+    .underline:focus:after,
+    .underline:active:after {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     div.line2 {
       width: 25%;
-      margin-left: 45%;
+      margin-left: 0%;
     }
   }
+ @media only screen and (max-width: 768px) {
+
+   .work p {
+      max-width: 160px;
+   }
+ }
 
  @media only screen and (min-width: 768px) {
 

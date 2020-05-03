@@ -47,10 +47,10 @@
 
     <div class="container" >
       <div class="row  work-container">
-        <div class="col-7 hidden-sm"></div>
-        <div class="col-4">
+        <div class="col-6 hidden-sm"></div>
+        <div class="col-5">
           <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-          <a data-aos="fade" data-aos-duration="1000" class="work" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
+          <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
         </div>
       </div>
     </div>
@@ -157,32 +157,6 @@
     font-size: 20px;
   }
 
-  .work {
-    font-family: 'Roboto-regular', sans-serif;
-    font-size: 30px;
-  }
-
-  .work p{
-    text-decoration: underline;
-    max-width: 160px;
-  }
-
-  .work p,
-  div.line2 {
-    width: 45%;
-    display: inline-block;
-    float: left;
-  }
-
-  div.line2 {
-    margin-top: 8px;
-    margin-right: 25px;
-  }
-
-  .work-container {
-    padding: 120px 0 150px;
-  }
-
   .line {
     height: 3px;
     width: 90%;
@@ -274,17 +248,10 @@
     float: right;
   }
 
-  .work-container {
-    padding: 180px 0 220px;
-  }
-
   .noFollower .follower {
     opacity: 0!important;
   }
   
-  div.line2 {
-    margin-right: 30px;
-  }
 
   .hover .sub-header {
     color: #000;
@@ -295,11 +262,97 @@
   }
 }
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+  /* view work */
+
+  .view-work {
+    position: relative;
+    z-index: 9;
+    transition: background 1s ease;
+    background: #fff;
+  }
+
+ .work-container {
+    padding: 0 0 150px;
+
+  }
+
+  .line {
+    height: 3px;
+    width: 90%;
+    background: #000;
+    transition: all 1s ease;
+    margin-top: 50px;
+  }
+
+
+  .work p{
+    font-family: 'Roboto-regular', sans-serif;
+    font-size: 30px;
+    margin: 0;
+    transition: all 1s ease;
+  }
+
+  .work p,
+  div.line2 {
+    display: inline-block;
+  }
+
+  div.line2 {
+    margin-top: 8px;
+    margin-right: 25px;
+    width: 30%;
+    float: left;
+  }
+
+
+.underline {
+      display: inline;
+      position: relative;
+      overflow: hidden;
+    }
+    .underline:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 0;
+      bottom: -5px;
+      background: #000;
+      height: 3px;
+      transition-property: width;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+    .underline:hover:after,
+    .underline:focus:after,
+    .underline:active:after {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
     div.line2 {
       width: 25%;
-      margin-left: 45%;
+      margin-left: 0%;
     }
   }
+ @media only screen and (max-width: 768px) {
+
+   .work p {
+      max-width: 160px;
+   }
+ }
+
+ @media only screen and (min-width: 768px) {
+
+    .work-container {
+        padding: 180px 0 220px;
+    }
+
+  .work-container {
+    padding: 80px 0 220px;
+  }
+ }
 
 </style>
