@@ -3,17 +3,17 @@
     <div class="container" >
       <div class="row">
         <div class="col-6 hidden-sm"></div>
-        <div class="flex">
-          <div class="col-2">
+
+          <div class="col-2 mob">
             <div data-aos="fade" data-aos-duration="1000" class="line"></div>
           </div>
-          <div class="col-3" data-aos="fade" data-aos-duration="1000">
+          <div class="col-3 mob" data-aos="fade" data-aos-duration="1000">
             <p v-if="$props.sub" class="sub">{{ $props.sub }}</p>
             <a :href="$props.link" ><h2 class="underline">{{ $props.title }}</h2></a>
           </div>
         </div>
       </div>
-    </div>
+
   </div>
 </template>
 
@@ -29,7 +29,7 @@
       title: String,
       sub: String,
       bg: String,
-      link: Boolean
+      link: String
     },
 
     methods: {
@@ -66,20 +66,18 @@
     margin-top: 62px;
   }
 
-  .flex {
-    display: flex;
-  }
-
-  .flex .col-2 {
-
-  }
-
 
   .underline {
     text-decoration: underline;
   }
 
+@media only screen and (max-width: 768px) {
 
+    .mob{
+     width: 38%;
+     float:left;
+  }
+}
 
 @media only screen and (min-width: 768px) {
 
@@ -135,10 +133,6 @@
   h2 {
     margin: 0;
     font-size:40px;
-  }
-
-  .flex {
-    display: block
   }
 
   .line {

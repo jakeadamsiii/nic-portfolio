@@ -48,7 +48,6 @@
 
    <NextProject
       :title="'Made.com.'"
-      :categories="'UI DESIGN | UX DESIGN | PRODUCT DESIGN'"
       :sub="'Next project.'"
       :bg="'#fff'"
       :link="'/made'"
