@@ -50,7 +50,7 @@
         <div class="col-6 hidden-sm"></div>
         <div class="col-5">
           <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-          <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
+          <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover.once="clientHover" @mouseleave.once="clientHover" ><p class="change">View my work here</p></a>
         </div>
       </div>
     </div>
@@ -257,8 +257,8 @@
     color: #000;
   }
 
-  .noFollower.hover .work p {
-    color: #000;
+  .work p:hover {
+    color: #000!important;
   }
 }
 
@@ -282,6 +282,10 @@
     background: #000;
     transition: all 1s ease;
     margin-top: 50px;
+  }
+
+  .hover .work p {
+    color: #FFDBC5;
   }
 
 

@@ -13,6 +13,7 @@
     <FullImage 
       :images="imageArray"
       :bg="'#B7B6BB'"
+      :hero="true"
     />
 
     <ImageCopy 

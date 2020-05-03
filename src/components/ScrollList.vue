@@ -11,7 +11,7 @@
     <div class="slider">
       <ul class="slide-track" v-if="$props.brandList">
         <li class="slide" v-for="item in $props.brandList">
-          <a class="underline change" :href="item.href">{{item.name}}</a>
+          <a class="client underline change" :href="item.href">{{item.name}}</a>
         </li>
       </ul>
     </div>
@@ -36,7 +36,7 @@
     },
     mounted: function() {
       const that = this;
-      const clients = document.querySelectorAll("a.underline")
+      const clients = document.querySelectorAll("a.client")
         for (const client of clients) {
           client.addEventListener('mouseenter', function(event) {
             that.$emit('clientHover');

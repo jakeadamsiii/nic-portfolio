@@ -7,7 +7,8 @@
 
           <ul v-if="$props.images.length > 0" :class="{one: $props.images.length === 1, four: $props.images.length === 4}" >
             <li v-for="image in $props.images">
-                <img v-bind:src="image.src" :alt="image.alt" data-aos="fade-up">
+                <img v-if="$props.hero" v-bind:src="image.src" :alt="image.alt" data-aos="fade-up" data-aos-offset="-400">
+                <img v-if="!$props.hero" v-bind:src="image.src" :alt="image.alt" data-aos="fade-up">
             </li>
           </ul>
           
@@ -28,7 +29,8 @@
     },
     props: {
       images: Array,
-      bg: String
+      bg: String,
+      hero: Boolean
     },
     components: {
     },

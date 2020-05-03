@@ -15,6 +15,7 @@
       :bg="'#D6BDAE'"
       :bottomLeft="false"
       :bottomRight="false"
+      :hero="true"
      />
 
     <ImageCopy 

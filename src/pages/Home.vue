@@ -4,7 +4,7 @@
       :isHomepage="true"
     />
 
-    <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover}">  
+    <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover, workHover: workHover}">  
         
       <div class="first">
         <FallingImage 
@@ -551,7 +551,7 @@
                 <div class="col-6 hidden-sm"></div>
                 <div class="col-5">
                 <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-                <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work"><p class="change underline">View my work here</p></a>
+                <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="workHover = true" @mouseleave="workHover = false"><p class="change underline">View my work here</p></a>
                 </div>
             </div>
         </div>
@@ -581,6 +581,7 @@
         viHover: false,
         adHover: false,
         motionHover: false,
+        workHover: false,
         isMobile: window.innerWidth <= 768 ? 'fade-right' : '',
         isDesktop: true
       }
@@ -899,18 +900,25 @@
 
 
     .ui .experience-list .rows div:not(.ui-li),
-    .ui .work-container p {
+    .ui .work-container p,
+    .workHover .experience-list .rows div,
+    .workHover .work-container p {
       color: #FFDBC5;
     }
 
     .ui .experience-list .rows div.line,
-    .ui .work-container .line {
+    .ui .work-container .line,
+    .workHover .experience-list .rows div.line,
+    .workHover .work-container .line {
       background: #FFDBC5;
     }
 
     .ui .second,
     .ui .spacer,
-    .ui .view-work {
+    .ui .view-work,
+    .workHover .second,
+    .workHover .spacer,
+    .workHover .view-work {
       background: #D6BDAE;
     }
 
@@ -1507,6 +1515,10 @@
     font-size: 30px;
     margin: 0;
     transition: all 1s ease;
+  }
+
+  .work p:hover {
+    color: #000!important;
   }
 
   .work p,
