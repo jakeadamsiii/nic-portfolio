@@ -337,7 +337,7 @@
       max-width: 500px;
       width: 25%;
       height: 3px;
-      margin: 20px 30px;
+      margin: 25px 30px;
       background: #000;
     }
 
@@ -350,7 +350,7 @@
     }
 
     .list .rows.no-margin div.line {
-      margin: 20px 30px;
+      margin: 25px 30px;
     }
 
  /* transitions */

@@ -568,7 +568,6 @@
   import Nav from '../components/Nav.vue';
   import VueScrollSnap from "vue-scroll-snap";
   import passwordProtect from "../components/PasswordProtect.vue"
-  import PageHeading from '../components/PageHeading.vue'
   import FallingImage from '../components/FallingImage.vue'
   import Footer from '../components/Footer.vue'
 
@@ -587,7 +586,7 @@
       }
     },
     components: {
-      MainLayout, Nav, VueScrollSnap, passwordProtect, PageHeading, FallingImage, Footer
+      MainLayout, Nav, VueScrollSnap, passwordProtect, FallingImage, Footer
     },
      methods: {
        scroll: function() {

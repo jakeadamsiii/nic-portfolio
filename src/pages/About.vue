@@ -31,7 +31,7 @@
       </div>
     </div>
 
-    <PageHeading 
+    <Skills
       :title="'Skills.'"
       :hover="hover"
       :list="['UI / UX', 'Prototyping', 'Art Direction', 'Visual Design', 'Mobile and Web Design', 'HTML / CSS']"
@@ -64,7 +64,7 @@
 <script>
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
-  import PageHeading from '../components/PageHeading.vue'
+  import Skills from '../components/Skills.vue'
   import ScrollList from '../components/ScrollList.vue'
   import Footer from '../components/Footer.vue'
 
@@ -77,7 +77,7 @@
       }
     },
     components: {
-      MainLayout, PageHeading, Nav, ScrollList, Footer
+      MainLayout, Skills, Nav, ScrollList, Footer
     },
     methods: {
       clientHover: function() {
