@@ -1489,12 +1489,13 @@
   .view-work {
     position: relative;
     z-index: 9;
+    transition: background 1s ease;
+    background: #fff;
   }
 
  .work-container {
     padding: 0 0 150px;
-    background: #fff;
-    transition: background 1s ease;
+
   }
 
   .line {
