@@ -87,7 +87,7 @@
 
   .header {
     font-family: 'Roboto-bold', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     margin: 60px 0 0;
   }
 
@@ -138,6 +138,7 @@
 
     .header {
       margin: 0 0 40px;
+      font-size: 14px;
     }
 
     .text {
