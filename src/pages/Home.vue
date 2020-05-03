@@ -919,7 +919,7 @@
 
     .ui .second,
     .ui .spacer,
-    .ui .work-container {
+    .ui .view-work {
       background: #D6BDAE;
     }
 
@@ -932,7 +932,7 @@
 
     .icons .second,
     .icons .spacer,
-    .icons .work-container {
+    .icons .view-work {
       background-color: #C8C1BB;
     }
 
@@ -1095,7 +1095,7 @@
 
     .prints .second,
     .prints .spacer,
-    .prints .work-container {
+    .prints .view-work {
       background: #B7B6BB; 
     }
 
@@ -1118,7 +1118,7 @@
 
     .publications .second,
     .publications .spacer,
-    .publications .work-container {
+    .publications .view-work {
       background: #AB9389;
     }
 
@@ -1156,7 +1156,7 @@
 
     .motion .second,
     .motion .spacer,
-    .motion .work-container {
+    .motion .view-work {
       background: #AB9389;
     }
 
@@ -1243,7 +1243,7 @@
 
     .ad .second,
     .ad .spacer,
-    .ad .work-container {
+    .ad .view-work {
       background-color: #C8C1BB;
     }
 
