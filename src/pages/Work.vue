@@ -43,7 +43,7 @@
               <div class="line"></div>
               <div class="div-netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix.</p></a></div>
             </div>
-            <div class="rows offset">
+            <div class="rows offset last">
               <div class="div-magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine.</p></a></div>
               <div class="line"></div>
             </div>
@@ -230,10 +230,10 @@
   }
 
   h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     font-weight: 400;
     font-size: 40px;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     margin: 55px 0 0;
     position: relative;
     z-index: 2;
@@ -264,7 +264,7 @@
   li p {
     font-family: 'Roboto-regular', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     font-size: 35px;
     display: inline;
   }
@@ -308,9 +308,10 @@
     position: relative;
     z-index: 1;
     width: fit-content;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     letter-spacing: -0.02em;
   }
+
 
   .list .rows {
     display: flex;
@@ -318,15 +319,15 @@
   }
 
   .list .rows span {
-    font-size: 24px;
-    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-family: 'Roboto-regular', sans-serif;
     margin-right: 15px;
     color: #000;
     transition: color 1s ease;
   }
 
   .list .rows p {
-    font-size: 45px;
+    font-size: 40px;
     font-family: 'Roboto-regular', sans-serif;
     letter-spacing: -0.02em;
     color: #000;
@@ -561,8 +562,8 @@
       }
 
       h1 {
-        margin: 100px 0 90px;
-        font-size: 55px;
+        margin: 60px 0 90px;
+        font-size: 50px;
       }
 
       .this {
@@ -659,20 +660,25 @@
       background-image: url('../images/1883-hover.png');
     }
 
+      .list .rows p {
+        font-size: 45px;
+      }
+
+      .list .rows.last div:not(.line) {
+        margin: 0 0 225px;
+      }
+    
+
   }
 
     @media only screen and (min-width: 1024px) {
 
       h1 {
-        margin: 100px 0 145px;
+        margin: 60px 0 145px;
       }
 
       h2 {
-        margin: 135px 0 0;
-      }
-
-      .list .rows p {
-        font-size: 45px;
+        margin: 90px 0 0;
       }
     }
 

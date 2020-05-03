@@ -96,7 +96,7 @@
 .email a {
   font-family: 'Roboto', sans-serif;
   letter-spacing: -0.02em;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .connect {
@@ -118,6 +118,10 @@
 
   .svg-container svg {
     margin: 0 15px 80px 0;
+  }
+
+  .email a {
+    font-size: 25px;
   }
 
 }

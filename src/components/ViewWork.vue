@@ -29,7 +29,7 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     transition: all 1s ease;
     margin-top: 50px;

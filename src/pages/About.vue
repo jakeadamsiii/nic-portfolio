@@ -48,9 +48,13 @@
     <div class="container" >
       <div class="row  work-container">
         <div class="col-6 hidden-sm"></div>
-        <div class="col-5">
-          <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-          <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover.once="clientHover" @mouseleave.once="clientHover" ><p class="change">View my work here</p></a>
+          <div class="flex">
+          <div class="col-2">
+             <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
+          </div>
+          <div class="col-3" data-aos="fade" data-aos-duration="1000">
+            <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
+          </div>
         </div>
       </div>
     </div>
@@ -96,6 +100,10 @@
 
 <style scoped>
 
+  .flex {
+    display: flex;
+  }
+
   .about {
     background: #fff;
     transition: background 1s ease;
@@ -126,21 +134,21 @@
   }
 
   h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     font-size: 40px;
     margin: 0;
   }
 
   .sub-header {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.04em;
-    font-size: 30px;
+    letter-spacing: -0.02em;
+    font-size: 25px;
     float: left;
     width: 100%;
-    margin: 30px 0 0 ;
+    margin: 60px 0 0 ;
   }
 
   .list, .list-two  {
@@ -159,10 +167,10 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     transition: all 1s ease;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   @media only screen and (min-width: 768px) {
@@ -197,6 +205,7 @@
 
   .sub-header {
     font-size: 35px;
+    margin: 10px 0 0 0;
   }
 
   .hover .follower {
@@ -233,7 +242,7 @@
 
   h1 {
     margin: 0 0 2rem;
-    font-size: 55px;
+    font-size: 50px;
   }
 
   .list {
@@ -278,10 +287,10 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     transition: all 1s ease;
-    margin-top: 50px;
+    margin-top: 30px;
   }
 
   .hover .work p {
@@ -291,9 +300,11 @@
 
   .work p{
     font-family: 'Roboto-regular', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     transition: all 1s ease;
+    text-decoration: underline;
+    letter-spacing: -0.02em;
   }
 
   .work p,
@@ -302,9 +313,7 @@
   }
 
   div.line2 {
-    margin-top: 8px;
-    margin-right: 25px;
-    width: 30%;
+    margin-top: 16px;
     float: left;
   }
 
@@ -335,28 +344,29 @@
       width: 100%;
     }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    div.line2 {
-      width: 25%;
-      margin-left: 0%;
-    }
-  }
  @media only screen and (max-width: 768px) {
 
    .work p {
-      max-width: 160px;
+      max-width: 130px;
    }
  }
 
  @media only screen and (min-width: 768px) {
 
-    .work-container {
-        padding: 180px 0 220px;
-    }
-
   .work-container {
     padding: 80px 0 220px;
   }
+
+  .work p {
+    font-size: 30px;
+    text-decoration: none;
+  }
  }
+
+@media only screen and (min-width: 1024px) {
+   .flex {
+    display: block
+  }
+}
 
 </style>

@@ -4,7 +4,7 @@
       :isHomepage="true"
     />
 
-    <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover, workHover: workHover}">  
+    <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover, workHover: workHover, white: white}">  
         
       <div class="first">
         <FallingImage 
@@ -99,26 +99,16 @@
           :hp="true"
         />
 
-        <div class="container hp-text">
-          <div class="row">
-            <div class="col-1 hidden-sm"></div>
-            <div class="col-10" data-aos="fade-in" data-aos-duration="1000">
-              <h1>Hey I'm Nic</h1>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-5 hidden-sm"></div>
-            <div class="col-5 fade" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
-              <p>A london based senior designer specialising in creating digital experiences for fashion, luxury and lifestyle brands.</p>
-            </div>
-          </div>
-        </div>
+        <ProjectHeading
+          :title="`Hey I'm Nic.`"
+          :sub="'A london based senior designer specialising in creating digital experiences for fashion, luxury and lifestyle brands.'"
+        />
 
-        <img class="hp-image" src="../images/hero-hp.gif" alt="my work" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
+        <img class="hp-image hidden-sm" src="../images/hero-hp.gif" alt="my work" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
 
       </div>
 
-      <div class="spacer"></div>
+      <div class="spacer hidden-sm"></div>
 
       
       <div class="second">
@@ -549,9 +539,13 @@
         <div class="container">
             <div class="row  work-container">
                 <div class="col-6 hidden-sm"></div>
-                <div class="col-5">
-                <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
-                <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="workHover = true" @mouseleave="workHover = false"><p class="change underline">View my work here</p></a>
+                <div class="flex2">
+                  <div class="col-2 weird">
+                    <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
+                  </div>
+                  <div class="col-3" data-aos="fade" data-aos-duration="1000">
+                    <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="workHover = true" @mouseleave="workHover = false"><p class="change underline">View my work here</p></a>
+                  </div>
                 </div>
             </div>
         </div>
@@ -570,6 +564,7 @@
   import passwordProtect from "../components/PasswordProtect.vue"
   import FallingImage from '../components/FallingImage.vue'
   import Footer from '../components/Footer.vue'
+  import ProjectHeading from '../components/ProjectHeading.vue'
 
   export default {
     data: function () {
@@ -582,12 +577,13 @@
         adHover: false,
         motionHover: false,
         workHover: false,
+        white: false,
         isMobile: window.innerWidth <= 768 ? 'fade-right' : '',
         isDesktop: true
       }
     },
     components: {
-      MainLayout, Nav, VueScrollSnap, passwordProtect, FallingImage, Footer
+      MainLayout, Nav, VueScrollSnap, passwordProtect, FallingImage, Footer, ProjectHeading
     },
      methods: {
        scroll: function() {
@@ -603,6 +599,7 @@
           var printY = document.querySelector('.print-li').getBoundingClientRect().top;
           var adY = document.querySelector('.ad-li').getBoundingClientRect().top;
           var motionY = document.querySelector('.motion-li').getBoundingClientRect().top;
+          var workY = document.querySelector('.work-container').getBoundingClientRect().top;
 
           switch (true) {
             case uiY <= 450 && uiY > 0:
@@ -659,6 +656,16 @@
                 this.adHover = false;
                 this.motionHover = true;
               break;
+            case workY <= 550 && workY > 0:
+                this.uiHover = false;
+                this.iconHover = false;
+                this.publicationHover = false;
+                this.viHover = false;
+                this.printHover = false;
+                this.adHover = false;
+                this.motionHover = false;
+                this.white = true;
+              break;
             default:
                 this.uiHover = false;
                 this.iconHover = false;
@@ -667,6 +674,7 @@
                 this.printHover = false;
                 this.adHover = false;
                 this.motionHover = false;
+                this.white = false;
           }
        },
         checkDesktop: function() {
@@ -729,9 +737,13 @@
   }
 
   .first {
-    background-color: #AB9389;
-    height: 70vh;
+    background-color: #D6BDAE;
+    height: 100vh;
     overflow: hidden;
+  }
+
+  .flex2 {
+    display: flex;
   }
 
   .first h1 {
@@ -773,7 +785,8 @@
     transform: translateX(-50%);
     left: 50%;
     width: 90%;
-    max-width: 574px;
+    max-width: 700px;
+    z-index: 0;
   }
 
   .spacer {
@@ -836,14 +849,14 @@
   }
 
   .experience-list li {
-    font-size: 30px;
+    font-size: 35px;
     margin: 0 0 65vh;
     color: black;
     transition: all 1s ease;
     position: relative;
     z-index: 1;
     width: fit-content;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     letter-spacing: -0.02em;
   }
 
@@ -885,10 +898,14 @@
   .second {
     position: relative;
     z-index: 1;
+    background: #D6BDAE;
     transition: background 1s ease;
   }
 
     /*  ===== hover effects ======= */
+    .white .second {
+      background: #fff;
+    }
 
     /*  ===== ui effects ======= */
 
@@ -1286,6 +1303,9 @@
 
   @media only screen and (min-width: 768px) {
     
+    .second {
+      background: #fff; 
+    }
 
     .flex {
       height: 100vh;
@@ -1314,12 +1334,13 @@
     }
 
     .first .hp-image {
-      bottom: -270px;
+      bottom: -250px;
     }
 
     .spacer {
       height: 270px;
-      background: #fff;;
+      background: #fff;
+      padding: 0 0 150px 0;
     }
 
     .col-2 {
@@ -1346,7 +1367,7 @@
 
     .experience-list li {
       margin: 0 0 20px;
-      font-size: 55px;
+      font-size: 50px;
     }
 
     .experience-list .line {
@@ -1375,13 +1396,13 @@
 
     .experience-list .rows div {
       margin: 0 0 125px;
-      font-size: 40px;
+      font-size: 45px;
       color: black;
       transition: all 1s ease;
       position: relative;
       z-index: 1;
       width: fit-content;
-      font-family: 'Roboto', sans-serif;
+      font-family: 'Roboto-regular', sans-serif;
       letter-spacing: -0.02em;
     }
 
@@ -1446,13 +1467,9 @@
   }
 
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    .experience-list .rows.offset {
-      margin: 0 0 0 70px;
-    }   
 
     .experience-list .rows div {
       margin: 0 0 125px;
-      font-size: 30px;
     }
   }
 
@@ -1463,10 +1480,6 @@
   }
 
   @media only screen and (min-width: 1400px) {
-
-    .experience-list .rows div {
-      font-size: 50px;
-    }
 
     .experience-list .rows .line,
     .experience-list .rows.no-margin div.line  {
@@ -1503,7 +1516,7 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     transition: all 1s ease;
     margin-top: 50px;
@@ -1512,9 +1525,11 @@
 
   .work p{
     font-family: 'Roboto-regular', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     margin: 0;
     transition: all 1s ease;
+    letter-spacing: -0.02em;
+    text-decoration: underline;
   }
 
   .work p:hover {
@@ -1527,9 +1542,7 @@
   }
 
   div.line2 {
-    margin-top: 8px;
-    margin-right: 25px;
-    width: 30%;
+    margin-top: 16px;
     float: left;
   }
 
@@ -1560,16 +1573,10 @@
       width: 100%;
     }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-    div.line2 {
-      width: 25%;
-      margin-left: 0%;
-    }
-  }
  @media only screen and (max-width: 768px) {
 
    .work p {
-      max-width: 160px;
+      max-width: 130px;
    }
  }
 
@@ -1582,8 +1589,23 @@
   .work-container {
     padding: 80px 0 220px;
   }
+
+  .work p {
+    font-size: 30px;
+    text-decoration: none;
+  }
  }
 
+
+@media only screen and (min-width: 1024px) {
+   .flex2 {
+    display: block
+  }
+
+  .weird {
+    max-height: 0;
+  }
+}
 </style>
 
 <style>

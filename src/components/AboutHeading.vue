@@ -107,7 +107,7 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     margin-top: 50px;
   }

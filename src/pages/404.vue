@@ -6,19 +6,9 @@
       :title="'404.'"
       :sub="'Page not found.'"
       :para="`Click below to return to the homepage whilst I fire my developer.`"
-
+      :error="true"
     />
 
-     <div class="container" >
-      <div class="row">
-          <div class="col-7 hidden-sm"></div>
-          <div class="col-4" >
-            <a href="/">
-              <p data-aos="fade" data-aos-duration="1000" class="home">Return home</p>
-            </a>
-          </div>
-        </div>
-    </div>
 
     <FallingImage 
       :left= "'0'"
@@ -71,7 +61,7 @@
       :duration= "'2.7s'"
     />
     <FallingImage 
-      :left= "'92%'"
+      :left= "'71%'"
       :delay= "'1.5s'"
       :duration= "'1.2s'"
     />
@@ -90,7 +80,7 @@
       :delay= "'.8s'"
       :duration= "'1.9s'"
     />
-
+    <Footer />
   </main-layout>
 </template>
 
@@ -100,10 +90,11 @@
   import VLink from '../components/VLink.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
   import FallingImage from '../components/FallingImage.vue'
+  import Footer from '../components/Footer.vue'
 
   export default {
     components: {
-      MainLayout, Nav, ProjectHeading, VLink, FallingImage
+      MainLayout, Nav, ProjectHeading, VLink, FallingImage, Footer
     },
     mounted: function() {
       //deal with animation issue
@@ -118,6 +109,10 @@
 
 <style>
 
+  html, body {
+    overflow-x: hidden;
+  }
+
 .home {
   font-size: 1rem;
   text-decoration: underline;
@@ -130,7 +125,6 @@
 .main {
   height: 100vh;
   box-sizing: border-box;
-  overflow: hidden;
 }
 
 .container, .row {
@@ -144,9 +138,6 @@ a {
   letter-spacing: -0.02em;
 }
 
-html {
-  overflow: hidden;
-}
 
 @media only screen and (max-width: 767px) {
   .sub {

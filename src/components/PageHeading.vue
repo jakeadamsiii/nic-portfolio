@@ -100,7 +100,7 @@
 @media only screen and (min-width: 768px) {
 
   .page-heading {
-    padding: 240px 0 150px;
+    padding: 200px 0;
     transition: background 1s ease; 
   }
 

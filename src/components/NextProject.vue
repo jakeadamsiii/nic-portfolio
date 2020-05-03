@@ -2,12 +2,12 @@
   <div class="next-project" v-bind:style="{ backgroundColor:  $props.bg }">
     <div class="container" >
       <div class="row">
-        <div class="col-7 hidden-sm"></div>
+        <div class="col-6 hidden-sm"></div>
         <div class="flex">
           <div class="col-2">
             <div data-aos="fade" data-aos-duration="1000" class="line"></div>
           </div>
-          <div class="col-2" data-aos="fade" data-aos-duration="1000">
+          <div class="col-3" data-aos="fade" data-aos-duration="1000">
             <p v-if="$props.sub" class="sub">{{ $props.sub }}</p>
             <a :href="$props.link" ><h2 class="underline">{{ $props.title }}</h2></a>
           </div>
@@ -61,7 +61,7 @@
 
   .line {
     height: 3px;
-    width: 90%;
+    width: 100%;
     background: #000;
     margin-top: 62px;
   }
@@ -75,6 +75,30 @@
   }
 
 
+  .underline {
+    text-decoration: underline;
+  }
+
+
+
+@media only screen and (min-width: 768px) {
+
+  .next-project {
+    padding: 150px 0 220px;
+  }
+
+  .sub {
+    margin: 0 0 25px;
+  }
+
+  .line {
+    margin-top: 5px;
+  }
+
+  .underline {
+    text-decoration: none;
+  }
+  
 .underline {
       display: inline;
       position: relative;
@@ -102,16 +126,6 @@
   }
 
 
-
-@media only screen and (min-width: 768px) {
-
-  .next-project {
-    padding: 150px 0;
-  }
-
-  .sub {
-    margin: 0 0 25px;
-  }
 
 
 }

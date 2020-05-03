@@ -81,7 +81,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     letter-spacing: -0.04em;
-    font-size: 28px;
+    font-size: 25px;
     margin: 40px 0 60px;
   }
 
@@ -144,7 +144,7 @@
     }
 
     img {
-      max-height: 65%;
+      max-height: 55%;
     }
 
     .image-copy.right {

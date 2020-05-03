@@ -1,5 +1,5 @@
 <template>
-  <div class="nav-container" v-bind:class="{open: isNavOpen, home: $props.isHomepage, scrolled: scrolled}">
+  <div class="nav-container" v-bind:class="{open: isNavOpen, home: $props.isHomepage}">
 
     <div class="container nav" :class="{home: $props.isHomepage}">
       <div class="row">
@@ -43,8 +43,7 @@
 
     data: function () {
       return {
-          isNavOpen: false,
-          scrolled: false
+          isNavOpen: false
       }
     },
     props: {
@@ -64,20 +63,6 @@
       }
     },
     mounted: function(){
-      var vh = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
-
-      if (this.isHomepage) {
-        var that = this;
-        document.addEventListener('scroll', function(e) {
-          var secondY = document.querySelector('.second').getBoundingClientRect().top;
-          if (secondY <= 90) {
-            that.scrolled = true;
-          } else {
-            that.scrolled = false;
-          }
-        });
-        
-      }
     }
   }
 </script>
@@ -143,7 +128,7 @@
     font-size: 35px;
     padding: 20px;
     font-family: 'Roboto', sans-serif;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     cursor: url(../images/hover.png), pointer;
   }
 
@@ -243,13 +228,6 @@
 
 
 @media only screen and (max-width: 768px) {
-   .home.scrolled .home-icon {
-    color: #fff;
-  }
-
- .home.scrolled a.target-burger ul.buns li.bun {
-   background-color: #fff;
- }
 
     .home.open .home-icon {
     color: #000;

@@ -81,7 +81,7 @@ div {
 }
 
 label {
-  font-size: 35px;
+  font-size: 24px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   letter-spacing: -0.02em;
@@ -89,12 +89,12 @@ label {
 }
 
 input {
-  width: 90vw;
+  width: 80vw;
   height: 50px;
   font-size: 20px;
   background: #f2f2f2;
   border:1px solid #f2f2f2;
-  padding: 0 0 0 10px;
+  padding: 0 0 0 20px;
   margin: 0;
   border: none;
   background: #F2F2F2;
@@ -106,8 +106,7 @@ input:focus {
 }
 
 button {
-  width: 30%;
-  padding: 0;
+  padding: 0 20px;
   margin: 0;
   border: none;
   border-left: none;
@@ -120,7 +119,7 @@ button {
 
 p {
   margin: 18px 0 0 0;
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Roboto-regular', sans-serif;
   opacity: 0;
   transition: opacity .5s ease;

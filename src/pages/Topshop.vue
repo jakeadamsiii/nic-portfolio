@@ -29,6 +29,8 @@
       :bg="'#C8C1BB'"
       :bottomLeft="false"
       :bottomRight="false"
+      :leftSmall="false"
+      :rightSmall="true"
      />
 
     <PageHeading 
@@ -42,6 +44,8 @@
       :bg="'#E2DCD4'"
       :bottomLeft="false"
       :bottomRight="false"
+      :leftSmall="true"
+      :rightSmall="false"
      />
 
    <PageHeading 

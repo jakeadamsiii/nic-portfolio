@@ -6,14 +6,13 @@
 
         <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-2">
+          <div class="col-4">
             <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact.</h1>
           </div>
-          <div class="col-1 hidden-sm"></div>
           <div class="col-2 line-container hidden-sm">
             <div class="line" data-aos="fade" data-aos-duration="1000"></div>
           </div>
-          <div class="col-5 hidden-sm">
+          <div class="col-4 hidden-sm">
             <div class="link-container ">
               <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address" @mouseover="hover=true" @mouseleave="hover=false">hello@nicroberts.co.uk</a>
             </div>
@@ -29,7 +28,6 @@
 
         <div class="row hidden-desk">
           <div class="col-10">
-            <div class="line2" data-aos="fade" data-aos-duration="1000"></div>
             <div class="link-container">
               <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address2">hello@nicroberts.co.uk</a>
             </div>
@@ -66,7 +64,6 @@
         document.querySelector('.line').classList.add('aos-animate');
         document.querySelector('h1').classList.add('aos-animate');
         document.querySelector('.address2').classList.add('aos-animate');
-        document.querySelector('.line2').classList.add('aos-animate');
 
       
       }, 200);
@@ -80,7 +77,7 @@
   .title {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     font-size: 40px;
     margin: 150px 0 45px;
     color: #000;
@@ -88,29 +85,22 @@
   }
 
   .line {
-    width: 90%;
+    width: 100%;
     height: 3px;
     margin: 175px 30px 20px 0;
     background: #000;
     transition: all 1s ease;
   }
 
-  .line2 {
-    width: 50px;
-    height: 3px;
-    background: #000;
-    margin: 0 0 80px;
-  }
-
   .address2 {
     font-family: 'Roboto-regular', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
+    letter-spacing: -0.02em;
   }
-
 
   .text {
     font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     margin: 0 0 80px;
     color: #000;
     transition: all 1s ease;
@@ -128,29 +118,18 @@
 
   .address {
     font-family: 'Roboto', sans-serif;
-    font-size: 45px;
+    font-size: 40px;
     font-weight: 400;
     letter-spacing: -0.04em;
     color: #000;
     text-decoration: none;
+    letter-spacing: -0.02em;
   }
 
   .svg-container svg {
     height: 33px;
     width: 33px;
     margin: 0 22px 80px 0;
-  }
-
-  .col-5 {
-    margin-bottom: 50px!important;
-  }
-
-  .col-3 {
-    margin-right: 0!important;
-  }
-
-  .line-container {
-    margin-left: 0!important;
   }
 
   .hidden {
@@ -193,7 +172,7 @@
     }
 
     .title {
-      font-size: 45px;
+      font-size: 50px;
       margin: 150px 0 60px;
     }
   }
@@ -223,15 +202,20 @@
     .text {
       margin: 0 0 200px;
     }
+
+    .address {
+      font-size: 35px;
+    }
   }
 
   @media only screen and (min-width: 1200px) {
-    .address, .title {
-      font-size: 55px;
-    }
 
     .line{
-          margin: 185px 30px 20px 0;
+      margin: 185px 30px 20px 0;
+    }
+
+    .address {
+      font-size: 40px;
     }
   }
 

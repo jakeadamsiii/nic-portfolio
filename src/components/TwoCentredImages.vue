@@ -1,12 +1,12 @@
 <template>
   <div class="two-centered-images" >
     
-    <div class="image-container" v-bind:style="{ backgroundColor:  $props.bg }" :class="{ bottom:  $props.bottomLeft }">
+    <div class="image-container" v-bind:style="{ backgroundColor:  $props.bg }" :class="{ bottom:  $props.bottomLeft, small: $props.leftSmall }">
       <img v-if="$props.hero" :src="$props.images[0].src" :alt="$props.images[0].alt" data-aos="fade-up" data-aos-offset="-400">
       <img v-if="!$props.hero":src="$props.images[0].src" :alt="$props.images[0].alt" data-aos="fade-up">
     </div>
 
-    <div class="image-container" v-bind:style="{ backgroundColor:  $props.bg }" :class="{ bottom:  $props.bottomRight }">
+    <div class="image-container" v-bind:style="{ backgroundColor:  $props.bg }" :class="{ bottom:  $props.bottomRight, small: $props.rightSmall }">
       <img v-if="$props.hero" :src="$props.images[1].src" :alt="$props.images[1].alt" data-aos="fade-up" data-aos-offset="-400">
       <img v-if="!$props.hero" :src="$props.images[1].src" :alt="$props.images[1].alt" data-aos="fade-up">
     </div>
@@ -26,7 +26,9 @@
       bottomLeft: Boolean,
       bottomRight: Boolean,
       bg: String,
-      hero: Boolean
+      hero: Boolean,
+      leftSmall: Boolean,
+      rightSmall: Boolean
     },
     components: {
     },
@@ -74,6 +76,10 @@
       height: 100vh;
       min-height: 500px;
       max-height: 800px;
+    }
+
+    .small img {
+      max-height: 55%;
     }
 
   }
