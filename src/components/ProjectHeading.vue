@@ -120,7 +120,7 @@
   }
   
   .link-container {
-    margin: 20px 0 0;
+    margin: 20px 0 150px;
   }
 
 
