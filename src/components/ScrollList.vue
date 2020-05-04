@@ -54,7 +54,7 @@
   h1 {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.02em;
     font-size: 40px;
     margin: 0 0 70px;
   }
@@ -89,7 +89,7 @@
   width: 250px;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
   font-size: 35px;
   text-align: center;
 }
