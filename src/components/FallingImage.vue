@@ -40,7 +40,7 @@
   }
 
   .falling-image.home {
-    background-image: url("../images/smile1.png");
+    background-image: url("../images/smile.png");
   }
 
   .falling-image.mob {

@@ -75,6 +75,7 @@
     position: fixed;
     z-index: 12;
     background: transparent;
+    border-top: 2px solid #000;
   }
 
   a {
@@ -93,6 +94,7 @@
   .nav-container { 
     position: absolute;
     top: 0;
+   
   }
 
   .nav-list {
@@ -100,13 +102,12 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: #fff;
+    background: #D5D1CD;
     z-index: 10;
     left: 0;
     top: -100%;
     transition: top .5s ease;
   }
-
 
   .menu {
     width: 100%;
@@ -126,18 +127,21 @@
     text-decoration: none;
     color: #000;
     font-size: 35px;
+    line-height: 35px;
     padding: 20px;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: -0.02em;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -3px;
     cursor: url(../images/hover.png), pointer;
   }
 
   .home-icon {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 16px;
     padding: 0;
     text-decoration: none;
     line-height: 90px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
   .icon {
@@ -200,7 +204,7 @@
 	 color: #000;
 }
  a.target-burger ul.buns li.bun {
-	 width: 100%;
+	 width: 80%;
 	 height: 2px;
 	 background-color: #000;
 	 position: absolute;

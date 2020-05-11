@@ -5,13 +5,13 @@
           <div class="col-1 hidden-sm"></div>
           <div class="col-8" >
             <div class="flex">
-              <p class="title">Get in touch.</p>
+              <p class="title">Get in touch</p>
               <div class="email"><a target="_blank" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat">hello@nicroberts.co.uk</a></div>
             </div>
           </div>
           <div class="col-2">
             <div class="flex">
-              <p class="title connect">Connect.</p>
+              <p class="title connect">Connect</p>
               <div class="svg-container">
                 <a href="https://www.instagram.com/nicola__roberts/" target="_blank">
                   <svg class="insta" id="Bold" enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m12.004 5.838c-3.403 0-6.158 2.758-6.158 6.158 0 3.403 2.758 6.158 6.158 6.158 3.403 0 6.158-2.758 6.158-6.158 0-3.403-2.758-6.158-6.158-6.158zm0 10.155c-2.209 0-3.997-1.789-3.997-3.997s1.789-3.997 3.997-3.997 3.997 1.789 3.997 3.997c.001 2.208-1.788 3.997-3.997 3.997z"/><path d="m16.948.076c-2.208-.103-7.677-.098-9.887 0-1.942.091-3.655.56-5.036 1.941-2.308 2.308-2.013 5.418-2.013 9.979 0 4.668-.26 7.706 2.013 9.979 2.317 2.316 5.472 2.013 9.979 2.013 4.624 0 6.22.003 7.855-.63 2.223-.863 3.901-2.85 4.065-6.419.104-2.209.098-7.677 0-9.887-.198-4.213-2.459-6.768-6.976-6.976zm3.495 20.372c-1.513 1.513-3.612 1.378-8.468 1.378-5 0-7.005.074-8.468-1.393-1.685-1.677-1.38-4.37-1.38-8.453 0-5.525-.567-9.504 4.978-9.788 1.274-.045 1.649-.06 4.856-.06l.045.03c5.329 0 9.51-.558 9.761 4.986.057 1.265.07 1.645.07 4.847-.001 4.942.093 6.959-1.394 8.453z"/><circle cx="18.406" cy="5.595" r="1.439"/></svg>
@@ -56,9 +56,9 @@
 <style scoped>
 
 .footer {
-  background: #E2DCD4;
   position: relative;
   z-index: 1;
+  border-top: 2px solid #000;
 }
 
 .svg-container svg {
@@ -68,25 +68,25 @@
 }
 
 .title {
-  font-family: 'Roboto-bold', sans-serif;
-  font-size: 14px;
+  font-family: 'Roboto-medium', sans-serif;
+  font-size: 12px;
   margin: 40px 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .email {
   margin: 0 0 40px;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: -0.02em;
-  font-size: 20px;
 }
 
 .copy {
   font-size: 12px;
   margin: 0 0 40px;
+  font-family: 'Roboto-regular', sans-serif;
 }
 
 .nic {
-  margin: 0;
+  margin: 0 0 5px;
 }
 
 .jake {
@@ -94,9 +94,9 @@
 }
 
 .email a {
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: -0.02em;
-  font-size: 20px;
+  font-family: 'spectral-light', serif;
+  letter-spacing: -1px;
+  font-size: 30px;
 }
 
 .connect {

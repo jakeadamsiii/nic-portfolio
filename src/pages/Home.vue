@@ -1,11 +1,12 @@
 <template>
-  <main-layout>
+  <main-layout :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover, workHover: workHover, white: white}">
     <Nav 
       :isHomepage="true"
     />
 
-    <div class="home" :class="{ui: uiHover, icons: iconHover, prints: printHover, publications: publicationHover, vi: viHover, ad: adHover, motion: motionHover, workHover: workHover, white: white}">  
-        
+    <div class="home" >  
+      <div class="follower hidden-sm"></div>
+
       <div class="first">
         <FallingImage 
           :left= "'0'"
@@ -99,17 +100,24 @@
           :hp="true"
         />
 
-        <ProjectHeading
-          :title="`Hey I'm Nic.`"
-          :sub="'A london based senior designer specialising in creating digital experiences for fashion, luxury and lifestyle brands.'"
-        />
-
-        <img class="hp-image hidden-sm" src="../images/hero-hp.gif" alt="my work" data-aos="fade-in" data-aos-duration="1000" data-aos-offset="-400">
+        <div class="container">
+          <div class="row">
+            <div class="col-2 hidden-sm"></div>
+            <div class="col-9">
+              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">Product designer</span>
+              <br /> 
+              specialising in <span>creating digital experiences for</span> fashion, luxury <span>and</span> lifestyle <span>brands</span>.</h1>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-1 hidden-sm"></div>
+            <div class="col-5">
+              <p class="prev" data-aos="fade-in" data-aos-duration="1000">Previous projects include</p>
+            </div>
+          </div>
+        </div>
 
       </div>
-
-      <div class="spacer hidden-sm"></div>
-
       
       <div class="second">
 
@@ -123,24 +131,24 @@
             <div class="col-1 hidden-sm"></div>
             <div class="col-10 fade" data-aos="fade-in" data-aos-duration="1000">
               <ul class="experience-list hidden-desk">
-                <li class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">UI design</li>
+                <li class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">Product design</li>
                 <li class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography</li>
-                <li class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Publication design</li>
-                <li class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Print design</li>
+                <li class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Print design</li>
+                <li class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Branding</li>
                 <li class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction</li>
                 <li class="motion-li" @mouseover="motionHover = true" @mouseleave="motionHover = false">Motion design</li>
               </ul>
 
               <div class="experience-list hidden-sm">
                 <div class="rows">
-                  <div class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">UI design</div>
+                  <div class="ui-li" @mouseover="uiHover = true" @mouseleave="uiHover = false">Product design</div>
                   <div class="line"></div>
                   <div class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography</div>
                 </div>
                 <div class="rows offset">
-                  <div class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Publication design</div>
+                  <div class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Print design</div>
                   <div class="line"></div>
-                  <div class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Print design</div>
+                  <div class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Branding</div>
                 </div>
                 <div class="rows no-margin">
                   <div class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction</div>
@@ -561,7 +569,6 @@
   import MainLayout from '../layouts/Main.vue';
   import Nav from '../components/Nav.vue';
   import VueScrollSnap from "vue-scroll-snap";
-  import passwordProtect from "../components/PasswordProtect.vue"
   import FallingImage from '../components/FallingImage.vue'
   import Footer from '../components/Footer.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
@@ -583,7 +590,7 @@
       }
     },
     components: {
-      MainLayout, Nav, VueScrollSnap, passwordProtect, FallingImage, Footer, ProjectHeading
+      MainLayout, Nav, VueScrollSnap, FallingImage, Footer, ProjectHeading
     },
      methods: {
        scroll: function() {
@@ -694,6 +701,11 @@
             this.printHover = false;
             this.adHover = false;
             this.motionHover = false;
+
+            document.addEventListener('mousemove', function(e) {
+              document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
+              document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
+            });
           }
         }
       }, 
@@ -708,7 +720,6 @@
 
         setTimeout(function(){ 
          document.querySelector('.fade').classList.add('aos-animate')
-         document.querySelector('.hp-image').classList.add('aos-animate');
        }, 200);
 
      }
@@ -737,33 +748,12 @@
   }
 
   .first {
-    background-color: #D6BDAE;
     height: 100vh;
     overflow: hidden;
   }
 
   .flex2 {
     display: flex;
-  }
-
-  .first h1 {
-    font-size: 30px;
-    color: #FFDBC5;
-    position: relative;
-    margin: 200px 0 0 0;
-    letter-spacing: -0.02em;
-  }
-
-  .first h1:after {
-    content: '';
-    background: #FFDBC5;
-    position: absolute;
-    height: 3px;
-    width: 25%;
-    max-width: 300px;
-    top: 50%;
-    margin: 0 0 0 50px;
-    display: none;
   }
 
   .hp-text {
@@ -778,22 +768,91 @@
     letter-spacing: -0.02em;
   }
 
-  .first .hp-image {
-    position: absolute;
-    z-index: 2;
-    bottom: 0%;
-    transform: translateX(-50%);
-    left: 50%;
-    width: 90%;
-    max-width: 700px;
-    z-index: 0;
+  .first .head {
+    position: relative;
+    line-height: 45px;
+    font-size: 40px;
+    font-family: 'spectral-light-italic', serif;
+    letter-spacing: -3px;
+    font-weight: 300;
+    text-align: right;
+    margin: 25vh 0 0 0;
   }
 
-  .spacer {
-    height: 230px;
-    background: #AB9389;
-    transition: background 1s ease;
+  .first .head:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 200px;
+    top: calc(100% + 20px);
+    right: 0;
+    background: #000;
   }
+
+  .first .head span {
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+  }
+
+  .first .head span.upper {
+    text-transform: uppercase;
+  }
+
+  .first .prev {
+    font-size: 16px;
+    font-family: 'Roboto-mediun', sans-serif;
+    margin-top: 130px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 1px;
+  }
+
+  .follower {
+    height: 198px;
+    width: 442px;
+    position: absolute;
+    float: left;
+    opacity: 0;
+    z-index: 0; 
+    transition: opacity 1s ease;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .view-work .change {
+    font-size: 16px;
+    font-family: 'Roboto-mediun', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  .mask {
+    position: fixed;
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+    max-width: 90%;
+    max-height: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+    .ui .ui-mask {
+      opacity: 1;
+    }
+
+    .prints .print-mask {
+      opacity: 1;
+    }
+
+    .publications .publication-mask {
+      opacity: 1;
+    }
+
+    .motion .motion-mask {
+      opacity: 1;
+    }
 
   .experience-list.hidden-desk {
     display: block;
@@ -802,27 +861,6 @@
   .flex {
     display: flex;
     align-items: center;
-  }
-
-  span {
-    font-family: 'Roboto-bold', sans-serif;
-  }
-
-  .hp-image-mob {
-    position: absolute;
-    top: 130px;
-    right: 6%;
-    z-index: 1;
-  }
-
-  h2, span {
-    font-size: 20px;
-    display: inline;
-  }
-
-  p {
-    font-size: 15px;
-    margin: 20px 0 65px;
   }
 
   .hidden {
@@ -849,7 +887,7 @@
   }
 
   .experience-list li {
-    font-size: 35px;
+    font-size: 25px;
     margin: 0 0 65vh;
     color: black;
     transition: all 1s ease;
@@ -857,7 +895,8 @@
     z-index: 1;
     width: fit-content;
     font-family: 'Roboto-regular', sans-serif;
-    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   .experience-list li:last-of-type {
@@ -872,23 +911,11 @@
   }
 
   svg {
-    fill: #A7836D;
+    fill: #000;
   }
 
   .second svg {
     position: fixed;
-  }
-
-  .mask {
-    position: fixed;
-    z-index: 0;
-    opacity: 0;
-    transition: opacity 1s ease;
-    max-width: 90%;
-    max-height: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
 
   .second ul {
@@ -898,14 +925,9 @@
   .second {
     position: relative;
     z-index: 1;
-    background: #D6BDAE;
+    background: transparent;
     transition: background 1s ease;
   }
-
-    /*  ===== hover effects ======= */
-    .white .second {
-      background: #fff;
-    }
 
     /*  ===== ui effects ======= */
 
@@ -914,53 +936,14 @@
       opacity: 1;
       transition: all 1s ease;
     }
-
-
-    .ui .experience-list .rows div:not(.ui-li),
-    .ui .work-container p,
-    .workHover .experience-list .rows div,
-    .workHover .work-container p {
-      color: #FFDBC5;
-    }
-
-    .ui .experience-list .rows div.line,
-    .ui .work-container .line,
-    .workHover .experience-list .rows div.line,
-    .workHover .work-container .line {
-      background: #FFDBC5;
-    }
-
-    .ui .second,
-    .ui .spacer,
-    .ui .view-work,
-    .workHover .second,
-    .workHover .spacer,
-    .workHover .view-work {
-      background: #D6BDAE;
-    }
-
-    .ui .ui-mask {
+   
+    .ui .follower {
       opacity: 1;
+      background-image: url('../images/product-design-hover.png');
     }
+
 
     /*  ===== icon effects ======= */
-
-
-    .icons .second,
-    .icons .spacer,
-    .icons .view-work {
-      background-color: #C8C1BB;
-    }
-
-    .icons .experience-list .rows div:not(.icon-li),
-    .icons .work-container p  {
-      color: #FFDBC5;
-    }
-
-    .icons .experience-list .rows div.line,
-    .icons .work-container .lkine  {
-      background: #FFDBC5;
-    }
 
     svg {
       display: block;
@@ -1098,48 +1081,16 @@
     }
 
     /*prints*/
-
-    .prints .experience-list .rows div:not(.print-li),
-    .prints .work-container p  {
-      color: #FFDBC5;
-    }
-
-    .prints .experience-list .rows div.line,
-    .prints .work-container .line  {
-      background: #FFDBC5;
-    }
-
-    .prints .second,
-    .prints .spacer,
-    .prints .view-work {
-      background: #B7B6BB; 
-    }
-
-    .prints .print-mask {
+    .prints .follower {
       opacity: 1;
+      background-image: url('../images/print-hover-new.jpg');
     }
-
 
     /*publication */
 
-    .publications .experience-list .rows div:not(.publication-li),
-    .publicaions .work-container p  {
-      color: #FFDBC5;
-    }
-
-    .publications .experience-list .rows div.line,
-    .publications .work-container .line  {
-      background: #FFDBC5;
-    }
-
-    .publications .second,
-    .publications .spacer,
-    .publications .view-work {
-      background: #AB9389;
-    }
-
-    .publications .publication-mask {
+    .publications .follower {
       opacity: 1;
+      background-image: url('../images/branding-hover.png');
     }
 
     /*vi */
@@ -1154,40 +1105,23 @@
       color: white;
     }
 
-    .vi .second {
-      background: #C8C1BB;
-    }
-
     /* motion */
-
-    .motion .experience-list .rows div:not(.motion-li),
-    .motion .work-container p  {
-      color: #FFDBC5;
-    }
-
-    .motion .experience-list .rows div.line,
-    .motion .work-container .line {
-      background: #FFDBC5;
-    }
-
-    .motion .second,
-    .motion .spacer,
-    .motion .view-work {
-      background: #AB9389;
-    }
-
-    .motion .motion-mask {
+    .motion .follower {
       opacity: 1;
+      height: 270px;
+      background-image: url('../images/motion.gif');
     }
 
     /* art direction */
 
     .coming-soon {
-      color: #A7836D;
+      color: #000;
       opacity: 0;
-      font-size: 20px;
-      font-family: 'Roboto-italic', sans-serif;
+      font-size: 10px;
+      font-family: 'Roboto-medium', sans-serif;
       position: fixed;
+      letter-spacing: 1px;
+      text-transform: uppercase;
       z-index: -1;
     }
 
@@ -1246,22 +1180,6 @@
       top: 43%;
       left: 17%;
     }
-  
-    .ad .experience-list .rows div:not(.ad-li),
-    .ad .work-container p  {
-      color: #FFDBC5;
-    }
-
-    .ad .experience-list .rows div.line,
-    .ad .work-container .line  {
-      background: #FFDBC5;
-    }
-
-    .ad .second,
-    .ad .spacer,
-    .ad .view-work {
-      background-color: #C8C1BB;
-    }
 
     .slider {
       height: 50px;
@@ -1295,17 +1213,7 @@
     }
 
 
-  @media only screen and (min-width: 600px) {
-    .first .hp-image {
-      bottom:-30%;
-    }
-  }
-
   @media only screen and (min-width: 768px) {
-    
-    .second {
-      background: #fff; 
-    }
 
     .flex {
       height: 100vh;
@@ -1320,21 +1228,8 @@
       height: 100%;
     }
 
-    .first h1 {
-      font-size: 50px;
-      margin: 190px 0 0 0;
-    }
-
     .first p {
       font-size: 35px;
-    }
-
-    .first h1:after {
-      display: inline;
-    }
-
-    .first .hp-image {
-      bottom: -250px;
     }
 
     .spacer {
@@ -1367,11 +1262,11 @@
 
     .experience-list li {
       margin: 0 0 20px;
-      font-size: 50px;
+      font-size: 30px;
     }
 
     .experience-list .line {
-      height: 3px;
+      height: 2px;
       width: 100%; 
       background: #000;
       
@@ -1396,21 +1291,23 @@
 
     .experience-list .rows div {
       margin: 0 0 125px;
-      font-size: 45px;
+      font-size: 25px;
       color: black;
       transition: all 1s ease;
       position: relative;
       z-index: 1;
       width: fit-content;
       font-family: 'Roboto-regular', sans-serif;
-      letter-spacing: -0.02em;
+      letter-spacing: 2px;
+      z-index: 3; 
+      text-transform: uppercase;
     }
 
     .experience-list .rows .line {
       max-width: 500px;
-      width: 25%;
-      height: 3px;
-      margin: 20px 30px;
+      width: 30vw;
+      height: 2px;
+      margin: 15px 30px;
       background: #000;
     }
 
@@ -1423,37 +1320,11 @@
     }
 
     .experience-list .rows.no-margin div.line {
-      margin: 20px 30px;
-    }
-
-    .hp-image-mob {
-      display: none;
+      margin: 15px 30px;
     }
 
     .hidden {
       display: block;
-    }
-
-    .mask {
-      position: absolute;
-      top: 0;
-      z-index: 0;
-      opacity: 0;
-      transition: opacity 1s ease;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      max-height: 90%;
-    }
-
-    span {
-      text-decoration: underline;
-    }
-
-    h2, span {
-      font-size: 35px;
-      position: relative;
-      z-index: 2;
     }
 
     .second svg {
@@ -1466,6 +1337,12 @@
 
   }
 
+  @media only screen and (min-width: 1240px) {
+    .first .head {
+      font-size: 60px;
+    }
+  }
+
   @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
     .experience-list .rows div {
@@ -1476,14 +1353,6 @@
   @media only screen and (min-width: 1200px) {
     .first p {
         margin: 70px 0 0 0 ;
-    }
-  }
-
-  @media only screen and (min-width: 1400px) {
-
-    .experience-list .rows .line,
-    .experience-list .rows.no-margin div.line  {
-      margin: 30px;
     }
   }
 
@@ -1505,8 +1374,6 @@
   .view-work {
     position: relative;
     z-index: 9;
-    transition: background 1s ease;
-    background: #fff;
   }
 
  .work-container {
@@ -1515,7 +1382,7 @@
   }
 
   .line {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #000;
     transition: all 1s ease;
@@ -1542,7 +1409,7 @@
   }
 
   div.line2 {
-    margin-top: 16px;
+    margin-top: 8px;
     float: left;
   }
 
@@ -1560,7 +1427,7 @@
       width: 0;
       bottom: -5px;
       background: #000;
-      height: 3px;
+      height: 2px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
@@ -1594,8 +1461,31 @@
     font-size: 30px;
     text-decoration: none;
   }
- }
 
+
+  .first .head:after {
+    height: 20vh
+  }
+
+  .first .prev {
+    margin-top: calc(20vh + 40px);
+  }
+
+  .mask {
+    display: none;
+  }
+ }
+@media only screen and (max-width: 320px) {
+  .first .head {
+    line-height: 40px;
+    font-size: 35px;
+  }
+
+  .first .prev {
+    margin-top: 120px;
+  }
+
+}
 
 @media only screen and (min-width: 1024px) {
    .flex2 {
@@ -1605,12 +1495,39 @@
   .weird {
     max-height: 0;
   }
+
+  .first .head {
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+}
+
+@media only screen and (min-width: 1145px) {
+  .experience-list .rows div {
+    font-size: 30px;
+  }
 }
 </style>
 
 <style>
- @keyframes fade-in {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}
+  @keyframes fade-in {
+    0%   { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  .main {
+    background: #F7F6F3;
+    transition: background 1s ease;
+  }
+
+  .main.ui,
+  .main.icons,
+  .main.prints,
+  .main.publications,
+  .main.ad,
+  .main.motion,
+  .main.workHover {
+    background: #D5D1CD;
+  }
 </style>

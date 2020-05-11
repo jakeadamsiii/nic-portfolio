@@ -1,16 +1,18 @@
 <template>
-  <main-layout>
+  <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, netflix: netflixHover, magazine: magazineHover}">
     <Nav />
-    <div class="work" :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, netflix: netflixHover, magazine: magazineHover}">
+    <div class="work" >
     <div v-if="isDesktop" class="follower hidden-tab"></div>
     <div class="container">
       <div class="row">
         <div class="col-1 hidden-sm"></div>
-        <div class="col-4">
-          <h1 data-aos="fade" data-aos-duration="1000">Work.</h1>
+        <div class="col-10">
+          <h1 data-aos="fade" data-aos-duration="1000">Work</h1>
         </div>
-        <div class="col-2 hidden-sm"></div>
-        <div class="col-4">
+      </div>
+      <div class="row">
+        <div class="col-1 hidden-sm"></div>
+        <div class="col-20">
           <h2 data-aos="fade" data-aos-duration="1000">Selected projects</h2>
         </div>
       </div>
@@ -18,33 +20,33 @@
         <div class="col-1 hidden-sm"></div>
         <div class="col-10">
            <ul class="this hidden-desk" data-aos="fade" data-aos-duration="1000">
-            <li id="topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop.</p></a></li>
-            <li id="asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS.</p></a></li>
-            <li id="made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com.</p></a></li>
-            <li id="warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse.</p></a></li>
-            <li id="rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster.</p></a></li>
-            <li id="netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix.</p></a></li>
-            <li id="magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine.</p></a></li>
+            <li id="topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></li>
+            <li id="asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></li>
+            <li id="made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></li>
+            <li id="warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></li>
+            <li id="rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></li>
+            <li id="netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
+            <li id="magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
           </ul> 
 
           <div class="list hidden" data-aos="fade" data-aos-duration="1000">
             <div class="rows">
-              <div class="div-topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop.</p></a></div>
+              <div class="div-topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></div>
               <div class="line"></div>
-              <div class="div-asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS.</p></a></div>
+              <div class="div-asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></div>
             </div>
             <div class="rows offset">
-              <div class="div-made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com.</p></a></div>
+              <div class="div-made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></div>
               <div class="line"></div>
-              <div class="div-warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse.</p></a></div>
+              <div class="div-warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></div>
             </div>
             <div class="rows">
-              <div class="div-rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster.</p></a></div>
+              <div class="div-rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></div>
               <div class="line"></div>
-              <div class="div-netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix.</p></a></div>
+              <div class="div-netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></div>
             </div>
             <div class="rows offset last">
-              <div class="div-magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine.</p></a></div>
+              <div class="div-magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></div>
               <div class="line"></div>
             </div>
           </div> 
@@ -220,7 +222,6 @@
   }
 
   .work {
-    background-color: #fff;
     transition: background-color 1s ease;
     padding: 90px 0 0 0;
   }
@@ -230,19 +231,21 @@
   }
 
   h1 {
-    font-family: 'Roboto-regular', sans-serif;
-    font-weight: 400;
-    font-size: 40px;
-    letter-spacing: -0.02em;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+    font-size: 60px;
     margin: 55px 0 0;
     position: relative;
     z-index: 2;
+    font-weight: 300;
   }
 
   h2 {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 16px;
-    margin: 90px 0 200px;
+    margin: 100px 0 200px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   ul {
@@ -252,21 +255,23 @@
   }
 
   li {
-    font-family: 'Roboto-medium', sans-serif;
+    font-family: 'Roboto-regular', sans-serif;
     margin: 0 0 65vh;
     font-size: 24px;
     opacity: 1;
     transition: opacity 1s ease;
     position: relative;
     z-index: 2;
+    letter-spacing: 2px;
   }
 
   li p {
     font-family: 'Roboto-regular', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 30px;
     display: inline;
+    text-transform: uppercase;
   }
 
   li span {
@@ -295,21 +300,22 @@
   }
 
   .list .line {
-    height: 3px;
+    height: 2px;
     width: 100%; 
     background: #000;
   }
 
   .list .rows div {
     margin: 0 0 125px;
-    font-size: 40px;
+    font-size: 30px;
     color: black;
     transition: all 1s ease;
     position: relative;
     z-index: 1;
     width: fit-content;
     font-family: 'Roboto-regular', sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 
 
@@ -327,18 +333,18 @@
   }
 
   .list .rows p {
-    font-size: 40px;
+    font-size: 30px;
     font-family: 'Roboto-regular', sans-serif;
-    letter-spacing: -0.02em;
+    letter-spacing: 2px;
     color: #000;
     transition: color 1s ease;
   }
 
     .list .rows .line {
       max-width: 500px;
-      width: 25%;
-      height: 3px;
-      margin: 25px 30px;
+      width: 30vw;
+      height: 2px;
+      margin: 15px 30px;
       background: #000;
     }
 
@@ -351,7 +357,7 @@
     }
 
     .list .rows.no-margin div.line {
-      margin: 25px 30px;
+      margin: 15px 30px;
     }
 
  /* transitions */
@@ -401,11 +407,11 @@
   .topshop .list .rows div:not(.div-topshop) p,
   .topshop .this li:not(#topshop) span,
   .topshop .this li:not(#topshop) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .topshop .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .asos.work {
@@ -416,11 +422,11 @@
   .asos .list .rows div:not(.div-asos) p,
   .asos .this li:not(#asos) span,
   .asos .this li:not(#asos) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .asos .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .made.work {
@@ -431,11 +437,11 @@
   .made .list .rows div:not(.div-made) p,
   .made .this li:not(#made) span,
   .made .this li:not(#made) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .made .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .warehouse.work {
@@ -446,22 +452,22 @@
   .warehouse .list .rows div:not(.div-warehouse) p,
   .warehouse .this li:not(#warehouse) span,
   .warehouse .this li:not(#warehouse) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .warehouse .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .rollacoaster .list .rows div:not(.div-rollacoaster) span,
   .rollacoaster .list .rows div:not(.div-rollacoaster) p,
   .rollacoaster .this li:not(#rollacoaster) span,
   .rollacoaster .this li:not(#rollacoaster) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .rollacoaster .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .rollacoaster.work {
@@ -480,11 +486,11 @@
   .netflix .list .rows div:not(.div-netflix) p,
   .netflix .this li:not(#netflix) span,
   .netflix .this li:not(#netflix) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .netflix .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .netflix.work {
@@ -495,11 +501,11 @@
   .magazine .list .rows div:not(.div-magazine) p,
   .magazine .this li:not(#magazine) span,
   .magazine .this li:not(#magazine) p {
-    color: #FFDBC5;
+    color: #000;
   }
 
   .magazine .list .line {
-    background: #FFDBC5;
+    background: #000;
   }
 
   .magazine.work {
@@ -519,7 +525,7 @@
       width: 0;
       bottom: -5px;
       background: #000;
-      height: 3px;
+      height: 2px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
@@ -555,10 +561,6 @@
 
       .hidden {
         display: block;
-      }
-
-      .list .rows p {
-        font-size: 35px;
       }
 
       h1 {
@@ -660,10 +662,6 @@
       background-image: url('../images/1883-hover.png');
     }
 
-      .list .rows p {
-        font-size: 45px;
-      }
-
       .list .rows.last div:not(.line) {
         margin: 0 0 225px;
       }
@@ -674,12 +672,29 @@
     @media only screen and (min-width: 1024px) {
 
       h1 {
-        margin: 60px 0 145px;
+        margin: 60px 0 0;
       }
 
       h2 {
-        margin: 90px 0 0;
+        margin: 100px 0 200px;
       }
     }
 
+</style>
+
+<style>
+  .main {
+    background: #F7F6F3;
+    transition: background 1s ease;
+  }
+
+  .main.asos,
+  .main.topshop,
+  .main.made,
+  .main.netflix,
+  .main.magazine,
+  .main.warehouse,
+  .main.rollacoaster {
+    background: #D5D1CD;
+  }
 </style>

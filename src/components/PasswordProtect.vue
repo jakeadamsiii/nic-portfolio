@@ -61,8 +61,9 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background: #fff;
+  background: #F7F6F3;
   z-index: 100;
+  border-top: 2px solid #000;
 }
 
 form {
@@ -92,12 +93,11 @@ input {
   width: 80vw;
   height: 50px;
   font-size: 20px;
-  background: #f2f2f2;
-  border:1px solid #f2f2f2;
+  border:1px solid #fff;
   padding: 0 0 0 20px;
   margin: 0;
   border: none;
-  background: #F2F2F2;
+  background: #fff;
   max-width: 90vw;
 }
 
@@ -111,7 +111,7 @@ button {
   border: none;
   border-left: none;
   cursor: url(../images/hover.png), pointer; 
-  background: #F2F2F2;
+  background: #fff;
   outline: none;
   position: relative;
   z-index: 2;
@@ -132,16 +132,18 @@ p.show {
 
 
 .home-icon {
-  font-family: 'Roboto-bold', sans-serif;
-  font-size: 20px;
   padding: 0;
   margin:0;
   text-decoration: none;
-  line-height: 90px;
   position: absolute; 
   top:0;
   left: 6%;
   opacity:1;
+  font-family: 'Roboto-medium', sans-serif;
+  font-size: 16px;
+  line-height: 90px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 768px) {
