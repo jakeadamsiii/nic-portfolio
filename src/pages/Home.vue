@@ -833,7 +833,7 @@
 
   .view-work .change {
     font-size: 16px;
-    font-family: 'Roboto-mediun', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
