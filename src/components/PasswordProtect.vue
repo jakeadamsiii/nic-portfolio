@@ -83,9 +83,9 @@ div {
 
 label {
   font-size: 24px;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'spectral-light', serif;
+  letter-spacing: -1px;
   font-weight: 400;
-  letter-spacing: -0.02em;
   margin: 0 0 20px;
 }
 
@@ -119,7 +119,7 @@ button {
 
 p {
   margin: 18px 0 0 0;
-  font-size: 16px;
+  font-size: 14px;
   font-family: 'Roboto-regular', sans-serif;
   opacity: 0;
   transition: opacity .5s ease;

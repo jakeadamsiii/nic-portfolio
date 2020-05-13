@@ -104,7 +104,7 @@
 .email a {
   font-family: 'spectral-light', serif;
   letter-spacing: -1px;
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .connect {
@@ -129,7 +129,7 @@
   }
 
   .email a {
-    font-size: 25px;
+    font-size: 30px;
   }
 
 }

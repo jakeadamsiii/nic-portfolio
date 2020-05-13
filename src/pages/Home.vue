@@ -146,9 +146,9 @@
                   <div class="icon-li" @mouseover="iconHover = true" @mouseleave="iconHover = false">Iconography</div>
                 </div>
                 <div class="rows offset">
-                  <div class="publication-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Print design</div>
+                  <div class="publication-li" @mouseover="printHover = true" @mouseleave="printHover = false" >Print design</div>
                   <div class="line"></div>
-                  <div class="print-li" @mouseover="printHover = true" @mouseleave="printHover = false">Branding</div>
+                  <div class="print-li" @mouseover="publicationHover = true" @mouseleave="publicationHover = false">Branding</div>
                 </div>
                 <div class="rows no-margin">
                   <div class="ad-li" @mouseover="adHover = true" @mouseleave="adHover = false">Art direction</div>
@@ -703,7 +703,7 @@
             this.motionHover = false;
 
             document.addEventListener('mousemove', function(e) {
-              document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
+              document.querySelector('.follower').style.left = (e.pageX - 200) + "px";
               document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
             });
           }
@@ -799,12 +799,24 @@
   }
 
   .first .prev {
-    font-size: 16px;
-    font-family: 'Roboto-mediun', sans-serif;
+    font-size: 14px;
+    font-family: 'Roboto-medium', sans-serif;
     margin-top: 130px;
     text-transform: uppercase;
     color: #000;
     letter-spacing: 1px;
+    position: relative;
+    width: fit-content;
+  }
+
+  .first .prev:after {
+    content: '';
+    position: absolute;
+    right: -20px;
+    top: 40%;
+    height: 2px;
+    width: 15px;
+    background: #000;
   }
 
   .follower {
@@ -1282,6 +1294,7 @@
 
     .experience-list.hidden-sm {
       display: block;
+      margin-top: 200px;
     }
 
     .experience-list .rows {
@@ -1506,6 +1519,16 @@
 @media only screen and (min-width: 1145px) {
   .experience-list .rows div {
     font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  .first .head {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .experience-list .rows div {
+    margin: 0 0 150px;
   }
 }
 </style>

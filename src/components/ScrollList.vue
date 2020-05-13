@@ -91,6 +91,7 @@ h2 {
   font-weight: 400;
   letter-spacing: 1px;
   font-size: 20px;
+  text-transform: uppercase;
   text-align: center;
 }
 

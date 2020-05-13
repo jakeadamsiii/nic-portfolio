@@ -240,6 +240,7 @@
   .home.open a.target-burger ul.buns li.bun {
     background-color: #000;
   }
+  
 }
 
 @media only screen and (min-width: 1024px) {
@@ -263,6 +264,10 @@
     background: transparent;
   }
 
+  .link {
+    font-size: 40px;
+    line-height: 40px;
+  }
 
 }
  
