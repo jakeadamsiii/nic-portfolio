@@ -266,12 +266,11 @@
   }
 
   li p {
-    font-family: 'Roboto-regular', sans-serif;
-    font-weight: 300;
-    letter-spacing: 2px;
-    font-size: 30px;
     display: inline;
+    font-size: 25px;
+    font-family: 'Roboto-regular', sans-serif;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
   li span {
