@@ -703,7 +703,7 @@
             this.motionHover = false;
 
             document.addEventListener('mousemove', function(e) {
-              document.querySelector('.follower').style.left = (e.pageX - 200) + "px";
+              document.querySelector('.follower').style.left = (e.pageX - 170) + "px";
               document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
             });
           }

@@ -194,7 +194,7 @@
           //if desktop add follower div to follow cursor
           this.isDesktop = true;
           document.addEventListener('mousemove', function(e) {
-            document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
+            document.querySelector('.follower').style.left = (e.pageX - 170) + "px";
             document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
           });
         }
@@ -307,15 +307,15 @@
 
   .list .rows div {
     margin: 0 0 125px;
-    font-size: 30px;
+    font-size: 25px;
     color: black;
     transition: all 1s ease;
     position: relative;
     z-index: 1;
     width: fit-content;
     font-family: 'Roboto-regular', sans-serif;
-    letter-spacing: 2px;
     text-transform: uppercase;
+    letter-spacing: 2px;
   }
 
 
@@ -325,7 +325,7 @@
   }
 
   .list .rows span {
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Roboto-regular', sans-serif;
     margin-right: 15px;
     color: #000;
@@ -574,7 +574,6 @@
 
       h2 {
         margin: 0 0 90px;
-        font-size: 16px;
       }
 
     .hidden-desk {
@@ -680,6 +679,16 @@
         margin: 100px 0 200px;
       }
     }
+
+@media only screen and (min-width: 1400px) {
+      .list .rows div {
+        margin: 0 0 150px;
+      }
+
+      h1 {
+        font-size: 60px;
+      }
+}
 
 </style>
 
