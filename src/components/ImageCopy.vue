@@ -88,6 +88,7 @@
   .header {
     font-family: 'Roboto-bold', sans-serif;
     font-size: 16px;
+    font-weight: 400;
     margin: 60px 0 0;
   }
 

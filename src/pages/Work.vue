@@ -327,13 +327,13 @@
   .list .rows span {
     font-size: 16px;
     font-family: 'Roboto-regular', sans-serif;
-    margin-right: 15px;
+    margin-right: 10px;
     color: #000;
     transition: color 1s ease;
   }
 
   .list .rows p {
-    font-size: 30px;
+    font-size: 25px;
     font-family: 'Roboto-regular', sans-serif;
     letter-spacing: 2px;
     color: #000;
@@ -349,7 +349,7 @@
     }
 
     .list .rows.offset {
-      margin: 0 0 0 70px;
+      margin: 0 0 0 120px;
     }
 
     .list .rows.no-margin div {
@@ -688,6 +688,12 @@
       h1 {
         font-size: 60px;
       }
+}
+
+@media only screen and (min-width: 1145px) {
+  .list .rows p {
+    font-size: 30px;
+  }
 }
 
 </style>
