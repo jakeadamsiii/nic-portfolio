@@ -243,6 +243,7 @@
   h2 {
     font-family: 'Roboto-medium', sans-serif!important;
     font-size: 14px;
+    font-weight: 300;
     margin: 100px 0 200px;
     letter-spacing: 1px;
     text-transform: uppercase;
