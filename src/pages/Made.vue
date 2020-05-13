@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Made.com.'"
-      :categories="'UI DESIGN  |  UX DESIGN   |  PRODUCT DESIGN'"
-      :sub="'Wishlist functionality.'"
+      :title="'Made.com'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Wishlist functionality'"
       :para="'Wish List concept for Made.com to improve their on-site functionality.  As this functionality already existed in the app, I was tasked with extending this to the mobile web experience.'"
       :bg="'#fff'"
     />
@@ -45,9 +45,9 @@
     />
 
    <NextProject
-      :title="'Warehouse.'"
+      :title="'Warehouse'"
       :categories="'UI DESIGN | UX DESIGN'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/warehouse'"
     />

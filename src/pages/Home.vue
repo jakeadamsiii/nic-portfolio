@@ -546,9 +546,9 @@
       <div class="view-work">
         <div class="container">
             <div class="row  work-container">
-                <div class="col-6 hidden-sm"></div>
+                <div class="col-5 hidden-sm"></div>
                 <div class="flex2">
-                  <div class="col-2 weird">
+                  <div class="col-3 weird">
                     <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
                   </div>
                   <div class="col-3" data-aos="fade" data-aos-duration="1000">

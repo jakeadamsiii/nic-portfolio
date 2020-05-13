@@ -3,8 +3,8 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'404.'"
-      :sub="'Page not found.'"
+      :title="'404'"
+      :sub="'Page not found'"
       :para="`Click below to return to the homepage whilst I fire my developer.`"
       :error="true"
     />
@@ -80,7 +80,9 @@
       :delay= "'.8s'"
       :duration= "'1.9s'"
     />
-    <Footer />
+    <Footer 
+      :error="true"
+    />
   </main-layout>
 </template>
 
@@ -123,8 +125,8 @@
 }
 
 .main {
-  height: 100vh;
   box-sizing: border-box;
+  background: #F7F6F3;
 }
 
 .container, .row {

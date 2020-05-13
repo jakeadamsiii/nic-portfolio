@@ -1,10 +1,13 @@
 <template>
-  <div class="page-heading" :class="{hover: $props.hover}" v-bind:style="{ backgroundColor:  $props.bg }">
+  <div class="page-heading" :class="{hover: $props.hover}" >
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-4">
-            <h1 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
+          <div class="col-2">
+            <h2 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h2>
+          </div>
+          <div class="col-3 hidden-sm">
+            <div class="line" data-aos="fade" data-aos-duration="1000"></div>
           </div>
           <div class="col-5" >
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
@@ -38,7 +41,6 @@
       hover: Boolean, 
       sub: String,
       para: String,
-      bg: String,
       list: Array,
       listTwo: Array
     },
@@ -54,15 +56,22 @@
 
   .page-heading {
     width: 100%;
-    padding: 170px 0 100px;
+    padding: 80px 0 100px;
   }
 
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    font-size: 40px;
+  h2 {
     margin: 0;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+
+  .line {
+    height: 2px;
+    width: 100%;
+    background: #000;
+    margin-top: 30px;
   }
 
 
@@ -91,26 +100,16 @@
   }
 
   .list li, .list-two li  {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 20px;
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 16px;
   }
-
 
 
 @media only screen and (min-width: 768px) {
 
-  .page-heading {
-    padding: 240px 0 150px;
-    transition: background 1s ease; 
-  }
-
-  .hover.page-heading {
-    background: #D6BDAE;
-  }
-
-  h1 {
+  h2 {
     margin: 0 0 2rem;
-    font-size: 55px;
+    font-size: 50px;
   }
 
   .sub, .list {
@@ -130,9 +129,15 @@
     transition: all 1s ease;
   }
 
-  .hover .change {
-    color: #FFDBC5;
+  .list, .list-two  {
+    margin: 23px 0 0 0;
   }
+
+  .page-heading {
+    width: 100%;
+    padding: 170px 0 100px;
+  }
+
 }
 
 </style>

@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Warehouse.'"
-      :categories="'UI DESIGN  |  UX DESIGN'"
-      :sub="'Lookbook feature.'"
+      :title="'Warehouse'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Lookbook feature'"
       :para="'Online shoppable lookbook design for Warehouse AW14 Collection. The desktop design offers an easily navigated lookbook that once interacted with, splits into detailed product imagery with the ability to add products directly to bag.'"
       :bg="'#fff'"
     />
@@ -47,9 +47,9 @@
     />
 
    <NextProject
-      :title="'Rollacoaster.'"
+      :title="'Rollacoaster'"
       :categories="'PUBLICATION DESIGN | PRINT DESIGN'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/rollacoaster'"
     />

@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Topshop.'"
-      :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
-      :sub="'Website redesign.'"
+      :title="'Topshop'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Website redesign'"
       :para="'Responsive site redesign of Topshop.com, focusing on improving the experience of the shopping journey including product listing pages, product description pages, bag drawer and menus.'"
       :bg="'#fff'"
     />
@@ -83,9 +83,9 @@
     />
 
     <NextProject
-      :title="'ASOS.'"
+      :title="'ASOS'"
       :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/asos'"
     />

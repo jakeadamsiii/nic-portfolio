@@ -52,6 +52,7 @@
     cursor: url(../images/mouse.png), default;
     overflow-x: hidden;
     width: 100%;
+    background: #F7F6F3;
   }
 
 

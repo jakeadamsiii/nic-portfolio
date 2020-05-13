@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'ASOS.'"
-      :categories="'UI DESIGN  |  UX DESIGN  |  APP DESIGN  |  ICONOGRAPHY'"
-      :sub="'Augmented reality app design.'"
+      :title="'ASOS'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Augmented reality app design'"
       :para="'Augmented reality Make-up App design to co-inside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
       :bg="'#fff'"
     />
@@ -47,8 +47,8 @@
     />
 
    <NextProject
-      :title="'Made.com.'"
-      :sub="'Next project.'"
+      :title="'Made.com'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/made'"
     />

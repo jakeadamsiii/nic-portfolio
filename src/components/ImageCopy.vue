@@ -78,10 +78,10 @@
   }
 
   .text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.04em;
-    font-size: 25px;
+    line-height: 45px;
+    font-size: 40px;
+    font-family: 'spectral-light-italic', serif;
+    letter-spacing: -3px;
     margin: 40px 0 60px;
   }
 
@@ -109,6 +109,7 @@
     font-weight: 400;
     letter-spacing: unset;
     margin:0;
+    line-height: unset;
   }
 
   @media only screen and (min-width: 768px) {
@@ -169,17 +170,9 @@
       font-family: 'Roboto-regular', sans-serif;
       font-size: 12px;
       font-weight: 400;
+      line-height: unset;
     }
   }
 
-  @media only screen and (min-width: 1024px) {
-    
-
-
-    .text {
-      font-size: 35px;
-    }
-
-  }
 
 </style>

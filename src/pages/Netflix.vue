@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Netflix.'"
-      :categories="'UI DESIGN   |   UX DESIGN'"
-      :sub="'Stranger Things x Topshop.'"
+      :title="'Netflix'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Stranger Things x Topshop'"
       :para="'Responsive online hub design for a brand partnership campaign with Topshop and Netflix for the launch of Stranger Things 2. As lead designer, I worked on initial concept through to final delivery for the online presence to accompany the in-store event experience.'"
       :bg="'#fff'"
     />
@@ -38,9 +38,9 @@
      />
 
    <NextProject
-      :title="'1883 Magazine.'"
+      :title="'1883 Magazine'"
       :categories="'PUBLICATION DESIGN | PRINT DESIGN'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/1883'"
     />

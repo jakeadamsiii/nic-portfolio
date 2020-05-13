@@ -233,7 +233,7 @@
   h1 {
     font-family: 'spectral-light', serif;
     letter-spacing: -4px;
-    font-size: 60px;
+    font-size: 50px;
     margin: 55px 0 0;
     position: relative;
     z-index: 2;
@@ -242,7 +242,7 @@
 
   h2 {
     font-family: 'Roboto-medium', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     margin: 100px 0 200px;
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -574,6 +574,7 @@
 
       h2 {
         margin: 0 0 90px;
+        font-size: 16px;
       }
 
     .hidden-desk {

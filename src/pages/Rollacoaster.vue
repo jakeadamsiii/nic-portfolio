@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Rollacoaster.'"
-      :categories="'PUBLICATION DESIGN   |   PRINT DESIGN'"
-      :sub="'Magazine Issue 8.'"
+      :title="'Rollacoaster'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Magazine Issue 8'"
       :para="'Magazine layout design for Rollacoaster Issue 8.  As Art Editor I created a visual language, unique to each issue, and experimented with layouts for the magazine.'"
       :bg="'#fff'"
     />
@@ -56,9 +56,9 @@
     />
 
    <NextProject
-      :title="'Netflix.'"
+      :title="'Netflix'"
       :categories="'UI DESIGN | UX DESIGN'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/netflix'"
     />

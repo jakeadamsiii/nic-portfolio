@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer class="footer" :class="{error: $props.error}">
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
@@ -48,7 +48,9 @@
 <script>
 
   export default {
-
+     props: {
+      error: Boolean
+    }
   }
 
 </script>
@@ -59,6 +61,12 @@
   position: relative;
   z-index: 1;
   border-top: 2px solid #000;
+}
+
+.error  {
+  background: #F7F6F3;
+  position: relative;
+  z-index: 3;
 }
 
 .svg-container svg {

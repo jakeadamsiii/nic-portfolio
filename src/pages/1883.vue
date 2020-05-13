@@ -3,9 +3,9 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'1883 Magazine.'"
-      :categories="'PUBLICATION DESIGN   |   PRINT DESIGN'"
-      :sub="'Magazine editorial layout.'"
+      :title="'1883 Magazine'"
+      :categories="'App design — UX design — UI Design'"
+      :sub="'Magazine editorial layout'"
       :para="'Editorial layout design for issue 9 of the magazine.  The editorial spanned 8 pages of the magazine and I was tasked with designing the layout whilst on placement at the publication.'"
       :bg="'#fff'"
     />
@@ -43,9 +43,9 @@
     />
 
    <NextProject
-      :title="'Topshop.'"
+      :title="'Topshop'"
       :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
-      :sub="'Next project.'"
+      :sub="'Next project'"
       :bg="'#fff'"
       :link="'/topshop'"
     />

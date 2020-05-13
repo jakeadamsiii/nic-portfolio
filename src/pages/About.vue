@@ -7,17 +7,24 @@
       <div class="follower"></div>
       <div class="container" >
         <div class="row">
-            <div class="col-1 hidden-sm"></div>
-            <div class="col-4">
-              <h1 class="change" data-aos="fade" data-aos-duration="1000">About.</h1>
-            </div>
-            <div class="col-2 hidden-sm">
-              <div data-aos="fade" data-aos-duration="1000" class="line"></div>
-            </div>
-            <div class="col-4" >
-              <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" class="sub-header change">Hey, Im Nic, a senior designer with over 8 years experience designing for ecommerce brands, publication houses and design agencies.</p>
-            </div>
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-10">
+            <h1 data-aos="fade" data-aos-duration="1000">About</h1>
           </div>
+        </div>
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-20">
+            <h2 data-aos="fade" data-aos-duration="1000">My experience</h2>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-4 hidden-sm"></div>
+          <div class="col-7">
+            <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" data-aos-offset="-400" class="sub-header change">I am a <span class="upper">Senior designer</span> with over <span>eight years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -32,28 +39,40 @@
     </div>
 
     <Skills
-      :title="'Skills.'"
+      :title="'Skills'"
       :hover="hover"
       :list="['UI / UX', 'Prototyping', 'Art Direction', 'Visual Design', 'Mobile and Web Design', 'HTML / CSS']"
       :listTwo="['Product Design', 'Video Editing / Animation', 'Iconography', 'Print / Packaging Design', 'Branding', 'Typography']"
     />
 
     <ScrollList 
-      :title="'Clients.'"
+      :title="'Clients'"
       :hover="hover"
       @clientHover="clientHover" 
       :brandList="[{ name: 'Rollacoaster', href: '/rollacoaster'}, {name:'Harrods', href: ''}, {name:'Warehouse', href:'/warehouse'}, {name:'Made.com', href:'/made'}, {name:'Netflix', href:'/netflix'}, {name:'POP Magazine', href:''}, {name:'ASOS', href:'/asos'}, {name:'Selfridges', href:''}, {name:'Topshop', href:'/topshop'}, {name:'Topman', href:''}, {name:'Velour Magazine', href:''}, {name:'Ivy Park', href:''}, {name:'1883 Magazine', href:'/1883'}, { name: 'Rollacoaster', href: '/rollacoaster'}, {name:'Harrods', href: ''}, {name:'Warehouse', href:'/warehouse'}, {name:'Made.com', href:'/made'}, {name:'Netflix', href:'/netflix'}, {name:'POP Magazine', href:''}, {name:'ASOS', href:'/asos'}, {name:'Selfridges', href:''}, {name:'Topshop', href:'/topshop'}, {name:'Topman', href:''}, {name:'Velour Magazine', href:''}, {name:'Ivy Park', href:''}, {name:'1883 Magazine', href:'/1883'}]"
     />
 
     <div class="container" >
-      <div class="row  work-container">
-        <div class="col-6 hidden-sm"></div>
+      <div class="row  work-container work1" data-aos="fade" data-aos-duration="1000">
+        <div class="col-5 hidden-sm"></div>
           <div class="flex">
-          <div class="col-2">
-             <div data-aos="fade" data-aos-duration="1000" class="line line2"></div>
+          <div class="col-3">
+             <div class="line line2"></div>
           </div>
-          <div class="col-3" data-aos="fade" data-aos-duration="1000">
-            <a data-aos="fade" data-aos-duration="1000" class="work underline" href="/work" @mouseover="clientHover" @mouseleave="clientHover" ><p class="change">View my work here</p></a>
+          <div class="col-3" >
+            <a class="work underline" href="/work" ><p @mouseover.stop="clientHover" @mouseleave.stop="clientHover" class="change">View my work here</p></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="row  work-container" data-aos="fade" data-aos-duration="1000">
+        <div class="col-5 hidden-sm"></div>
+          <div class="flex">
+          <div class="col-3">
+             <div class="line line2"></div>
+          </div>
+          <div class="col-3" >
+            <a class="work underline" href="../../CV-Nicola-Roberts.pdf" target="_blank" ><p @mouseover.stop="clientHover" @mouseleave.stop="clientHover" class="change">View my cv here</p></a>
           </div>
         </div>
       </div>
@@ -100,25 +119,26 @@
 
 <style scoped>
 
-  .flex {
-    display: flex;
-  }
-
   .about {
-    background: #fff;
+    background: #F7F6F3;
     transition: background 1s ease;
   }
 
   .about.hover {
-    background: #D6BDAE;
+    background: #D5D1CD;
   }
+
+  .flex {
+    display: flex;
+  }
+
 
   .sub {
     font-family: 'Roboto-bold', sans-serif;
     font-size: 16px;
     float: left;
     width: 100%;
-    margin: 45px 0 0 ;
+    margin: 105px 0 0 ;
   }
 
   .para {
@@ -130,25 +150,55 @@
 
   .page-heading {
     width: 100%;
-    padding: 170px 0 100px;
+    padding: 90px 0 90px;
   }
 
   h1 {
-    font-family: 'Roboto-regular', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 40px;
-    margin: 0;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+    font-size: 50px;
+    margin: 55px 0 0;
+    position: relative;
+    z-index: 2;
+    font-weight: 300;
+  }
+
+  h2 {
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 14px;
+    margin: 100px 0 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   .sub-header {
-    font-family: 'Roboto-regular', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 25px;
-    float: left;
-    width: 100%;
-    margin: 60px 0 0 ;
+    position: relative;
+    line-height: 45px;
+    font-size: 40px;
+    font-family: 'spectral-light-italic', serif;
+    letter-spacing: -3px;
+    font-weight: 300;
+    text-align: right;
+    margin: 90px 0 0 ;
+  }
+
+  .sub-header:after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 100px;
+    top: calc(100% + 20px);
+    right: 0;
+    background: #000;
+  }
+
+  .sub-header span {
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+  }
+
+  .sub-header span.upper {
+    text-transform: uppercase;
   }
 
   .list, .list-two  {
@@ -166,11 +216,18 @@
   }
 
   .line {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #000;
     transition: all 1s ease;
     margin-top: 30px;
+  }
+
+  .work .change {
+    font-size: 16px;
+    font-family: 'Roboto-mediun', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   @media only screen and (min-width: 768px) {
@@ -203,47 +260,23 @@
     background-image: url('../images/me.jpg');
   }
 
-  .sub-header {
-    font-size: 35px;
-    margin: 10px 0 0 0;
-  }
-
   .hover .follower {
     opacity: 1;
-  }
-
-  .page-heading,
-  .container {
-    background: #fff;
-    transition: background 1s ease;
-  }
-
-  .hover .page-heading,
-  .hover .container {
-    background: #D6BDAE;
-  }
-
-  .change {
-    color: black;
-    transition: all 1s ease;
-  }  
-
-  .hover .change {
-    color: #FFDBC5;
-  }
-
-  .hover .line {
-    background: #FFDBC5;
-  }
+  } 
 
   .page-heading {
-    padding: 150px 0 150px;
+    padding: 90px 0 150px;
   }
 
   h1 {
-    margin: 0 0 2rem;
-    font-size: 50px;
-  }
+      margin: 60px 0 90px;
+      font-size: 50px;
+    }
+
+    h2 {
+      margin: 0 0 90px;
+      font-size: 16px;
+    }
 
   .list {
     width: 50%;
@@ -260,15 +293,7 @@
   .noFollower .follower {
     opacity: 0!important;
   }
-  
 
-  .hover .sub-header {
-    color: #000;
-  }
-
-  .work p:hover {
-    color: #000!important;
-  }
 }
 
   /* view work */
@@ -276,35 +301,30 @@
   .view-work {
     position: relative;
     z-index: 9;
-    transition: background 1s ease;
-    background: #fff;
   }
 
  .work-container {
     padding: 0 0 150px;
+  }
 
+  .work-container.work1 {
+    padding: 0 0 65px;
   }
 
   .line {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #000;
     transition: all 1s ease;
     margin-top: 30px;
   }
 
-  .hover .work p {
-    color: #FFDBC5;
-  }
-
 
   .work p{
-    font-family: 'Roboto-regular', sans-serif;
-    font-size: 25px;
-    margin: 0;
-    transition: all 1s ease;
-    text-decoration: underline;
-    letter-spacing: -0.02em;
+    font-size: 16px;
+    font-family: 'Roboto-mediun', sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
   }
 
   .work p,
@@ -313,7 +333,7 @@
   }
 
   div.line2 {
-    margin-top: 16px;
+    margin-top: 8px;
     float: left;
   }
 
@@ -331,7 +351,7 @@
       width: 0;
       bottom: -5px;
       background: #000;
-      height: 3px;
+      height: 2px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
@@ -357,9 +377,29 @@
     padding: 80px 0 220px;
   }
 
+  .work-container.work1 {
+    padding: 80px 0 0;
+  }
+
+
   .work p {
     font-size: 30px;
     text-decoration: none;
+  }
+
+  .sub-header {
+    margin: 60px 0 0 0;
+  }
+
+  .sub-header:after {
+    height: 10vh
+  }
+ }
+
+ @media only screen and (max-width: 320px) {
+  .sub-header  {
+    line-height: 40px;
+    font-size: 35px;
   }
  }
 
@@ -367,6 +407,23 @@
    .flex {
     display: block
   }
+
+  h1 {
+    margin: 60px 0 0;
+  }
+
+  h2 {
+    margin: 100px 0 0;
+  }
+
+  .sub-header {
+    font-size: 40px;
+  }
+
+  .sub-header:after {
+    height: 20vh
+  }
+
 }
 
 </style>

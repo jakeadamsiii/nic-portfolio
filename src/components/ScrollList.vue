@@ -4,7 +4,7 @@
       <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-4">
-            <h1 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
+            <h2 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h2>
           </div>
       </div>
     </div>
@@ -51,11 +51,11 @@
 
 <style scoped>
 
-  h1 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
+h2 {
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
     font-size: 40px;
+    font-weight: 300;
     margin: 0 0 70px;
   }
 
@@ -65,7 +65,7 @@
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 13))}
+	100% { transform: translateX(calc(-220px * 13))}
 }
 
 .slider {
@@ -80,38 +80,18 @@
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 26);
+  width: calc(220px * 26);
   list-style: none;
 }
 	
 .slide {
   height: 45px;
-  width: 250px;
-  font-family: 'Roboto', sans-serif;
+  width: 220px;
+  font-family: 'Roboto-medium', sans-serif;
   font-weight: 400;
-  letter-spacing: -0.02em;
-  font-size: 35px;
+  letter-spacing: 1px;
+  font-size: 20px;
   text-align: center;
-}
-
-.scroll-list {
-  background: #fff;
-  transition: background 1s ease; 
-  padding-top: 70px
-}
-
-.hover.scroll-list {
-  background: #D6BDAE;
-}
-
-.change {
-  color: #000;
-  transition: all 1s ease;
-}
-
-.hover .change {
-  color: #FFDBC5;
-
 }
 
 a.underline:hover {
@@ -131,7 +111,7 @@ a.underline:hover {
       width: 0;
       bottom: -5px;
       background: #000;
-      height: 3px;
+      height: 2px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
@@ -144,8 +124,8 @@ a.underline:hover {
       width: 100%;
     }
   @media only screen and (min-width: 768px) {
-    h1 {
-      font-size: 55px;
+    h2 {
+      font-size: 50px;
     }
 
     .scroll-list {

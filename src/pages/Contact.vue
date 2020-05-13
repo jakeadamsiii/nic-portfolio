@@ -1,15 +1,15 @@
 <template>
-  <main-layout>
+  <main-layout :class="{hover: hover}"> 
     <Nav />
-    <div class="contact-page" :class="{hover: hover}">
+    <div class="contact-page">
       <div class="container">
 
         <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-4">
-            <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact.</h1>
+          <div class="col-3">
+            <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact</h1>
           </div>
-          <div class="col-2 line-container hidden-sm">
+          <div class="col-3 line-container hidden-sm">
             <div class="line" data-aos="fade" data-aos-duration="1000"></div>
           </div>
           <div class="col-4 hidden-sm">
@@ -75,55 +75,43 @@
 
 
   .title {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 40px;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+    font-weight: 300;
+    font-size: 50px;
     margin: 150px 0 45px;
     color: #000;
-    transition: all 1s ease;
   }
 
   .line {
     width: 100%;
-    height: 3px;
-    margin: 175px 30px 20px 0;
+    height: 2px;
+    margin: 188px 30px 0px 0;
     background: #000;
-    transition: all 1s ease;
   }
 
   .address2 {
-    font-family: 'Roboto-regular', sans-serif;
-    font-size: 25px;
-    letter-spacing: -0.02em;
+    font-family: 'spectral-light', serif;
+    letter-spacing: -2px;
+    font-weight: 300;
+    font-size: 30px;
   }
 
   .text {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 16px;
     margin: 0 0 80px;
     color: #000;
     transition: all 1s ease;
   }
 
-  .subhead {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 15px;
-    margin: 0 0 40px;
-  }
-
-  .connect {
-    margin: 40px 0;
-  }
-
   .address {
-    font-family: 'Roboto', sans-serif;
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: -0.04em;
+    font-family: 'spectral-light-italic', serif;
+    letter-spacing: -2px;
+    font-weight: 300;
+    font-size: 50px;
     color: #000;
     text-decoration: none;
-    letter-spacing: -0.02em;
   }
 
   .svg-container svg {
@@ -141,28 +129,14 @@
   }
 
   .contact-page {
-    background: #fff;
-    transition: background 1s ease;
     width: 100%;
     height:100%;
   }
 
-  .hover.contact-page {
-    background: #C8C1BB;
-  }
-
-  .hover .line {
-    background: #FFDBC5;
-  }
-
-  .hover .title,
-  .hover .text {
-    color: #FFDBC5;
-  }
 
   @media only screen and (max-width: 340px) {
     .address2 {
-      font-size: 25px;
+      font-size: 30px;
     }
   }
 
@@ -172,27 +146,15 @@
     }
 
     .title {
-      font-size: 50px;
-      margin: 150px 0 60px;
+      font-size: 60px;
+      margin: 150px 0 120px;
     }
   }
 
   @media only screen and (min-width: 1024px) {
 
-    .connect {
-      margin: 0 0 40px;
-    }
-
-    .col-5 {
-      margin-bottom: 85px!important;
-    }
-
     .link-container {
-      margin: 150px 0 0;
-    }
-
-    .col-3 {
-      width: 23%;
+      margin: 165px 0 0;
     }
 
     .hidden-desk {
@@ -200,7 +162,7 @@
     }
 
     .text {
-      margin: 0 0 200px;
+      margin: 0 0 85px;
     }
 
     .address {
@@ -208,15 +170,17 @@
     }
   }
 
-  @media only screen and (min-width: 1200px) {
+</style>
 
-    .line{
-      margin: 185px 30px 20px 0;
-    }
+<style>
 
-    .address {
-      font-size: 40px;
-    }
+  .main,
+  html {
+    background: #F7F6F3;
+    transition: background 1s ease;
   }
 
+  .main.hover {
+    background: #D5D1CD;
+  }
 </style>

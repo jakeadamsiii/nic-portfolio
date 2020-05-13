@@ -7,13 +7,15 @@
             <div class="col-1 hidden-sm"></div>
             <div class="col-4">
               <h1 data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
+              <p data-aos="fade" data-aos-duration="1000" v-if="$props.categories" class="categories">{{ $props.categories }}</p>
             </div>
-            <div class="col-2 hidden-sm">
+            <div class="col-3 hidden-sm">
               <div data-aos="fade" data-aos-duration="1000" class="line"></div>
             </div>
-            <div class="col-4" >
+            <div class="col-3" >
               <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub-header">{{ $props.sub }}</p>
               <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
+              <p data-aos="fade" data-aos-duration="1000" v-if="$props.categories" class="categories2">{{ $props.categories }}</p>
               <div class="link-container" v-if="$props.error"><a class="error underline" href="/">Return Home</a></div>
             </div>
           </div>
@@ -34,6 +36,7 @@
       sub: String,
       para: String,
       error: Boolean,
+      categories: String,
       bg: String,
     },
     components: {
@@ -55,44 +58,67 @@
   }
 
   .sub-header {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 25px;
+    letter-spacing: 1px;
+    font-size: 14px;
     float: left;
     width: 100%;
-    margin: 60px 0 0 ;
+    margin: 60px 0 0;
+    text-transform: uppercase;
   }
 
   .line {
-    height: 3px;
+    height: 2px;
     width: 100%;
     background: #000;
     margin-top: 30px;
   }
 
-  h1 {
-    font-family: 'Roboto', sans-serif;
+  .categories {
+    font-family: 'Roboto-medium', sans-serif;
     font-weight: 400;
-    letter-spacing: -0.02em;
-    font-size: 40px;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    display: none;
+  }
+
+  .categories2 {
+    font-family: 'Roboto-medium', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 60px 0 0 0;
+  }
+
+  h1 {
+    font-family: 'spectral-light', serif;
+    letter-spacing: -4px;
+    font-size: 50px;
+    position: relative;
+    z-index: 2;
+    font-weight: 300;
     margin: 0;
   }
 
-  .para {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 12px;
+  .para, .error {
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 14px;
     display: inline-block;
     margin: 40px 0 0;
+    letter-spacing: 1px;
+  }
+
+  .error {
+    margin: 20px 0 0;
   }
 
   .underline {
     text-decoration: underline;
   }
 
-  .link-container {
-    margin: 40px 0 0;
-  }
 
 
 @media only screen and (min-width: 768px) {
@@ -102,8 +128,8 @@
   }
 
   .sub-header {
-    font-size: 35px;
-    margin: 10px 0 0 0;
+    font-size: 16px;
+    margin: 23px 0 0 0;
   }
 
   h1 {
@@ -112,15 +138,26 @@
   }
 
   .para {
-    margin: 20px 0 0;
+    margin: 140px 0 0;
+    font-size: 16px;
   }
 
   .error {
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .link-container {
     margin: 20px 0 150px;
+  }
+
+  .categories {
+    font-size: 16px;
+    margin: 105px 0 0;
+    display: block;
+  }
+
+  .categories2 {
+    display: none;
   }
 
 
@@ -138,7 +175,7 @@
       width: 0;
       bottom: -5px;
       background: #000;
-      height: 3px;
+      height: 2px;
       transition-property: width;
       transition-duration: 0.3s;
       transition-timing-function: ease-out;
