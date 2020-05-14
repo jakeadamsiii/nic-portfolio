@@ -138,6 +138,7 @@
   .hover .change {
     color: #FFDBC5;
   }
+
 }
 
 
@@ -145,6 +146,11 @@
 
   .para, .list-two {
     margin: 0;
+  }
+
+  .sub {
+    text-transform: initial;
+    letter-spacing: 0;
   }
 }
 
