@@ -7,7 +7,7 @@
       :categories="'App design — UX design — UI Design'"
       :sub="'Magazine editorial layout'"
       :para="'Editorial layout design for issue 9 of the magazine.  The editorial spanned 8 pages of the magazine and I was tasked with designing the layout whilst on placement at the publication.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
     
     <FullImage 
@@ -34,7 +34,7 @@
     <PageHeading 
       :sub="'Playing with white space and image sizes to create a dynamic layout.'"
       :para="'To ensure I incorporated all imagery within the editorial to the five double page spreads, including the opener and credits, I decided to use a layout with both full bleed imagery and white space.  This also allowed credits to not interact with imagery and gave the editorial a nice flow.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <FullImage 
@@ -46,7 +46,7 @@
       :title="'Topshop'"
       :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
       :sub="'Next project'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
       :link="'/topshop'"
     />
 

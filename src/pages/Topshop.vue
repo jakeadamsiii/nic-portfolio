@@ -7,7 +7,7 @@
       :categories="'App design — UX design — UI Design'"
       :sub="'Website redesign'"
       :para="'Responsive site redesign of Topshop.com, focusing on improving the experience of the shopping journey including product listing pages, product description pages, bag drawer and menus.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <FullImage 
@@ -36,7 +36,7 @@
     <PageHeading 
       :sub="'Dynamic image focused product listing pages.'"
       :para="'Image is key for topshop.com, so working with the Art Director we established a fresher feeling page by introducing more types of shots to the product photography.  Creating different experiences across devices allows a truly tailored experience for the customer.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <TwoCentredImages 
@@ -51,7 +51,7 @@
    <PageHeading 
       :sub="'Clean and simplified product description pages.'"
       :para="'Working out where best to hold content across the site I was able to simplify the product listing pages, making them purely about highlighting the product in the best possible way.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <ImageCopy 
@@ -86,7 +86,7 @@
       :title="'ASOS'"
       :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
       :sub="'Next project'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
       :link="'/asos'"
     />
 

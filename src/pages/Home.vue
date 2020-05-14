@@ -1226,7 +1226,10 @@
 
 
   @media only screen and (min-width: 768px) {
-
+    .second {
+      padding: 200px 0 0 0;
+    }
+    
     .flex {
       height: 100vh;
     }
@@ -1294,7 +1297,6 @@
 
     .experience-list.hidden-sm {
       display: block;
-      margin-top: 200px;
     }
 
     .experience-list .rows {

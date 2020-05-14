@@ -7,7 +7,7 @@
       :categories="'App design — UX design — UI Design'"
       :sub="'Wishlist functionality'"
       :para="'Wish List concept for Made.com to improve their on-site functionality.  As this functionality already existed in the app, I was tasked with extending this to the mobile web experience.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <FullImage 
@@ -27,7 +27,7 @@
     <PageHeading 
       :sub="'I created an enhanced experience for the website that made creating a wishlist useful and fun.'"
       :para="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionaility so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <ImageCopy 
@@ -48,7 +48,7 @@
       :title="'Warehouse'"
       :categories="'UI DESIGN | UX DESIGN'"
       :sub="'Next project'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
       :link="'/warehouse'"
     />
 

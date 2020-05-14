@@ -7,7 +7,7 @@
       :categories="'App design — UX design — UI Design'"
       :sub="'Magazine Issue 8'"
       :para="'Magazine layout design for Rollacoaster Issue 8.  As Art Editor I created a visual language, unique to each issue, and experimented with layouts for the magazine.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
     <TwoCentredImages 
@@ -36,7 +36,7 @@
     <PageHeading 
       :sub="'Using not only digital techniques but also expeirmenting with physical techniques gave the magazine a tactile feel.'"
       :para="'Each page was created using a range of physicla techniques, including collaging, painting, scanning, minipulating paper and photographing the results, before finally scanning them in and editing digitally.   I really enjoyed this project as it gave me the chance to push the boundries of what could be created, treating each page like a piece of art.'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
     />
 
    <TwoCentredImages 
@@ -59,7 +59,7 @@
       :title="'Netflix'"
       :categories="'UI DESIGN | UX DESIGN'"
       :sub="'Next project'"
-      :bg="'#fff'"
+      :bg="'#F7F6F3'"
       :link="'/netflix'"
     />
 

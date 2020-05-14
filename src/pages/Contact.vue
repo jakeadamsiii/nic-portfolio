@@ -6,15 +6,15 @@
 
         <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-3">
+          <div class="col-2">
             <h1 class="title" data-aos="fade" data-aos-duration="1000">Contact</h1>
           </div>
-          <div class="col-3 line-container hidden-sm">
+          <div class="col-4 line-container hidden-sm">
             <div class="line" data-aos="fade" data-aos-duration="1000"></div>
           </div>
           <div class="col-4 hidden-sm">
             <div class="link-container ">
-              <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address" @mouseover="hover=true" @mouseleave="hover=false">hello@nicroberts.co.uk</a>
+              <a data-aos="fade" data-aos-duration="1000" href="mailto:hello@nicroberts.co.uk?Subject=Let%27s%20chat" target="_blank" class="address underline" @mouseover="hover=true" @mouseleave="hover=false">hello@nicroberts.co.uk</a>
             </div>
           </div>
         </div>
@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-3">
-            <p class="text" data-aos="fade" data-aos-duration="1000">I am always interested in hearing about exciting projects so please feel free to get in touch to discuss.</p>
+            <p class="text" data-aos="fade" data-aos-duration="1000">Feel free to get in touch to discuss any upcoming projects.</p>
           </div>
         </div>
 
@@ -79,19 +79,19 @@
     letter-spacing: -4px;
     font-weight: 300;
     font-size: 50px;
-    margin: 150px 0 45px;
+    margin: 145px 0 100px;
     color: #000;
   }
 
   .line {
     width: 100%;
     height: 2px;
-    margin: 188px 30px 0px 0;
+    margin: 192px 30px 0px 0;
     background: #000;
   }
 
   .address2 {
-    font-family: 'spectral-light', serif;
+    font-family: 'spectral-light-italic', serif;
     letter-spacing: -2px;
     font-weight: 300;
     font-size: 30px;
@@ -99,9 +99,11 @@
 
   .text {
     font-family: 'Roboto-medium', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 0 80px;
     color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: all 1s ease;
   }
 
@@ -109,7 +111,7 @@
     font-family: 'spectral-light-italic', serif;
     letter-spacing: -2px;
     font-weight: 300;
-    font-size: 50px;
+    font-size: 40px;
     color: #000;
     text-decoration: none;
   }
@@ -134,6 +136,33 @@
   }
 
 
+.underline {
+      display: inline;
+      position: relative;
+      overflow: hidden;
+    }
+    .underline:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      right: 0;
+      width: 0;
+      bottom: -5px;
+      background: #000;
+      height: 2px;
+      transition-property: width;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+    .underline:hover:after,
+    .underline:focus:after,
+    .underline:active:after {
+      left: 0;
+      right: auto;
+      width: 100%;
+    }
+
+
   @media only screen and (max-width: 340px) {
     .address2 {
       font-size: 30px;
@@ -146,8 +175,7 @@
     }
 
     .title {
-      font-size: 60px;
-      margin: 150px 0 120px;
+      margin: 150px 0 100px;
     }
   }
 
@@ -164,11 +192,20 @@
     .text {
       margin: 0 0 85px;
     }
+  }
+ @media only screen and (min-width: 1400px) {
+   .title {
+    font-size: 60px;
+   }
 
     .address {
-      font-size: 35px;
+      font-size: 50px;
     }
-  }
+
+    .line {
+      margin-top: 200px;
+    }
+ }
 
 </style>
 
