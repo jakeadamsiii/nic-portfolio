@@ -49,6 +49,7 @@
 
   .image-copy {
     width: 100%;
+    margin-top: 2px;
   }
 
   .image,
@@ -78,18 +79,20 @@
   }
 
   .text {
-    line-height: 45px;
-    font-size: 40px;
-    font-family: 'spectral-light-italic', serif;
+    line-height: 40px;
+    font-size: 35px;
+    font-family: 'spectral-light', serif;
     letter-spacing: -3px;
     margin: 40px 0 60px;
   }
 
   .header {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 16px;
+    letter-spacing: 1px;
     font-weight: 400;
     margin: 60px 0 0;
+    text-transform: uppercase;
   }
 
   .text-container.alt {
@@ -145,6 +148,8 @@
 
     .text {
       margin: 0;
+      line-height: 45px;
+      font-size: 40px;
     }
 
     img {

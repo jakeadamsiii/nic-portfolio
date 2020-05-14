@@ -55,6 +55,7 @@
   .page-heading {
     width: 100%;
     padding: 170px 0 100px;
+    margin-top: 2px;
   }
 
   h1 {
