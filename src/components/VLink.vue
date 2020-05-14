@@ -56,7 +56,7 @@
   }
 
   .home-icon {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 20px;
     padding: 0;
     text-decoration: none;

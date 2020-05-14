@@ -917,7 +917,7 @@
 
   .second p {
     text-align: left;
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 14px;
     margin: 200px 0;;
   }
@@ -1229,7 +1229,7 @@
     .second {
       padding: 200px 0 0 0;
     }
-    
+
     .flex {
       height: 100vh;
     }

@@ -3,22 +3,27 @@
     <div class="container" >
       <div class="row">
           <div class="col-1 hidden-sm"></div>
-          <div class="col-4">
+          <div class="col-2">
             <h1 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h1>
           </div>
-          <div class="col-5" >
+          <div class="col-2" >
             <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
-            <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
             <ul data-aos="fade" data-aos-duration="1000" class="list" v-if="$props.list">
               <li class="change" v-for="item in $props.list" >
                 {{item}}
               </li>
             </ul>
+          </div>
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-2">
+            <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
+
             <ul data-aos="fade" data-aos-duration="1000" class="list-two" v-if="$props.list && $props.listTwo">
               <li class="change" v-for="item in $props.listTwo" >
                 {{item}}
               </li>
             </ul>
+            </div>
           </div>
         </div>
     </div>
@@ -68,8 +73,10 @@
 
 
   .sub {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto-medium', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
     float: left;
     width: 100%;
     margin: 45px 0 0 ;
@@ -92,7 +99,7 @@
   }
 
   .list li, .list-two li  {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 20px;
   }
 
@@ -115,14 +122,11 @@
   }
 
   .sub, .list {
-    width: 50%;
     margin: 0;
     float: left;
   }
 
   .para, .list-two {
-    width: 40%;
-    margin: 0;
     float: right;
   }
 
@@ -133,6 +137,14 @@
 
   .hover .change {
     color: #FFDBC5;
+  }
+}
+
+
+@media only screen and (min-width: 1024px) {
+
+  .para, .list-two {
+    margin: 0;
   }
 }
 

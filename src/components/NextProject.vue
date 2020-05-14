@@ -89,7 +89,7 @@
 
   .sub {
     margin: 0 0 25px;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .line {

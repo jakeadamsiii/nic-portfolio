@@ -77,7 +77,7 @@
   }
 
   .list li, .list-two li  {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 20px;
   }
 

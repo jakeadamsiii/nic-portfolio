@@ -61,7 +61,7 @@
     font-family: 'Roboto-medium', sans-serif;
     font-weight: 400;
     letter-spacing: 1px;
-    font-size: 14px;
+    font-size: 16px;
     float: left;
     width: 100%;
     margin: 100px 0 0;

@@ -76,7 +76,7 @@
 
 
   .sub {
-    font-family: 'Roboto-bold', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     font-size: 16px;
     float: left;
     width: 100%;

@@ -88,7 +88,7 @@
 
   .header {
     font-family: 'Roboto-medium', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     letter-spacing: 1px;
     font-weight: 400;
     margin: 60px 0 0;

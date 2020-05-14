@@ -190,7 +190,7 @@
     }
 
     .text {
-      margin: 0 0 85px;
+      margin: 0 0 185px;
     }
   }
  @media only screen and (min-width: 1400px) {
