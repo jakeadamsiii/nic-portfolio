@@ -20,8 +20,8 @@
         </div>
 
         <div class="row">
-          <div class="col-4 hidden-sm"></div>
-          <div class="col-7">
+          <div class="col-3 hidden-sm"></div>
+          <div class="col-8">
             <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" data-aos-offset="-400" class="sub-header change">I am a <span class="upper">Senior designer</span> with over <span>eight years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
           </div>
         </div>
@@ -31,8 +31,11 @@
     <div class="container" >
       <div class="row row-2">
         <div class="col-3 hidden-sm"></div>
-        <div class="col-5" data-aos="fade" data-aos-duration="1000">
+        <div class="col-2" data-aos="fade" data-aos-duration="1000">
           <p class="sub change">I have a diverse range of experience in a number of different disciplinaries including UI and UX design, print and publication design and art direction.</p>
+        </div>
+        <div class="col-1 hidden-sm"></div>
+        <div class="col-2" data-aos="fade" data-aos-duration="1000">
           <p class="para change">With my experience of designing in house for large fashion and lifestyle brands and my knowledge of ecommerce as a whole, I am greatly successful at designing effective solutions that have proved their value whilst taking into account the business needs and priorities.  I have a diverse background of experience and always excited by new and interesting projects.</p>
         </div>
       </div>
@@ -134,8 +137,8 @@
 
 
   .sub {
-    font-family: 'Roboto-bold', sans-serif;
-    font-size: 16px;
+    font-family: 'Roboto-medium', sans-serif;
+    font-size: 14px;
     float: left;
     width: 100%;
     margin: 105px 0 0 ;
@@ -169,12 +172,13 @@
     margin: 100px 0 0;
     letter-spacing: 1px;
     text-transform: uppercase;
+    font-weight: 300;
   }
 
   .sub-header {
     position: relative;
     line-height: 45px;
-    font-size: 40px;
+    font-size: 35px;
     font-family: 'spectral-light-italic', serif;
     letter-spacing: -3px;
     font-weight: 300;
@@ -186,7 +190,7 @@
     content: '';
     position: absolute;
     width: 2px;
-    height: 100px;
+    height: 130px;
     top: calc(100% + 20px);
     right: 0;
     background: #000;
@@ -225,28 +229,20 @@
 
   .work .change {
     font-size: 16px;
-    font-family: 'Roboto-mediun', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
 
   @media only screen and (min-width: 768px) {
 
-  .sub {
-    width: 50%;
-    margin: 0;
-    float: left;
-  }
-
-  .para {
-    width: 40%;
-    margin: 0;
-    float: right;
-  }
-
   .row-2 {
     padding: 80px 0 0;
   }
+
+   .sub {
+     margin: 0;
+   }
 
   .follower {
     height: 297px;
@@ -275,7 +271,6 @@
 
     h2 {
       margin: 0 0 90px;
-      font-size: 16px;
     }
 
   .list {
@@ -322,7 +317,7 @@
 
   .work p{
     font-size: 16px;
-    font-family: 'Roboto-mediun', sans-serif;
+    font-family: 'Roboto-medium', sans-serif;
     letter-spacing: 1px;
     text-transform: uppercase;
   }
@@ -424,6 +419,28 @@
     height: 20vh
   }
 
+    .sub {
+    margin: 0;
+    float: left;
+  }
+
+  .para {
+    margin: 0;
+    float: right;
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+      h1 {
+        font-size: 60px;
+      }
+
+      .sub-header {
+        font-size: 50px;
+        line-height: 60px;
+      }
 }
 
 </style>
