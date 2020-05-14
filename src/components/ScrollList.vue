@@ -65,7 +65,7 @@ h2 {
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-220px * 13))}
+	100% { transform: translateX(calc(-210px * 13))}
 }
 
 .slider {
@@ -80,19 +80,23 @@ h2 {
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(220px * 26);
+  width: calc(210px * 26);
   list-style: none;
 }
 	
 .slide {
   height: 45px;
-  width: 220px;
+  width: 210px;
   font-family: 'Roboto-medium', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 1px;
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+}
+
+.slide a {
+  font-family: 'Roboto', sans-serif!important;
 }
 
 a.underline:hover {
