@@ -50,6 +50,10 @@
     margin-top: 2px;
   }
 
+  img[src*=".jpg"] {
+    border: 2px solid #fff;
+  }
+
   .flex {
     display: flex;
     align-items: center;

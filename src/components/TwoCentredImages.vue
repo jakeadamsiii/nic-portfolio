@@ -61,6 +61,10 @@
     max-width: 90%;
   }
 
+  img[src*=".jpg"] {
+    border: 2px solid #fff;
+  }
+
   @media only screen and (min-width: 768px) {
 
 

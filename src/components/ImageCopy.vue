@@ -72,6 +72,10 @@
     max-width: 90%;
   }
 
+  img[src*=".jpg"] {
+    border: 2px solid #fff;
+  }
+
   .text-container {
     float: right;
     box-sizing: border-box;
