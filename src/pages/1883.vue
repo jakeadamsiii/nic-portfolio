@@ -4,7 +4,7 @@
 
     <ProjectHeading 
       :title="'1883 Magazine'"
-      :categories="'App design — UX design — UI Design'"
+      :categories="'Print Design - Publication design'"
       :sub="'Magazine editorial layout'"
       :para="'Editorial layout design for issue 9 of the magazine.  The editorial spanned 8 pages of the magazine and I was tasked with designing the layout whilst on placement at the publication.'"
       :bg="'#F7F6F3'"
@@ -12,13 +12,13 @@
     
     <FullImage 
       :images="ImageArray"
-      :bg="'#AB9389'"
+      :bg="'#D5D1CD'"
       :hero="true"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/18832.jpg')"
       :head="'The Approach'"
       :text="`1883's design style is very experiemental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
@@ -26,25 +26,24 @@
 
    <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#AB9389'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
      />
 
     <PageHeading 
-      :sub="'Playing with white space and image sizes to create a dynamic layout.'"
+      :sub="'Playing with white space and image sizes to create a dynamic layout'"
       :para="'To ensure I incorporated all imagery within the editorial to the five double page spreads, including the opener and credits, I decided to use a layout with both full bleed imagery and white space.  This also allowed credits to not interact with imagery and gave the editorial a nice flow.'"
       :bg="'#F7F6F3'"
     />
 
     <FullImage 
       :images="ImageArrayThree"
-      :bg="'#E2DCD4'"
+      :bg="'#D5D1CD'"
     />
 
    <NextProject
       :title="'Topshop'"
-      :categories="'UI DESIGN | UX DESIGN | VISUAL IDENTITY'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
       :link="'/topshop'"

@@ -4,7 +4,7 @@
 
     <ProjectHeading 
       :title="'Warehouse'"
-      :categories="'App design — UX design — UI Design'"
+      :categories="'UX design — UI Design'"
       :sub="'Lookbook feature'"
       :para="'Online shoppable lookbook design for Warehouse AW14 Collection. The desktop design offers an easily navigated lookbook that once interacted with, splits into detailed product imagery with the ability to add products directly to bag.'"
       :bg="'#F7F6F3'"
@@ -12,27 +12,27 @@
 
     <FullImage 
       :images="imageArray"
-      :bg="'#AB9389'"
+      :bg="'#D5D1CD'"
       :hero="true"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#B7B6BB'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/warehouse-lookbook-mob.jpg')"
       :head="'The Approach'"
       :text="'To create a easy to use, yet beautifully designed lookbook for customers to easily view and shop the latest collection from Warehouse.'"
     />
 
     <PageHeading 
-      :sub="'Introducing a new way to make imagery shoppable.'"
+      :sub="'Introducing a new way to make imagery shoppable'"
       :para="'Working with limited imagery, I came up with a solution that gave a originally static lookbook a dynamic and interactive layer.  Images could be clicked into, diving the screen into crops of the products, making them easily shoppable, even when limited with product shots.'"
       :bg="'#F7F6F3'"
     />
 
     <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#AB9389'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -40,15 +40,14 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#B7B6BB'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/warehouse-lookbook-mobiles.png')"
-      :head="'Simplified mobile journey for a more shoppable experience.'"
+      :head="'Simplified mobile journey for a more shoppable experience'"
       :text="'A simplified experience with swipable imagery and shoppable overlay gave customers a quicker route to shop imagery on a smaller screen.'"
     />
 
    <NextProject
       :title="'Rollacoaster'"
-      :categories="'PUBLICATION DESIGN | PRINT DESIGN'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
       :link="'/rollacoaster'"

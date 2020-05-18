@@ -96,6 +96,7 @@
   h1 {
     font-family: 'spectral-light', serif;
     letter-spacing: -4px;
+    line-height: 60px;
     font-size: 50px;
     position: relative;
     z-index: 2;

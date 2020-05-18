@@ -4,7 +4,7 @@
 
     <ProjectHeading 
       :title="'Rollacoaster'"
-      :categories="'App design — UX design — UI Design'"
+      :categories="'Print Design - Publication design'"
       :sub="'Magazine Issue 8'"
       :para="'Magazine layout design for Rollacoaster Issue 8.  As Art Editor I created a visual language, unique to each issue, and experimented with layouts for the magazine.'"
       :bg="'#F7F6F3'"
@@ -12,7 +12,7 @@
 
     <TwoCentredImages 
       :images="ImageArray"
-      :bg="'#D6BDAE'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
       :hero="true"
@@ -20,7 +20,7 @@
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/rollacoaster3.jpg')"
       :head="'The Approach'"
       :text="`To give the magazine a 'zine' feel I experimented with typography, materials and techniques to create interesting layouts for the magazine.`"
@@ -28,20 +28,20 @@
 
    <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#D6BDAE'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
      />
 
     <PageHeading 
-      :sub="'Using not only digital techniques but also expeirmenting with physical techniques gave the magazine a tactile feel.'"
+      :sub="'Using not only digital techniques but also expeirmenting with physical techniques gave the magazine a tactile feel'"
       :para="'Each page was created using a range of physicla techniques, including collaging, painting, scanning, minipulating paper and photographing the results, before finally scanning them in and editing digitally.   I really enjoyed this project as it gave me the chance to push the boundries of what could be created, treating each page like a piece of art.'"
       :bg="'#F7F6F3'"
     />
 
    <TwoCentredImages 
       :images="ImageArrayThree"
-      :bg="'#E2DCD4'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
      />
@@ -49,15 +49,14 @@
     <ImageCopy 
       :right="true"
       :alt="true"
-      :imageBg="'#D6BDAE'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/rollacoaster8.jpg')"
-      :head="'Bringing the final publication together.'"
+      :head="'Bringing the final publication together'"
       :text="'I assisted in the comissioning of photographers and collaborators for the magazine, ensuring they were right for the issue and it all came together cohesively.  Finally I press-passed the final print run to ensure the final result was to high standard.'"
     />
 
    <NextProject
       :title="'Netflix'"
-      :categories="'UI DESIGN | UX DESIGN'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
       :link="'/netflix'"

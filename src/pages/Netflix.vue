@@ -4,7 +4,7 @@
 
     <ProjectHeading 
       :title="'Netflix'"
-      :categories="'App design — UX design — UI Design'"
+      :categories="'UX design — UI Design'"
       :sub="'Stranger Things x Topshop'"
       :para="'Responsive online hub design for a brand partnership campaign with Topshop and Netflix for the launch of Stranger Things 2. As lead designer, I worked on initial concept through to final delivery for the online presence to accompany the in-store event experience.'"
       :bg="'#F7F6F3'"
@@ -12,34 +12,33 @@
     
     <FullImage 
       :images="ImageArray"
-      :bg="'#C8C1BB'"
+      :bg="'#D5D1CD'"
       :hero="true"
     />
 
     <ImageCopy 
       :right="false"
-      :imageBg="'#E2DCD4'"
+      :imageBg="'#D5D1CD'"
       :image="require('../images/Netflix5.jpg')"
       :head="'The Approach'"
       :text="'I wanted to create a immersive digital experience, reflective of that in the show, to enhance the shopping journey for the exclusive Stranger Things collection.'"
     />
 
     <PageHeading 
-      :sub="'Recreating the Stranger Things experience in the digital space.'"
+      :sub="'Recreating the Stranger Things experience in the digital space'"
       :para="'Users could toggle between an ‘upside down’ world where the page content and imagery would flip upside down and overaly a particle effect to mimic the atmospheric iconic scenes from the series.  Using a toggle meant that on land, it did not distrup the initial purchasing journey, but instead added a fun layer to the page should the user interact.'"
       :bg="'#F7F6F3'"
     />
 
    <TwoCentredImages 
       :images="ImageArrayTwo"
-      :bg="'#C8C1BB'"
+      :bg="'#D5D1CD'"
       :bottomLeft="false"
       :bottomRight="false"
      />
 
    <NextProject
       :title="'1883 Magazine'"
-      :categories="'PUBLICATION DESIGN | PRINT DESIGN'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
       :link="'/1883'"

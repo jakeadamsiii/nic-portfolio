@@ -121,9 +121,9 @@
       
       <div class="second">
 
-        <img src="../images/uihero.gif" class="mask ui-mask"></img>
-        <img src="../images/printhero.gif" class="mask print-mask"></img>
-        <img src="../images/publicationhero.gif" class="mask publication-mask"></img>
+        <img src="../images/product-design-hover2.gif" class="mask ui-mask"></img>
+        <img src="../images/print-hover.gif" class="mask print-mask"></img>
+        <img src="../images/branding-hover.gif" class="mask publication-mask"></img>
         <img src="../images/motion.gif" class="mask motion-mask"></img>
      
         <div class="container">
@@ -820,13 +820,13 @@
   }
 
   .follower {
-    height: 198px;
-    width: 442px;
+    height: 260px;
+    width: 340px;
     position: absolute;
     float: left;
     opacity: 0;
     z-index: 0; 
-    transition: opacity 1s ease;
+    transition: opacity 2s ease;
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -923,7 +923,7 @@
   }
 
   svg {
-    fill: #000;
+    fill: #999189;
   }
 
   .second svg {
@@ -951,7 +951,7 @@
    
     .ui .follower {
       opacity: 1;
-      background-image: url('../images/product-design-hover.png');
+      background-image: url('../images/product-design-hover2.gif');
     }
 
 
@@ -1095,14 +1095,14 @@
     /*prints*/
     .prints .follower {
       opacity: 1;
-      background-image: url('../images/print-hover-new.jpg');
+      background-image: url('../images/print-hover.gif');
     }
 
     /*publication */
 
     .publications .follower {
       opacity: 1;
-      background-image: url('../images/branding-hover.png');
+      background-image: url('../images/branding-hover.gif');
     }
 
     /*vi */
