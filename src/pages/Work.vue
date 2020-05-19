@@ -2,7 +2,13 @@
   <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, netflix: netflixHover, magazine: magazineHover}">
     <Nav />
     <div class="work" >
-    <div v-if="isDesktop" class="follower hidden-tab"></div>
+    <div v-if="isDesktop" class="follower asos hidden-tab"></div>
+    <div v-if="isDesktop" class="follower topshop hidden-tab"></div>
+    <div v-if="isDesktop" class="follower made hidden-tab"></div>
+    <div v-if="isDesktop" class="follower warehouse hidden-tab"></div>
+    <div v-if="isDesktop" class="follower rollacoaster hidden-tab"></div>
+    <div v-if="isDesktop" class="follower netflix hidden-tab"></div>
+    <div v-if="isDesktop" class="follower magazine hidden-tab"></div>
     <div class="container">
       <div class="row">
         <div class="col-1 hidden-sm"></div>
@@ -194,8 +200,20 @@
           //if desktop add follower div to follow cursor
           this.isDesktop = true;
           document.addEventListener('mousemove', function(e) {
-            document.querySelector('.follower').style.left = (e.pageX - 170) + "px";
-            document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.asos').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.asos').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.topshop').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.topshop').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.made').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.made').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.warehouse').style.left = (e.pageX - 130) + "px";
+            document.querySelector('.follower.warehouse').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.rollacoaster').style.left = (e.pageX - 150) + "px";
+            document.querySelector('.follower.rollacoaster').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.netflix').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.netflix').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.magazine').style.left = (e.pageX - 130) + "px";
+            document.querySelector('.follower.magazine').style.top = ( e.pageY + -90) + "px";
           });
         }
       }
@@ -590,10 +608,39 @@
       position: absolute;
       float: left;
       opacity: 0;
-      transition: opacity 1s ease;
+      transition: opacity .5s ease;
       background-size: contain;
       background-repeat: no-repeat;
     }
+
+    .follower.asos {
+      background-image: url('../images/ASOS-hover.png');
+    }
+
+    .follower.topshop {
+      background-image: url('../images/Topshop-hover.png');
+    }
+
+    .follower.made {
+      background-image: url('../images/Made-hover.png');
+    }
+
+    .follower.warehouse {
+      background-image: url('../images/Warehouse-hover.png');
+    }
+
+    .follower.rollacoaster {
+      background-image: url('../images/Rollacoaster-hover.png');
+    }
+
+   .follower.netflix {
+      background-image: url('../images/Netflix-hover.png');
+    }
+
+    .follower.magazine {
+      background-image: url('../images/1883-hover.png');
+    }
+
 
 
     ul {
@@ -617,29 +664,24 @@
       right: 10%;
     }
 
-    .asos .follower {
+    .asos .follower.asos {
       opacity: 1;
-      background-image: url('../images/ASOS-hover.png');
     }
 
-    .topshop .follower {
+    .topshop .follower.topshop {
       opacity: 1;
-      background-image: url('../images/Topshop-hover.png');
     }
 
-    .made .follower {
+    .made .follower.made {
       opacity: 1;
-      background-image: url('../images/Made-hover.png');
     }
 
-    .warehouse .follower {
+    .warehouse .follower.warehouse {
       opacity: 1;
-      background-image: url('../images/Warehouse-hover.png');
     }
 
-    .rollacoaster .follower {
+    .rollacoaster .follower.rollacoaster {
       opacity: 1;
-      background-image: url('../images/Rollacoaster-hover.png');
     }
 
     /*.selfridges .follower {
@@ -652,14 +694,12 @@
       background-image: url('../images/Topshop-hover.png');
     }*/
 
-    .netflix .follower {
+    .netflix .follower.netflix {
       opacity: 1;
-      background-image: url('../images/Netflix-hover.png');
     }
 
-    .magazine .follower {
+    .magazine .follower.magazine {
       opacity: 1;
-      background-image: url('../images/1883-hover.png');
     }
 
       .list .rows.last div:not(.line) {

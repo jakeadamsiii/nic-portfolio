@@ -5,7 +5,10 @@
     />
 
     <div class="home" >  
-      <div class="follower hidden-sm"></div>
+      <div class="follower ui hidden-sm"></div>
+      <div class="follower print hidden-sm"></div>
+      <div class="follower branding hidden-sm"></div>
+      <div class="follower motion hidden-sm"></div>
 
       <div class="first">
         <FallingImage 
@@ -104,7 +107,7 @@
           <div class="row">
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
-              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">Product designer</span>
+              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">Senior designer</span>
               <br /> 
               specialising in <span>creating digital experiences for</span> fashion, luxury <span>and</span> lifestyle <span>brands</span>.</h1>
             </div>
@@ -703,8 +706,14 @@
             this.motionHover = false;
 
             document.addEventListener('mousemove', function(e) {
-              document.querySelector('.follower').style.left = (e.pageX - 170) + "px";
-              document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
+              document.querySelector('.follower.ui').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.ui').style.top = ( e.pageY + -90) + "px";
+              document.querySelector('.follower.branding').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.branding').style.top = ( e.pageY + -90) + "px";
+              document.querySelector('.follower.motion').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.motion').style.top = ( e.pageY + -90) + "px";
+              document.querySelector('.follower.print').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.print').style.top = ( e.pageY + -90) + "px";
             });
           }
         }
@@ -826,10 +835,27 @@
     float: left;
     opacity: 0;
     z-index: 0; 
-    transition: opacity 2s ease;
+    transition: opacity .5s ease;
     background-size: contain;
     background-repeat: no-repeat;
   }
+
+  .follower.ui {
+    background-image: url('../images/product-design-hover2.gif');
+  }
+
+  .follower.print {
+    background-image: url('../images/print-hover.gif');
+  }
+
+  .follower.branding {
+    background-image: url('../images/branding-hover.gif');
+  }
+
+  .follower.motion {
+    background-image: url('../images/motion.gif');
+  }
+
 
   .view-work .change {
     font-size: 16px;
@@ -949,9 +975,8 @@
       transition: all 1s ease;
     }
    
-    .ui .follower {
+    .ui .follower.ui {
       opacity: 1;
-      background-image: url('../images/product-design-hover2.gif');
     }
 
 
@@ -1093,16 +1118,14 @@
     }
 
     /*prints*/
-    .prints .follower {
+    .prints .follower.print {
       opacity: 1;
-      background-image: url('../images/print-hover.gif');
     }
 
     /*publication */
 
-    .publications .follower {
+    .publications .follower.branding {
       opacity: 1;
-      background-image: url('../images/branding-hover.gif');
     }
 
     /*vi */
@@ -1118,10 +1141,9 @@
     }
 
     /* motion */
-    .motion .follower {
+    .motion .follower.motion {
       opacity: 1;
       height: 270px;
-      background-image: url('../images/motion.gif');
     }
 
     /* art direction */
