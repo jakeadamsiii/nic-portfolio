@@ -125,8 +125,8 @@
       <div class="second">
 
         <img src="../images/product-design-hover2.gif" class="mask ui-mask"></img>
-        <img src="../images/print-hover.gif" class="mask print-mask"></img>
-        <img src="../images/branding-hover.gif" class="mask publication-mask"></img>
+        <img src="../images/branding-hover.gif" class="mask print-mask"></img>
+        <img src="../images/print-hover.gif" class="mask publication-mask"></img>
         <img src="../images/motion.gif" class="mask motion-mask"></img>
      
         <div class="container">
@@ -1149,7 +1149,7 @@
     /* art direction */
 
     .coming-soon {
-      color: #000;
+      color: #999189;
       opacity: 0;
       font-size: 10px;
       font-family: 'Roboto-medium', sans-serif;
