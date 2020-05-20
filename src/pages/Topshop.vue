@@ -1,5 +1,11 @@
 <template>
-  <main-layout>
+  <div>
+  <passwordProtect
+    :blocked="block"
+    :tried="tried"
+    @enterPassword="enterPassword"
+  />
+  <main-layout v-if="allowed">
     <Nav />
 
     <ProjectHeading 
@@ -92,6 +98,7 @@
     <Footer />
 
   </main-layout>
+  </div>
 </template>
 
 <script>
@@ -104,11 +111,15 @@
   import TwoCentredImages from '../components/TwoCentredImages.vue'
   import NextProject from '../components/NextProject.vue'
   import Footer from '../components/Footer.vue'
+  import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
 
     data: function () {
       return {
+        allowed: false,
+        tried: false,
+        block: true,
           imageArray: [
           {
             src: require('../images/topshop-hero2.jpg'),
@@ -149,9 +160,26 @@
           ]
       }
     },
-
+    methods: {
+      enterPassword: function(val) {
+        if (val === "NicPortfolio") {
+          this.allowed = true;
+          this.block = false; 
+          localStorage.setItem("allowed", true);
+          location.reload();
+        } else {
+          this.tried = true;
+        }
+      }
+    },
     components: {
-      MainLayout, PageHeading, Nav, ImageCopy, FullImage, TwoCentredImages, ProjectHeading, NextProject, Footer
+      MainLayout, PageHeading, Nav, ImageCopy, FullImage, TwoCentredImages, ProjectHeading, NextProject, Footer, passwordProtect
+    },
+    mounted: function() {
+      if (localStorage.getItem("allowed") === 'true') {
+        this.allowed = true;
+        this.block = false; 
+      }
     }
   }
 </script>

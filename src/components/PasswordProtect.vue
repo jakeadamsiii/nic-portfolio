@@ -64,6 +64,7 @@
   background: #F7F6F3;
   z-index: 100;
   border-top: 2px solid #000;
+  cursor: url(../images/mouse.png), default;
 }
 
 form {
@@ -156,3 +157,10 @@ p.show {
 }
   
 </style>
+<style>
+
+body {
+  margin: 0;
+}
+</style>
+

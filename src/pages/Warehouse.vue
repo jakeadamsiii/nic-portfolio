@@ -1,5 +1,11 @@
 <template>
-  <main-layout>
+  <div>
+  <passwordProtect
+    :blocked="block"
+    :tried="tried"
+    @enterPassword="enterPassword"
+  />
+  <main-layout v-if="allowed">
     <Nav />
 
     <ProjectHeading 
@@ -56,6 +62,7 @@
     <Footer />
 
   </main-layout>
+  </div>
 </template>
 
 <script>
@@ -68,11 +75,15 @@
   import PageHeading from '../components/PageHeading.vue'
   import NextProject from '../components/NextProject.vue'
   import Footer from '../components/Footer.vue'
+  import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
 
     data: function () {
       return {
+        allowed: false,
+        tried: false,
+        block: true,
         imageArray: [
           {
             src: require('../images/warehouse-lookbook.jpg'),
@@ -91,9 +102,27 @@
         ]   
       }
     },
+    methods: {
+      enterPassword: function(val) {
+        if (val === "NicPortfolio") {
+          this.allowed = true;
+          this.block = false; 
+          localStorage.setItem("allowed", true);
+          location.reload();
+        } else {
+          this.tried = true;
+        }
+      }
+    },
 
     components: {
-      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, TwoCentredImages, NextProject, Footer
+      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, TwoCentredImages, NextProject, Footer, passwordProtect
+    },
+    mounted: function() {
+      if (localStorage.getItem("allowed") === 'true') {
+        this.allowed = true;
+        this.block = false; 
+      }
     }
   }
 </script>
