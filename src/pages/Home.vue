@@ -706,13 +706,13 @@
             this.motionHover = false;
 
             document.addEventListener('mousemove', function(e) {
-              document.querySelector('.follower.ui').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.ui').style.left = (e.pageX - 120) + "px";
               document.querySelector('.follower.ui').style.top = ( e.pageY + -90) + "px";
-              document.querySelector('.follower.branding').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.branding').style.left = (e.pageX - 120) + "px";
               document.querySelector('.follower.branding').style.top = ( e.pageY + -90) + "px";
               document.querySelector('.follower.motion').style.left = (e.pageX - 170) + "px";
               document.querySelector('.follower.motion').style.top = ( e.pageY + -90) + "px";
-              document.querySelector('.follower.print').style.left = (e.pageX - 170) + "px";
+              document.querySelector('.follower.print').style.left = (e.pageX - 120) + "px";
               document.querySelector('.follower.print').style.top = ( e.pageY + -90) + "px";
             });
           }
@@ -829,8 +829,8 @@
   }
 
   .follower {
-    height: 260px;
-    width: 340px;
+    height: 198px;
+    width: 442px;
     position: absolute;
     float: left;
     opacity: 0;
