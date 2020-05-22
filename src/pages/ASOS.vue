@@ -12,7 +12,7 @@
       :title="'ASOS'"
       :categories="'App design — UX design — UI Design'"
       :sub="'Augmented reality app design'"
-      :para="'Augmented reality Make-up App design to co-inside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
+      :para="'Augmented reality Make-up App design to coinside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
       :bg="'#F7F6F3'"
     />
 
@@ -32,7 +32,7 @@
 
     <PageHeading 
       :sub="'Simplifying the UI design, creating a well designed and easy to use interface'"
-      :para="'Icons where very important in this project, being that there had to be around 30, each had to remain clear at small sizes and feel ASOS branded.  The focus of the UI had to be the camera element, so although important the menu needed to remain understated and easy to use.'"
+      :para="'Icons were very important in this project, being that there had to be around 30, each had to remain clear at small sizes and feel ASOS branded.  The focus of the UI had to be the camera element, so although important the menu needed to remain understated and easy to use.'"
       :bg="'#F7F6F3'"
     />
 
@@ -49,7 +49,7 @@
       :head="'Saved and pre-loaded looks'"
       :text="'To enhance the shopping experience of the app, both curated content and the ability to save user generated content had to be integrated into the experience.  Pre-loaded looks and saved looks really enhance the experience to encourage users to return and always feel there is fresh content.'"
       :headTwo="'Scan products'"
-      :textTwo="'Functionality that allowed users to scan the barcode of beauty products meant the app could be integrated into the customers everyday when it came to selecting beauty products.  Users were able to try on multipul products and purchase at the tap of a button.'"
+      :textTwo="'Functionality that allowed users to scan the barcode of beauty products meant the app could be integrated into the customers everyday when it came to selecting beauty products.  Users were able to try on multiple products and purchase at the tap of a button.'"
     />
 
    <NextProject

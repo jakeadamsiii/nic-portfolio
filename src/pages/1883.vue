@@ -27,7 +27,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/18832.jpg')"
       :head="'The Approach'"
-      :text="`1883's design style is very experiemental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
+      :text="`1883's design style is very experimental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
     />
 
    <TwoCentredImages 

@@ -40,8 +40,8 @@
      />
 
     <PageHeading 
-      :sub="'Using not only digital techniques but also expeirmenting with physical techniques gave the magazine a tactile feel'"
-      :para="'Each page was created using a range of physicla techniques, including collaging, painting, scanning, minipulating paper and photographing the results, before finally scanning them in and editing digitally.   I really enjoyed this project as it gave me the chance to push the boundries of what could be created, treating each page like a piece of art.'"
+      :sub="'Using not only digital techniques but also experimenting with physical techniques gave the magazine a tactile feel'"
+      :para="'Each page was created using a range of physical techniques, including collaging, painting, scanning, manipulating paper and photographing the results, before finally scanning them in and editing digitally. I really enjoyed this project as it gave me the chance to push the boundaries of what could be created, treating each page like a piece of art.'"
       :bg="'#F7F6F3'"
     />
 
@@ -58,7 +58,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/rollacoaster8.jpg')"
       :head="'Bringing the final publication together'"
-      :text="'I assisted in the comissioning of photographers and collaborators for the magazine, ensuring they were right for the issue and it all came together cohesively.  Finally I press-passed the final print run to ensure the final result was to high standard.'"
+      :text="'I assisted in the commissioning of photographers and collaborators for the magazine, ensuring they were right for the issue and it all came together cohesively.  Finally I press-passed the final print run to ensure the final result was to high standard.'"
     />
 
    <NextProject

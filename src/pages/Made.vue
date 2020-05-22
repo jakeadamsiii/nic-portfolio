@@ -27,12 +27,12 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/made-wishlist5.png')"
       :head="'The Approach'"
-      :text="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that encourporated a basic wishlist but with enchanced features.'"
+      :text="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
     />
 
     <PageHeading 
       :sub="'I created an enhanced experience for the website that made creating a wishlist useful and fun'"
-      :para="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionaility so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'"
+      :para="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'"
       :bg="'#F7F6F3'"
     />
 
@@ -41,7 +41,7 @@
       :alt="true"
       :imageBg="'#D5D1CD'"
       :image="require('../images/made-wishlist6.png')"
-      :head="'Exploring augumented reality'"
+      :head="'Exploring augmented reality'"
       :text="'Giving users the ability to place products into their rooms using their phone camera. The mobile web application meant that users were not forced to download an app to easily interact with products on Made.com, with the goal of driving conversion through increased confidence and knowledge that the product would be right for them.'"
     />
 

@@ -27,12 +27,12 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/Netflix5.jpg')"
       :head="'The Approach'"
-      :text="'I wanted to create a immersive digital experience, reflective of that in the show, to enhance the shopping journey for the exclusive Stranger Things collection.'"
+      :text="'I wanted to create an immersive digital experience, reflective of that in the show, to enhance the shopping journey for the exclusive Stranger Things collection.'"
     />
 
     <PageHeading 
       :sub="'Recreating the Stranger Things experience in the digital space'"
-      :para="'Users could toggle between an ‘upside down’ world where the page content and imagery would flip upside down and overaly a particle effect to mimic the atmospheric iconic scenes from the series.  Using a toggle meant that on land, it did not distrup the initial purchasing journey, but instead added a fun layer to the page should the user interact.'"
+      :para="'Users could toggle between an ‘upside down’ world where the page content and imagery would flip upside down and overlay a particle effect to mimic the atmospheric iconic scenes from the series. Using a toggle meant that on land, it did not disrupt the initial purchasing journey, but instead added a fun layer to the page should the user interact.'"
       :bg="'#F7F6F3'"
     />
 

@@ -12,7 +12,7 @@
       :title="'Warehouse'"
       :categories="'UX design — UI Design'"
       :sub="'Lookbook feature'"
-      :para="'Online shoppable lookbook design for Warehouse AW14 Collection. The desktop design offers an easily navigated lookbook that once interacted with, splits into detailed product imagery with the ability to add products directly to bag.'"
+      :para="'Online shoppable lookbook design for Warehouse AW14 Collection. The desktop design offers an easily navigated lookbook that once interacted with, splits into detailed product imagery with the ability to add products directly to the bag.'"
       :bg="'#F7F6F3'"
     />
 
@@ -27,7 +27,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/warehouse-lookbook-mob.jpg')"
       :head="'The Approach'"
-      :text="'To create a easy to use, yet beautifully designed lookbook for customers to easily view and shop the latest collection from Warehouse.'"
+      :text="'To create an easy to use, yet beautifully designed lookbook for customers to easily view and shop the latest collection from Warehouse.'"
     />
 
     <PageHeading 
@@ -49,7 +49,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/warehouse-lookbook-mobiles.png')"
       :head="'Simplified mobile journey for a more shoppable experience'"
-      :text="'A simplified experience with swipable imagery and shoppable overlay gave customers a quicker route to shop imagery on a smaller screen.'"
+      :text="'A simplified experience with swipeable imagery and shoppable overlay gave customers a quicker route to shop imagery on a smaller screen.'"
     />
 
    <NextProject
@@ -93,7 +93,7 @@
         ImageArrayTwo: [
           {
             src: require('../images/warehouse-lookbook-2.jpg'),
-            alt: "Warehouse lookbook"
+            alt: "Warehouse lookbook"x
           },
           {
             src: require('../images/warehouse-lookbook-3.jpg'),
