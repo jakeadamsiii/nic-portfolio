@@ -202,7 +202,7 @@
           document.addEventListener('mousemove', function(e) {
             document.querySelector('.follower.asos').style.left = (e.pageX - 100) + "px";
             document.querySelector('.follower.asos').style.top = ( e.pageY + -90) + "px";
-            document.querySelector('.follower.topshop').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.topshop').style.left = (e.pageX - 110) + "px";
             document.querySelector('.follower.topshop').style.top = ( e.pageY + -90) + "px";
             document.querySelector('.follower.made').style.left = (e.pageX - 100) + "px";
             document.querySelector('.follower.made').style.top = ( e.pageY + -90) + "px";
@@ -603,8 +603,8 @@
     }
 
     .follower {
-      height: 198px;
-      width: 442px;
+      height: 231px;
+      width: 315px;
       position: absolute;
       float: left;
       opacity: 0;
