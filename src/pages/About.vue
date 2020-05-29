@@ -75,7 +75,7 @@
              <div class="line line2"></div>
           </div>
           <div class="col-3" >
-            <a class="work underline" href="../../CV-Nicola-Roberts.pdf" target="_blank" ><p @mouseover.stop="clientHover" @mouseleave.stop="clientHover" class="change">View my cv here</p></a>
+            <a class="work underline" href="../../CV-Nic-Roberts.pdf" target="_blank" ><p @mouseover.stop="clientHover" @mouseleave.stop="clientHover" class="change">View my cv here</p></a>
           </div>
         </div>
       </div>

@@ -93,7 +93,7 @@
         ImageArrayTwo: [
           {
             src: require('../images/warehouse-lookbook-2.jpg'),
-            alt: "Warehouse lookbook"x
+            alt: "Warehouse lookbook"
           },
           {
             src: require('../images/warehouse-lookbook-3.jpg'),

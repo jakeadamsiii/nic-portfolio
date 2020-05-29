@@ -984,8 +984,8 @@
 
     svg {
       display: block;
-      height: 38px;
-      width: 38px;
+      height: 25px;
+      width: 25px;
       opacity: 0;
       position: absolute;
       z-index: -1;
