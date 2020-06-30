@@ -53,10 +53,10 @@
     />
 
    <NextProject
-      :title="'Made.com'"
+      :title="'Harrods'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
-      :link="'/made'"
+      :link="'/harrods'"
     />
 
     

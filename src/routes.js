@@ -9,5 +9,9 @@ export default {
   '/made': 'Made',
   '/rollacoaster': 'Rollacoaster',
   '/1883': '1883',
-  '/netflix': 'Netflix'
+  '/netflix': 'Netflix',
+  '/harrods': 'Harrods',
+  '/selfridges': 'Selfridges',
+  '/makers50': 'Makers50',
+  '/sushito': 'Sushito'
 }

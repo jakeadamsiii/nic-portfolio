@@ -1,5 +1,5 @@
 <template>
-  <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, netflix: netflixHover, magazine: magazineHover}">
+  <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, sushito: sushitoHover, makers: makersHover, netflix: netflixHover, magazine: magazineHover}">
     <Nav />
     <div class="work" >
     <div v-if="isDesktop" class="follower asos hidden-tab"></div>
@@ -9,6 +9,10 @@
     <div v-if="isDesktop" class="follower rollacoaster hidden-tab"></div>
     <div v-if="isDesktop" class="follower netflix hidden-tab"></div>
     <div v-if="isDesktop" class="follower magazine hidden-tab"></div>
+    <div v-if="isDesktop" class="follower harrods hidden-tab"></div>
+    <div v-if="isDesktop" class="follower selfridges hidden-tab"></div>
+    <div v-if="isDesktop" class="follower sushito hidden-tab"></div>
+    <div v-if="isDesktop" class="follower makers hidden-tab"></div>
     <div class="container">
       <div class="row">
         <div class="col-1 hidden-sm"></div>
@@ -28,11 +32,15 @@
            <ul class="this hidden-desk" data-aos="fade" data-aos-duration="1000">
             <li id="topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></li>
             <li id="asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></li>
-            <li id="made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></li>
-            <li id="warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></li>
-            <li id="rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></li>
-            <li id="netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
-            <li id="magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
+            <li id="harrods"><span>03.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p></a></li>
+            <li id="made"><span>04.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></li>
+            <li id="warehouse"><span>05.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></li>
+            <li id="rollacoaster" ><span>06.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></li>
+            <li id="netflix"><span>07.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
+            <li id="magazine"><span>08.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
+            <li id="selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></li>
+            <li id="sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></li>
+            <li id="makers"><span>11.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></li>
           </ul> 
 
           <div class="list hidden" data-aos="fade" data-aos-duration="1000">
@@ -42,28 +50,43 @@
               <div class="div-asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></div>
             </div>
             <div class="rows offset">
-              <div class="div-made"><span>03.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></div>
+              <div class="div-harrods"><span>03.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">harrods</p></a></div>
               <div class="line"></div>
-              <div class="div-warehouse"><span>04.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></div>
+              <div class="div-made"><span>04.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></div>
             </div>
             <div class="rows">
-              <div class="div-rollacoaster" ><span>05.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></div>
+              <div class="div-warehouse"><span>05.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></div>
               <div class="line"></div>
-              <div class="div-netflix"><span>06.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></div>
+              <div class="div-rollacoaster" ><span>06.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></div>
+            </div>
+            <div class="rows offset">
+              <div class="div-netflix"><span>07.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></div>
+              <div class="line"></div>
+              <div class="div-magazine"><span>08.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></div>
+            </div>
+            <div class="rows">
+              <div class="div-selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></div>
+              <div class="line"></div>
+              <div class="div-sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></div>
             </div>
             <div class="rows offset last">
-              <div class="div-magazine"><span>07.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></div>
+              <div class="div-makers"><span>09.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></div>
               <div class="line"></div>
+             
             </div>
           </div> 
 
           <img class="mobile-image hidden-desk imageasos" src="../images/ASOS-hover.png" alt="example of asos work">
           <img class="mobile-image hidden-desk imagetopshop" src="../images/Topshop-hover.png" alt="example of topshop work">
+          <img class="mobile-image hidden-desk imageharrods" src="../images/Harrods-hover.png" alt="example of harrods work">
           <img class="mobile-image hidden-desk imagemade" src="../images/Made-hover.png" alt="example of made work">
           <img class="mobile-image hidden-desk imagewarehouse" src="../images/Warehouse-hover.png" alt="example of warehouse work">
           <img class="mobile-image hidden-desk imagerollacoaster" src="../images/Rollacoaster-hover.png" alt="example of rollacoaster work">
           <img class="mobile-image hidden-desk imagenetflix" src="../images/Netflix-hover.png" alt="example of netflix work">
           <img class="mobile-image hidden-desk imagemagazine" src="../images/1883-hover.png" alt="example of 1883 magazine work">
+          <img class="mobile-image hidden-desk imageselfridges" src="../images/Selfridges-hover.png" alt="example of selfridges work">
+          <img class="mobile-image hidden-desk imagesushito" src="../images/Sushito-hover.png" alt="example of sushito work">
+          <img class="mobile-image hidden-desk imagemakers" src="../images/Makers-hover.png" alt="example of makers work">
 
         </div>
       </div>
@@ -87,6 +110,8 @@
         warehouseHover: false,
         rollacoasterHover: false,
         selfridgesHover: false,
+        makersHover: false,
+        sushitoHover: false,
         harrodsHover: false,
         netflixHover: false,
         magazineHover: false,
@@ -102,11 +127,15 @@
          
           var asosY = document.querySelector('#asos').getBoundingClientRect().top;
           var topshopY = document.querySelector('#topshop').getBoundingClientRect().top;
+          var harrodsY = document.querySelector('#harrods').getBoundingClientRect().top;
           var madeY = document.querySelector('#made').getBoundingClientRect().top;
           var warehouseY = document.querySelector('#warehouse').getBoundingClientRect().top;
           var rollacoasterY = document.querySelector('#rollacoaster').getBoundingClientRect().top;
           var netflixY = document.querySelector('#netflix').getBoundingClientRect().top;
           var magazineY = document.querySelector('#magazine').getBoundingClientRect().top;
+          var selfridgesY = document.querySelector('#selfridges').getBoundingClientRect().top;
+          var sushitoY = document.querySelector('#sushito').getBoundingClientRect().top;
+          var makersY = document.querySelector('#makers').getBoundingClientRect().top;
 
           switch (true) {
             case topshopY <= 400 && topshopY > 0:
@@ -117,6 +146,10 @@
                 this.rollacoasterHover = false;
                 this.netflixHover = false;
                 this.magazineHover = false;
+                this.harrodsHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
               break;
             case asosY <= 800 && asosY > 0:
                 
@@ -127,6 +160,24 @@
                 this.rollacoasterHover = false;
                 this.netflixHover = false;
                 this.magazineHover = false;
+                this.harrodsHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
+              break;
+            case harrodsY <= 800 && harrodsY > 0:
+                
+                this.harrodsHover = true;
+                this.asosHover = false;
+                this.topshopHover = false;
+                this.madeHover = false;
+                this.warehouseHover = false;
+                this.rollacoasterHover = false;
+                this.netflixHover = false;
+                this.magazineHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
               break;
             case madeY <= 800 && madeY > 0:    
                 this.asosHover = false;
@@ -136,6 +187,10 @@
                 this.rollacoasterHover = false;
                 this.netflixHover = false;
                 this.magazineHover = false;
+                this.harrodsHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
               break;
             case warehouseY <= 800 && warehouseY > 0:
                 this.asosHover = false;
@@ -145,6 +200,9 @@
                 this.rollacoasterHover = false;
                 this.netflixHover = false;
                 this.magazineHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
                 
               break;
             case rollacoasterY <= 800 && rollacoasterY > 0:
@@ -155,6 +213,10 @@
                 this.rollacoasterHover = true;
                 this.netflixHover = false;
                 this.magazineHover = false;
+                this.harrodsHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
                 
               break;
             case netflixY <= 800 && netflixY > 0:
@@ -165,6 +227,10 @@
                 this.rollacoasterHover = false;
                 this.netflixHover = true;
                 this.magazineHover = false;
+                this.harrodsHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
 
               break;
             case magazineY <= 800 && magazineY > 0:
@@ -174,7 +240,55 @@
                 this.warehouseHover = false;
                 this.rollacoasterHover = false;
                 this.netflixHover = false;
+                this.harrodsHover = false;
                 this.magazineHover = true;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
+
+              break;
+            case selfridgesY <= 800 && selfridgesY > 0:
+                this.asosHover = false;
+                this.topshopHover = false;
+                this.madeHover = false;
+                this.warehouseHover = false;
+                this.rollacoasterHover = false;
+                this.netflixHover = false;
+                this.harrodsHover = false;
+                this.magazineHover = false;
+                this.selfridgesHover = true;
+                this.sushitoHover = false;
+                this.makersHover = false;
+
+              break;
+
+            case sushitoY <= 800 && sushitoY > 0:
+                this.asosHover = false;
+                this.topshopHover = false;
+                this.madeHover = false;
+                this.warehouseHover = false;
+                this.rollacoasterHover = false;
+                this.netflixHover = false;
+                this.harrodsHover = false;
+                this.magazineHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = true;
+                this.makersHover = false;
+
+              break;
+
+            case makersY <= 800 && makersY > 0:
+                this.asosHover = false;
+                this.topshopHover = false;
+                this.madeHover = false;
+                this.warehouseHover = false;
+                this.rollacoasterHover = false;
+                this.netflixHover = false;
+                this.harrodsHover = false;
+                this.magazineHover = false;
+                this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = true;
 
               break;
             default:
@@ -185,6 +299,10 @@
               this.rollacoasterHover = false;
               this.netflixHover = false;
               this.magazineHover = false;
+              this.harrodsHover = false;
+              this.selfridgesHover = false;
+                this.sushitoHover = false;
+                this.makersHover = false;
           }
 
         },
@@ -204,6 +322,8 @@
             document.querySelector('.follower.asos').style.top = ( e.pageY + -90) + "px";
             document.querySelector('.follower.topshop').style.left = (e.pageX - 110) + "px";
             document.querySelector('.follower.topshop').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.harrods').style.left = (e.pageX - 100) + "px";
+            document.querySelector('.follower.harrods').style.top = ( e.pageY + -90) + "px";
             document.querySelector('.follower.made').style.left = (e.pageX - 100) + "px";
             document.querySelector('.follower.made').style.top = ( e.pageY + -90) + "px";
             document.querySelector('.follower.warehouse').style.left = (e.pageX - 130) + "px";
@@ -214,6 +334,12 @@
             document.querySelector('.follower.netflix').style.top = ( e.pageY + -90) + "px";
             document.querySelector('.follower.magazine').style.left = (e.pageX - 130) + "px";
             document.querySelector('.follower.magazine').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.selfridges').style.left = (e.pageX - 130) + "px";
+            document.querySelector('.follower.selfridges').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.sushito').style.left = (e.pageX - 130) + "px";
+            document.querySelector('.follower.sushito').style.top = ( e.pageY + -90) + "px";
+            document.querySelector('.follower.makers').style.left = (e.pageX - 130) + "px";
+            document.querySelector('.follower.makers').style.top = ( e.pageY + -90) + "px";
           });
         }
       }
@@ -388,6 +514,10 @@
     opacity: 1;
   }
 
+  .harrods .imageharrods {
+    opacity: 1;
+  }
+
   .made .imagemade {
     opacity: 1;
   }
@@ -413,6 +543,16 @@
   }
 
   .magazine .imagemagazine {
+    opacity: 1;
+  }
+
+    .selfridges .imageselfridges {
+    opacity: 1;
+  }
+    .sushito .imagesushito {
+    opacity: 1;
+  }
+    .makers .imagemakers {
     opacity: 1;
   }
 
@@ -458,7 +598,22 @@
     color: #000;
   }
 
-  .made .list .line {
+  .harrods .list .line {
+    background: #000;
+  }
+
+  .harrods.work {
+    background-color: #B7B6BB;
+  }
+
+  .harrods .list .rows div:not(.div-harrods) span,
+  .harrods .list .rows div:not(.div-harrods) p,
+  .harrods .this li:not(#harrods) span,
+  .harrods .this li:not(#harrods) p {
+    color: #000;
+  }
+
+  .harrods .list .line {
     background: #000;
   }
 
@@ -530,6 +685,51 @@
     background-color: #AB9389;
   }
 
+  .selfridges .list .rows div:not(.div-selfridges) span,
+  .selfridges .list .rows div:not(.div-selfridges) p,
+  .selfridges .this li:not(#selfridges) span,
+  .selfridges .this li:not(#selfridges) p {
+    color: #000;
+  }
+
+  .selfridges .list .line {
+    background: #000;
+  }
+
+  .selfridges.work {
+    background-color: #AB9389;
+  }
+
+  .sushito .list .rows div:not(.div-sushito) span,
+  .sushito .list .rows div:not(.div-sushito) p,
+  .sushito .this li:not(#sushito) span,
+  .sushito .this li:not(#sushito) p {
+    color: #000;
+  }
+
+  .sushito .list .line {
+    background: #000;
+  }
+
+  .sushito.work {
+    background-color: #AB9389;
+  }
+
+  .makers .list .rows div:not(.div-makers) span,
+  .makers .list .rows div:not(.div-makers) p,
+  .makers .this li:not(#makers) span,
+  .makers .this li:not(#makers) p {
+    color: #000;
+  }
+
+  .makers .list .line {
+    background: #000;
+  }
+
+  .makers.work {
+    background-color: #AB9389;
+  }
+
   .underline {
       display: inline;
       position: relative;
@@ -554,10 +754,14 @@
     .topshop #topshop .underline:after,
     .asos #asos .underline:after,
     .made #made .underline:after,
+    .harrods #harrods .underline:after,
     .warehouse #warehouse .underline:after,
     .netflix #netflix .underline:after,
     .rollacoaster #rollacoaster .underline:after,
-    .magazine #magazine .underline:after {
+    .magazine #magazine .underline:after,
+    .selfridges #selfridges .underline:after,
+    .sushito #sushito .underline:after,
+    .makers #makers .underline:after {
       left: 0;
       right: auto;
       width: 100%;
@@ -621,6 +825,10 @@
       background-image: url('../images/Topshop-hover.png');
     }
 
+    .follower.harrods {
+      background-image: url('../images/Harrods-hover.png');
+    }
+
     .follower.made {
       background-image: url('../images/Made-hover.png');
     }
@@ -639,6 +847,18 @@
 
     .follower.magazine {
       background-image: url('../images/1883-hover.png');
+    }
+
+    .follower.selfridges {
+      background-image: url('../images/Selfridges-hover.png');
+    }
+
+    .follower.sushito {
+      background-image: url('../images/Sushito-hover.png');
+    }
+
+    .follower.makers {
+      background-image: url('../images/Makers-hover.png');
     }
 
 
@@ -676,6 +896,10 @@
       opacity: 1;
     }
 
+    .harrods .follower.harrods {
+      opacity: 1;
+    }
+
     .warehouse .follower.warehouse {
       opacity: 1;
     }
@@ -684,21 +908,23 @@
       opacity: 1;
     }
 
-    /*.selfridges .follower {
-      opacity: 1;
-      background-image: url('../images/Topshop-hover.png');
-    }
-
-    .harrods .follower {
-      opacity: 1;
-      background-image: url('../images/Topshop-hover.png');
-    }*/
-
     .netflix .follower.netflix {
       opacity: 1;
     }
 
     .magazine .follower.magazine {
+      opacity: 1;
+    }
+
+    .selfridges .follower.selfridges {
+      opacity: 1;
+    }
+
+    .sushito .follower.sushito {
+      opacity: 1;
+    }
+
+    .makers .follower.makers {
       opacity: 1;
     }
 
@@ -747,9 +973,13 @@
   .main.asos,
   .main.topshop,
   .main.made,
+  .main.harrods,
   .main.netflix,
   .main.magazine,
   .main.warehouse,
+  .main.selfridges,
+  .main.sushito,
+  .main.makers,
   .main.rollacoaster {
     background: #D5D1CD;
   }
