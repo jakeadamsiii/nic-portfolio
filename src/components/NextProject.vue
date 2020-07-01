@@ -47,7 +47,7 @@
 
   h2 {
     font-family: 'spectral-light', serif;
-    letter-spacing: -4px;
+    letter-spacing: -2px;
     font-size: 30px;
     font-weight: 300;
     margin: 0 0 20px 0;
@@ -136,6 +136,7 @@
   h2 {
     margin: 0;
     font-size: 50px;
+    letter-spacing: -4px;
   }
 
   .line {

@@ -10,9 +10,9 @@
 
     <ProjectHeading 
       :title="'Makers 50'"
-      :categories="'UX Design - UI Design'"
-      :sub="'Website Design'"
-      :para="'Editorial layout design for issue 9 of the magazine.  The editorial spanned 8 pages of the magazine and I was tasked with designing the layout whilst on placement at the publication.'"
+      :categories="'UX Design - UI Design - Branding'"
+      :sub="'Branding Concept'"
+      :para="'Branding and website concept for a ceramic earthenware ecommerce company that creates limited runs of 50 pieces per design.'"
       :bg="'#F7F6F3'"
     />
     
@@ -27,7 +27,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/makers5.jpg')"
       :head="'The Approach'"
-      :text="`1883's design style is very experimental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
+      :text="`A bold, luxury website design with strong brand identity to highlight its unique limited run appeal.`"
     />
 
    <FullImage 
@@ -37,8 +37,8 @@
     />
 
     <PageHeading 
-      :sub="'Playing with white space and image sizes to create a dynamic layout'"
-      :para="'To ensure I incorporated all imagery within the editorial to the five double page spreads, including the opener and credits, I decided to use a layout with both full bleed imagery and white space.  This also allowed credits to not interact with imagery and gave the editorial a nice flow.'"
+      :sub="'Bold black and white structured layout and strong typography complemented the product imagery and gave a boutique, scandinavian feel.'"
+      :para="'Product pages, listing pages and menus were designed clean, simple and bold, with typographic counters to denote the exclusivity of the unique product offering.'"
       :bg="'#F7F6F3'"
     />
 

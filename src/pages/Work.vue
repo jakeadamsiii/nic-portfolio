@@ -39,8 +39,8 @@
             <li id="netflix"><span>07.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
             <li id="magazine"><span>08.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
             <li id="selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></li>
-            <li id="sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></li>
             <li id="makers"><span>11.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></li>
+            <!--<li id="sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></li>-->
           </ul> 
 
           <div class="list hidden" data-aos="fade" data-aos-duration="1000">
@@ -67,13 +67,13 @@
             <div class="rows">
               <div class="div-selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></div>
               <div class="line"></div>
-              <div class="div-sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></div>
-            </div>
-            <div class="rows offset last">
               <div class="div-makers"><span>09.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></div>
+            </div>
+            <!--<div class="rows offset last">
+              <div class="div-sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></div>
               <div class="line"></div>
              
-            </div>
+            </div>-->
           </div> 
 
           <img class="mobile-image hidden-desk imageasos" src="../images/ASOS-hover.png" alt="example of asos work">
@@ -134,7 +134,7 @@
           var netflixY = document.querySelector('#netflix').getBoundingClientRect().top;
           var magazineY = document.querySelector('#magazine').getBoundingClientRect().top;
           var selfridgesY = document.querySelector('#selfridges').getBoundingClientRect().top;
-          var sushitoY = document.querySelector('#sushito').getBoundingClientRect().top;
+          //var sushitoY = document.querySelector('#sushito').getBoundingClientRect().top;
           var makersY = document.querySelector('#makers').getBoundingClientRect().top;
 
           switch (true) {
@@ -262,20 +262,20 @@
 
               break;
 
-            case sushitoY <= 800 && sushitoY > 0:
-                this.asosHover = false;
-                this.topshopHover = false;
-                this.madeHover = false;
-                this.warehouseHover = false;
-                this.rollacoasterHover = false;
-                this.netflixHover = false;
-                this.harrodsHover = false;
-                this.magazineHover = false;
-                this.selfridgesHover = false;
-                this.sushitoHover = true;
-                this.makersHover = false;
+            // case sushitoY <= 800 && sushitoY > 0:
+            //     this.asosHover = false;
+            //     this.topshopHover = false;
+            //     this.madeHover = false;
+            //     this.warehouseHover = false;
+            //     this.rollacoasterHover = false;
+            //     this.netflixHover = false;
+            //     this.harrodsHover = false;
+            //     this.magazineHover = false;
+            //     this.selfridgesHover = false;
+            //     this.sushitoHover = true;
+            //     this.makersHover = false;
 
-              break;
+            //   break;
 
             case makersY <= 800 && makersY > 0:
                 this.asosHover = false;
@@ -958,7 +958,7 @@
 
 @media only screen and (min-width: 1145px) {
   .list .rows p {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 

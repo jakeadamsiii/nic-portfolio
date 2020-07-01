@@ -1238,7 +1238,7 @@
       height: 40px;
       width: 210px;
       text-align: center;
-      font-size: 30px;
+      font-size: 25px;
       color: white;
     }
 
@@ -1299,7 +1299,7 @@
 
     .experience-list li {
       margin: 0 0 20px;
-      font-size: 30px;
+      font-size: 25px;
     }
 
     .experience-list .line {
@@ -1401,7 +1401,7 @@
 
   @media only screen and (max-height: 640px) and (min-width: 768px) {
     .first p {
-      font-size: 30px;
+      font-size: 25px;
     }
   }
 
@@ -1495,7 +1495,7 @@
   }
 
   .work p {
-    font-size: 30px;
+    font-size: 25px;
     text-decoration: none;
   }
 
@@ -1542,7 +1542,7 @@
 
 @media only screen and (min-width: 1145px) {
   .experience-list .rows div {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 
