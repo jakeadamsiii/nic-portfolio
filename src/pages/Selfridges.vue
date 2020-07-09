@@ -12,7 +12,7 @@
       :title="'Selfridges'"
       :categories="'UX Design - UI Design'"
       :sub="'Daniel Arsham Corner Shop'"
-      :para="'Editorial layout design for issue 9 of the magazine.  The editorial spanned 8 pages of the magazine and I was tasked with designing the layout whilst on placement at the publication.'"
+      :para="'Shoppable online destination for Daniel Arsham for the Selfridges Corner Shop, a boutique in-store space for new product launches and brand collaborations.'"
       :bg="'#F7F6F3'"
     />
     
@@ -30,7 +30,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/selfridges3.jpg')"
       :head="'The Approach'"
-      :text="`1883's design style is very experimental, so I approached this layout with this in mind, but also to showcase the imagery as best as possible.`"
+      :text="`To create a digital experience for the in-store boutique that allowed users to digitally navigate through the house of Daniel Arsham, including in-store blueprints, artworks and products.`"
     />
 
    <TwoCentredImages 
@@ -43,8 +43,8 @@
      />
 
     <PageHeading 
-      :sub="'Playing with white space and image sizes to create a dynamic layout'"
-      :para="'To ensure I incorporated all imagery within the editorial to the five double page spreads, including the opener and credits, I decided to use a layout with both full bleed imagery and white space.  This also allowed credits to not interact with imagery and gave the editorial a nice flow.'"
+      :sub="'I created a dynamic layout that not only incorporated Daniel Arsham’s strong brand identity, but also showcased the full in-store experience.'"
+      :para="'Using a blueprint from the store experience, I was able to break the page up into the rooms, making it easy for the user to navigate the page, whilst also being able to experience the boutique without actually being there.  This made the page not only shoppable but also showcased the artists unique sculptures.'"
       :bg="'#F7F6F3'"
     />
 

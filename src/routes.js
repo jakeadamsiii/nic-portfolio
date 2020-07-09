@@ -12,6 +12,5 @@ export default {
   '/netflix': 'Netflix',
   '/harrods': 'Harrods',
   '/selfridges': 'Selfridges',
-  '/makers50': 'Makers50',
-  '/sushito': 'Sushito'
+  '/makers50': 'Makers50'
 }

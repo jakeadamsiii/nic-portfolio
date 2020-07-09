@@ -11,8 +11,8 @@
     <ProjectHeading 
       :title="'Harrods'"
       :categories="'UX design — UI Design'"
-      :sub="'Saint Laurent Brand Activation'"
-      :para="'Responsive online hub design for a brand partnership campaign with Topshop and Netflix for the launch of Stranger Things 2. As lead designer, I worked on initial concept through to final delivery for the online presence to accompany the in-store event experience.'"
+      :sub="'Brand Activation'"
+      :para="'Following a full side redesign, where I worked alongside a branding agency to redefine the Harrods.com online experience, I was tasked with translating these concepts to commercially driving pages for brands such as Saint Laurent, Gucci and Burberry. '"
       :bg="'#F7F6F3'"
     />
     
@@ -27,12 +27,12 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/harrods5.jpg')"
       :head="'The Approach'"
-      :text="'I wanted to create an immersive digital experience, reflective of that in the show, to enhance the shopping journey for the exclusive Stranger Things collection.'"
+      :text="'To seamlessly integrate brands into the new identity of harrods.com whilst maintaining both brand identities, creating an elevated experience similar to that of the store.'"
     />
 
     <PageHeading 
-      :sub="'Recreating the Stranger Things experience in the digital space'"
-      :para="'Users could toggle between an ‘upside down’ world where the page content and imagery would flip upside down and overlay a particle effect to mimic the atmospheric iconic scenes from the series. Using a toggle meant that on land, it did not disrupt the initial purchasing journey, but instead added a fun layer to the page should the user interact.'"
+      :sub="'Identifying the approach for each brand.'"
+      :para="'Treating each brand individually, I visited the store and identified textures, imagery and colours to imitate the store boutique experience and maintain Harrods unique luxury store feel.'"
       :bg="'#F7F6F3'"
     />
 
@@ -46,8 +46,8 @@
      />
 
     <PageHeading 
-      :sub="'Recreating the Stranger Things experience in the digital space'"
-      :para="'Users could toggle between an ‘upside down’ world where the page content and imagery would flip upside down and overlay a particle effect to mimic the atmospheric iconic scenes from the series. Using a toggle meant that on land, it did not disrupt the initial purchasing journey, but instead added a fun layer to the page should the user interact.'"
+      :sub="'Integrating content throughout the site across product pages, brand pages and homepage'"
+      :para="'The approach was to Integrate content throughout the shopping experience, rather than holding editorial and brand stories in a completely separate area.  This meant creating placements throughout the site which felt integrated and relevant, allowing users to have a rich shopping experience.'"
       :bg="'#F7F6F3'"
     />
 
