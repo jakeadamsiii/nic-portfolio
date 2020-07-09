@@ -58,7 +58,7 @@
       :title="'Sushito'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
-      :link="'/sushito'"
+      :link="'/topshop'"
     />
 
     <Footer />
