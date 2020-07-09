@@ -55,7 +55,7 @@
     />
 
    <NextProject
-      :title="'Sushito'"
+      :title="'Topshop'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
       :link="'/topshop'"
