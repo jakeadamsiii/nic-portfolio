@@ -11,6 +11,9 @@
       <div class="follower motion hidden-sm"></div>
 
       <div class="first">
+        <video autoplay loop muted id="myVideo" src="../src/images/HP.mp4" type="video/mp4">
+        </video>
+
         <FallingImage 
           :left= "'0'"
           :delay= "'.5s'"
@@ -759,6 +762,14 @@
   .first {
     height: 100vh;
     overflow: hidden;
+  }
+
+  .first video {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .flex2 {
