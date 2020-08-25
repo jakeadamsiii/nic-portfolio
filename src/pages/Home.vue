@@ -5,16 +5,16 @@
     />
 
     <div class="home" >  
-      <div class="follower ui hidden-sm"></div>
+<!--      <div class="follower ui hidden-sm"></div>
       <div class="follower print hidden-sm"></div>
       <div class="follower branding hidden-sm"></div>
-      <div class="follower motion hidden-sm"></div>
+      <div class="follower motion hidden-sm"></div> -->
 
       <div class="first">
-        <video autoplay loop muted id="myVideo" src="../src/images/HP.mp4" type="video/mp4">
+        <video loop muted id="myVideo" src="../src/images/vid.mp4" type="video/mp4">
         </video>
 
-        <FallingImage 
+       <!-- <FallingImage 
           :left= "'0'"
           :delay= "'.5s'"
           :duration= "'1s'"
@@ -104,28 +104,28 @@
           :delay= "'.8s'"
           :duration= "'1.9s'"
           :hp="true"
-        />
+        /> -->
 
         <div class="container">
           <div class="row">
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
-              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">Senior designer</span>
+              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">senior designer</span>
               <br /> 
               specialising in <span>creating digital experiences for</span> fashion, luxury <span>and</span> lifestyle <span>brands</span>.</h1>
             </div>
           </div>
-          <div class="row">
+          <!--<div class="row">
             <div class="col-1 hidden-sm"></div>
             <div class="col-5">
               <p class="prev" data-aos="fade-in" data-aos-duration="1000">Previous projects include</p>
             </div>
-          </div>
+          </div>-->
         </div>
 
       </div>
       
-      <div class="second">
+      <!-- <div class="second">
 
         <img src="../images/product-design-hover2.gif" class="mask ui-mask"></img>
         <img src="../images/branding-hover.gif" class="mask print-mask"></img>
@@ -547,7 +547,7 @@
               </svg>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="view-work">
         <div class="container">
@@ -690,14 +690,55 @@
                 this.white = false;
           }
        },
+       videoFixed: function() {
+         var vid = document.querySelector('.first video'),
+             foot = document.querySelector('footer');
+
+        var seeFoot = this.elementInViewport(foot);
+
+        if (!seeFoot) {
+          vid.style.top = window.scrollY + "px";
+        }
+         
+       },
+      elementInViewport: function(el) {
+          var top = el.offsetTop;
+          var left = el.offsetLeft;
+          var width = el.offsetWidth;
+          var height = el.offsetHeight;
+
+          while(el.offsetParent) {
+            el = el.offsetParent;
+            top += el.offsetTop;
+            left += el.offsetLeft;
+          }
+
+          if(this.isDesktop){
+            return (
+              top < (window.pageYOffset + window.innerHeight +150) &&
+              left < (window.pageXOffset + window.innerWidth +150) &&
+              (top + height +150) > window.pageYOffset &&
+              (left + width +150) > window.pageXOffset
+            );
+          } else {
+            return (
+              top < (window.pageYOffset + window.innerHeight) &&
+              left < (window.pageXOffset + window.innerWidth) &&
+              (top + height) > window.pageYOffset &&
+              (left + width) > window.pageXOffset
+            );
+          }
+
+
+        },
         checkDesktop: function() {
           var that = this;
           //check if desktop
           if( /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768 ) {
             this.isDesktop = false;
-            document.addEventListener('scroll', function(e) {
-                that.mobileScorll();
-            });
+            // document.addEventListener('scroll', function(e) {
+            //     that.mobileScorll();
+            // });
           } else {
             this.isDesktop = true;
             this.uiHover = false;
@@ -708,16 +749,16 @@
             this.adHover = false;
             this.motionHover = false;
 
-            document.addEventListener('mousemove', function(e) {
-              document.querySelector('.follower.ui').style.left = (e.pageX - 140) + "px";
-              document.querySelector('.follower.ui').style.top = ( e.pageY + -90) + "px";
-              document.querySelector('.follower.branding').style.left = (e.pageX - 140) + "px";
-              document.querySelector('.follower.branding').style.top = ( e.pageY + -90) + "px";
-              document.querySelector('.follower.motion').style.left = (e.pageX - 170) + "px";
-              document.querySelector('.follower.motion').style.top = ( e.pageY + -90) + "px";
-              document.querySelector('.follower.print').style.left = (e.pageX - 140) + "px";
-              document.querySelector('.follower.print').style.top = ( e.pageY + -90) + "px";
-            });
+            // document.addEventListener('mousemove', function(e) {
+            //   document.querySelector('.follower.ui').style.left = (e.pageX - 140) + "px";
+            //   document.querySelector('.follower.ui').style.top = ( e.pageY + -90) + "px";
+            //   document.querySelector('.follower.branding').style.left = (e.pageX - 140) + "px";
+            //   document.querySelector('.follower.branding').style.top = ( e.pageY + -90) + "px";
+            //   document.querySelector('.follower.motion').style.left = (e.pageX - 170) + "px";
+            //   document.querySelector('.follower.motion').style.top = ( e.pageY + -90) + "px";
+            //   document.querySelector('.follower.print').style.left = (e.pageX - 140) + "px";
+            //   document.querySelector('.follower.print').style.top = ( e.pageY + -90) + "px";
+            // });
           }
         }
       }, 
@@ -730,13 +771,20 @@
           that.checkDesktop();
         });
 
-        setTimeout(function(){ 
-         document.querySelector('.fade').classList.add('aos-animate')
-       }, 200);
+        window.addEventListener('scroll', function(e) {
+          that.videoFixed();
+        });
+
+         var vid = document.querySelector('.first video');
+         setTimeout(function(){ vid.play(); }, 2000);
+         
+
+
 
      }
   }
 </script>
+
 
 <style scoped>
 
@@ -761,15 +809,18 @@
 
   .first {
     height: 100vh;
-    overflow: hidden;
+    position: relative;
+
   }
 
   .first video {
     height: 100%;
-    width: 100%;
+    width: 200%;
     position: absolute;
     top: 0;
-    left: 0;
+    left: -50%;
+    opacity: 0;
+    animation: fadeIn 1s 2s ease forwards;
   }
 
   .flex2 {
@@ -1263,6 +1314,11 @@
       padding: 200px 0 0 0;
     }
 
+    .first video {
+      width: 100%;
+      left: 0;
+    }
+
     .flex {
       height: 100vh;
     }
@@ -1409,6 +1465,11 @@
     100% { transform: translateX(calc(-210px * 6))}
   }
 
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1;}
+  }
+
 
   @media only screen and (max-height: 640px) and (min-width: 768px) {
     .first p {
@@ -1497,12 +1558,8 @@
 
  @media only screen and (min-width: 768px) {
 
-    .work-container {
-        padding: 180px 0 220px;
-    }
-
   .work-container {
-    padding: 80px 0 220px;
+    padding: 450px 0 100px;
   }
 
   .work p {
@@ -1575,7 +1632,7 @@
   }
 
   .main {
-    background: #F7F6F3;
+    background: #dbd6d5;
     transition: background 1s ease;
   }
 
