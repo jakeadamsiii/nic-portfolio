@@ -11,7 +11,7 @@
       <div class="follower motion hidden-sm"></div> -->
 
       <div class="first">
-        <video loop muted id="myVideo" src="../src/images/vid.mp4" type="video/mp4">
+        <video loop muted playsinline id="myVideo" src="../src/images/vid.mp4" type="video/mp4">
         </video>
 
        <!-- <FallingImage 
