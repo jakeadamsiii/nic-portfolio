@@ -22,7 +22,7 @@
         <div class="row">
           <div class="col-3 hidden-sm"></div>
           <div class="col-8">
-            <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" data-aos-offset="-400" class="sub-header change">I am a <span class="upper">Senior designer</span> with over <span>nine years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
+            <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" data-aos-offset="-400" class="sub-header change">I am a <span>lead designer</span> with over <span>nine years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
           </div>
         </div>
       </div>

@@ -102,7 +102,7 @@
     position: fixed;
     height: 100%;
     width: 100%;
-    background: #D5D1CD;
+    background: #F7F6F3;
     z-index: 10;
     left: 0;
     top: -100%;

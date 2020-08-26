@@ -110,9 +110,11 @@
           <div class="row">
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
-              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span class="upper">senior designer</span>
+              <h1 class="head" data-aos="fade-in" data-aos-duration="1000">London based <span>lead designer</span>
               <br /> 
-              specialising in <span>creating digital experiences for</span> fashion, luxury <span>and</span> lifestyle <span>brands</span>.</h1>
+              specialising in <span>creating digital experiences</span>
+              <br />
+              <span>for</span> fashion, luxury <span>and</span> lifestyle <span>brands</span>.</h1>
             </div>
           </div>
           <!--<div class="row">
