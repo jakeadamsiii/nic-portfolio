@@ -12,7 +12,7 @@
 
       <div class="first">
         <video class="desktop" v-if="!mobVid" loop muted playsinline src="../src/images/vid.mp4" type="video/mp4"></video>
-        <video class="mobile" v-if="mobVid" loop muted playsinline src="../src/images/Mobile.mp4" type="video/mp4"></video>
+        <video class="mobile" v-if="mobVid" loop muted playsinline src="../src/images/mobile.mp4" type="video/mp4"></video>
 
        <!-- <FallingImage 
           :left= "'0'"
