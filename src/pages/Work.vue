@@ -76,7 +76,7 @@
             </div>-->
           </div> 
 
-          <img class="mobile-image hidden-desk imageasos" src="../images/asos-hover.png" alt="example of asos work">
+          <img class="mobile-image hidden-desk imageasos" src="../images/ASOS-hover.png" alt="example of asos work">
           <img class="mobile-image hidden-desk imagetopshop" src="../images/Topshop-hover.png" alt="example of topshop work">
           <img class="mobile-image hidden-desk imageharrods" src="../images/Harrods-hover.png" alt="example of harrods work">
           <img class="mobile-image hidden-desk imagemade" src="../images/Made-hover.png" alt="example of made work">
@@ -818,7 +818,7 @@
     }
 
     .follower.asos {
-      background-image: url('../images/asos-hover.png');
+      background-image: url('../images/ASOS-hover.png');
     }
 
     .follower.topshop {
