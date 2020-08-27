@@ -1645,9 +1645,16 @@
   }
 
   .main {
-    background: #dbd6d5;
+    background: #D9D3D0;
     transition: background 1s ease;
   }
+
+
+ @media only screen and (min-width: 768px) {
+  .main {
+    background: #dbd6d5;
+  }
+ }
 
   .main.ui,
   .main.icons,
