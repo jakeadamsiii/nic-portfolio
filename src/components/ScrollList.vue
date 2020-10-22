@@ -65,7 +65,7 @@ h2 {
 
 @keyframes scroll {
 	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-210px * 13))}
+	100% { transform: translateX(calc(-210px * 15))}
 }
 
 .slider {
@@ -80,7 +80,7 @@ h2 {
 .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(210px * 26);
+  width: calc(210px * 30);
   list-style: none;
 }
 	
