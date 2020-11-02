@@ -108,11 +108,14 @@
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
   import Footer from '../components/Footer.vue'
+  import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
     data: function () {
       return {
         allowed: false,
+        tried: false,
+        block: true,
         asosHover: false,
         topshopHover: false,
         madeHover: false,
@@ -131,7 +134,7 @@
       }
     },
     components: {
-      MainLayout, Nav, Footer
+      MainLayout, Nav, Footer, passwordProtect
     },
     methods:{
       mobileScorll: function() {
