@@ -126,7 +126,7 @@
         if (val === "Port2020") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed", true);
+          localStorage.setItem("allowed2", true);
           location.reload();
         } else {
           this.tried = true;
@@ -138,7 +138,7 @@
       MainLayout, Nav, ProjectHeading, TwoCentredImages, ImageCopy, FullImage, PageHeading, NextProject, Footer, passwordProtect
     },
     mounted: function() {
-      if (localStorage.getItem("allowed") === 'true') {
+      if (localStorage.getItem("allowed2") === 'true') {
         this.allowed = true;
         this.block = false; 
       }
