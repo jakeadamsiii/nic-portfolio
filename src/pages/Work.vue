@@ -1,100 +1,107 @@
 <template>
-  <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, sushito: sushitoHover, makers: makersHover, netflix: netflixHover, magazine: magazineHover, sheep: sheepHover, sivvi: sivviHover}">
-    <Nav />
-    <div class="work" >
-    <div v-if="isDesktop" class="follower asos hidden-tab"></div>
-    <div v-if="isDesktop" class="follower topshop hidden-tab"></div>
-    <div v-if="isDesktop" class="follower made hidden-tab"></div>
-    <div v-if="isDesktop" class="follower warehouse hidden-tab"></div>
-    <div v-if="isDesktop" class="follower rollacoaster hidden-tab"></div>
-    <div v-if="isDesktop" class="follower netflix hidden-tab"></div>
-    <div v-if="isDesktop" class="follower magazine hidden-tab"></div>
-    <div v-if="isDesktop" class="follower harrods hidden-tab"></div>
-    <div v-if="isDesktop" class="follower selfridges hidden-tab"></div>
-    <div v-if="isDesktop" class="follower sushito hidden-tab"></div>
-    <div v-if="isDesktop" class="follower makers hidden-tab"></div>
-    <div v-if="isDesktop" class="follower sheep hidden-tab"></div>
-    <div v-if="isDesktop" class="follower sivvi hidden-tab"></div>
-    <div class="container">
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-10">
-          <h1 data-aos="fade" data-aos-duration="1000">Work</h1>
+  <div>
+    <passwordProtect
+      :blocked="block"
+      :tried="tried"
+      @enterPassword="enterPassword"
+    />
+    <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, sushito: sushitoHover, makers: makersHover, netflix: netflixHover, magazine: magazineHover, sheep: sheepHover, sivvi: sivviHover}">
+      <Nav />
+      <div class="work" >
+      <div v-if="isDesktop" class="follower asos hidden-tab"></div>
+      <div v-if="isDesktop" class="follower topshop hidden-tab"></div>
+      <div v-if="isDesktop" class="follower made hidden-tab"></div>
+      <div v-if="isDesktop" class="follower warehouse hidden-tab"></div>
+      <div v-if="isDesktop" class="follower rollacoaster hidden-tab"></div>
+      <div v-if="isDesktop" class="follower netflix hidden-tab"></div>
+      <div v-if="isDesktop" class="follower magazine hidden-tab"></div>
+      <div v-if="isDesktop" class="follower harrods hidden-tab"></div>
+      <div v-if="isDesktop" class="follower selfridges hidden-tab"></div>
+      <div v-if="isDesktop" class="follower sushito hidden-tab"></div>
+      <div v-if="isDesktop" class="follower makers hidden-tab"></div>
+      <div v-if="isDesktop" class="follower sheep hidden-tab"></div>
+      <div v-if="isDesktop" class="follower sivvi hidden-tab"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-10">
+            <h1 data-aos="fade" data-aos-duration="1000">Work</h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-20">
+            <h2 data-aos="fade" data-aos-duration="1000">Selected projects</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-10">
+            <ul class="this hidden-desk" data-aos="fade" data-aos-duration="1000">
+              <li id="topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></li>
+              <li id="asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></li>
+              <li id="sheep"><span>03.</span><a href="/sheepinc"><p class="underline" @mouseover="sheepHover = true" @mouseleave="sheepHover = false">SheepInc</p></a></li>
+              <li id="sivvi"><span>04.</span><a href="/sivvi"><p class="underline" @mouseover="sivviHover = true" @mouseleave="sivviHover = false">Sivvi</p></a></li>
+              <li id="made"><span>05.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></li>
+              <li id="harrods"><span>06.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p></a></li>
+              <li id="warehouse"><span>07.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></li>
+              <li id="rollacoaster" ><span>08.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></li>
+              <!--<li id="netflix"><span>07.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
+              <li id="magazine"><span>08.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
+              <li id="selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></li>
+              <li id="makers"><span>10.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></li>
+              <li id="sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></li>-->
+            </ul> 
+
+            <div class="list hidden" data-aos="fade" data-aos-duration="1000">
+              <div class="rows">
+                <div class="div-topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></div>
+                <div class="line"></div>
+                <div class="div-asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></div>
+              </div>
+              <div class="rows offset">
+                <div class="div-sheep"><span>03.</span><a href="/sheepinc"><p class="underline" @mouseover="sheepHover = true" @mouseleave="sheepHover = false">SheepInc</p></a></div>
+                <div class="line"></div>
+                <div class="div-sivvi"><span>04.</span><a href="/sivvi"><p class="underline" @mouseover="sivviHover = true" @mouseleave="sivviHover = false">Sivvi</p></a></div>
+              </div>
+              <div class="rows ">
+                <div class="div-made"><span>05.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">MADE.com</p></a></div>
+                <div class="line"></div>
+                <div class="div-harrods"><span>06.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p></a></div>
+              </div>
+              <div class="rows offset">
+                <div class="div-warehouse"><span>07.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></div>
+                <div class="line"></div>
+                <div class="div-rollacoaster" ><span>08.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></div>
+              </div>
+              <!--<div class="rows offset last">
+                <div class="div-sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></div>
+                <div class="line"></div>
+              
+              </div>-->
+            </div> 
+
+            <img class="mobile-image hidden-desk imageasos" src="../images/ASOS-hover2.png" alt="example of asos work">
+            <img class="mobile-image hidden-desk imagetopshop" src="../images/Topshop-hover2.png" alt="example of topshop work">
+            <img class="mobile-image hidden-desk imageharrods" src="../images/Harrods-hover2.png" alt="example of harrods work">
+            <img class="mobile-image hidden-desk imagemade" src="../images/Made-hover.png" alt="example of made work">
+            <img class="mobile-image hidden-desk imagewarehouse" src="../images/Warehouse-hover.png" alt="example of warehouse work">
+            <img class="mobile-image hidden-desk imagerollacoaster" src="../images/Rollacoaster-hover.png" alt="example of rollacoaster work">
+            <img class="mobile-image hidden-desk imagenetflix" src="../images/Netflix-hover.png" alt="example of netflix work">
+            <img class="mobile-image hidden-desk imagemagazine" src="../images/1883-hover.png" alt="example of 1883 magazine work">
+            <img class="mobile-image hidden-desk imageselfridges" src="../images/Selfridges-hover.png" alt="example of selfridges work">
+            <img class="mobile-image hidden-desk imagesushito" src="../images/Sushito-hover.png" alt="example of sushito work">
+            <img class="mobile-image hidden-desk imagemakers" src="../images/Makers-hover.png" alt="example of makers work">
+            <img class="mobile-image hidden-desk imagesheep" src="../images/Sheep-hover.png" alt="example of sheep inc. work">
+            <img class="mobile-image hidden-desk imagesivvi" src="../images/Sivvi-hover.png" alt="example of Sivvi work">
+
+          </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-20">
-          <h2 data-aos="fade" data-aos-duration="1000">Selected projects</h2>
-        </div>
       </div>
-      <div class="row">
-        <div class="col-1 hidden-sm"></div>
-        <div class="col-10">
-           <ul class="this hidden-desk" data-aos="fade" data-aos-duration="1000">
-            <li id="topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></li>
-            <li id="asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></li>
-            <li id="sheep"><span>03.</span><a href="/sheepinc"><p class="underline" @mouseover="sheepHover = true" @mouseleave="sheepHover = false">SheepInc</p></a></li>
-            <li id="sivvi"><span>04.</span><a href="/sivvi"><p class="underline" @mouseover="sivviHover = true" @mouseleave="sivviHover = false">Sivvi</p></a></li>
-            <li id="made"><span>05.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p></a></li>
-            <li id="harrods"><span>06.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p></a></li>
-            <li id="warehouse"><span>07.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></li>
-            <li id="rollacoaster" ><span>08.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></li>
-            <!--<li id="netflix"><span>07.</span><a href="/netflix"><p class="underline" @mouseover="netflixHover = true" @mouseleave="netflixHover = false">Netflix</p></a></li>
-            <li id="magazine"><span>08.</span><a href="/1883"><p class="underline" @mouseover="magazineHover = true" @mouseleave="magazineHover = false">1883 Magazine</p></a></li>
-            <li id="selfridges"><span>09.</span><a href="/selfridges"><p class="underline" @mouseover="selfridgesHover = true" @mouseleave="selfridgesHover = false">Selfridges</p></a></li>
-            <li id="makers"><span>10.</span><a href="/makers50"><p class="underline" @mouseover="makersHover = true" @mouseleave="makersHover = false">Makers 50</p></a></li>
-            <li id="sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></li>-->
-          </ul> 
-
-          <div class="list hidden" data-aos="fade" data-aos-duration="1000">
-            <div class="rows">
-              <div class="div-topshop"><span>01.</span><a href="/topshop"><p class="underline" @mouseover="topshopHover = true" @mouseleave="topshopHover = false">Topshop</p></a></div>
-              <div class="line"></div>
-              <div class="div-asos"><span>02.</span><a href="/asos"><p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p></a></div>
-            </div>
-            <div class="rows offset">
-              <div class="div-sheep"><span>03.</span><a href="/sheepinc"><p class="underline" @mouseover="sheepHover = true" @mouseleave="sheepHover = false">SheepInc</p></a></div>
-              <div class="line"></div>
-              <div class="div-sivvi"><span>04.</span><a href="/sivvi"><p class="underline" @mouseover="sivviHover = true" @mouseleave="sivviHover = false">Sivvi</p></a></div>
-            </div>
-            <div class="rows ">
-              <div class="div-made"><span>05.</span><a href="/made"><p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">MADE.com</p></a></div>
-              <div class="line"></div>
-              <div class="div-harrods"><span>06.</span><a href="/harrods"><p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p></a></div>
-            </div>
-            <div class="rows offset">
-              <div class="div-warehouse"><span>07.</span><a href="/warehouse"><p class="underline" @mouseover="warehouseHover = true" @mouseleave="warehouseHover = false">Warehouse</p></a></div>
-              <div class="line"></div>
-              <div class="div-rollacoaster" ><span>08.</span><a href="/rollacoaster"><p class="underline" @mouseover="rollacoasterHover = true" @mouseleave="rollacoasterHover = false">Rollacoaster</p></a></div>
-            </div>
-            <!--<div class="rows offset last">
-              <div class="div-sushito"><span>10.</span><a href="/sushito"><p class="underline" @mouseover="sushitoHover = true" @mouseleave="sushitoHover = false">Sushito</p></a></div>
-              <div class="line"></div>
-             
-            </div>-->
-          </div> 
-
-          <img class="mobile-image hidden-desk imageasos" src="../images/ASOS-hover2.png" alt="example of asos work">
-          <img class="mobile-image hidden-desk imagetopshop" src="../images/Topshop-hover2.png" alt="example of topshop work">
-          <img class="mobile-image hidden-desk imageharrods" src="../images/Harrods-hover2.png" alt="example of harrods work">
-          <img class="mobile-image hidden-desk imagemade" src="../images/Made-hover.png" alt="example of made work">
-          <img class="mobile-image hidden-desk imagewarehouse" src="../images/Warehouse-hover.png" alt="example of warehouse work">
-          <img class="mobile-image hidden-desk imagerollacoaster" src="../images/Rollacoaster-hover.png" alt="example of rollacoaster work">
-          <img class="mobile-image hidden-desk imagenetflix" src="../images/Netflix-hover.png" alt="example of netflix work">
-          <img class="mobile-image hidden-desk imagemagazine" src="../images/1883-hover.png" alt="example of 1883 magazine work">
-          <img class="mobile-image hidden-desk imageselfridges" src="../images/Selfridges-hover.png" alt="example of selfridges work">
-          <img class="mobile-image hidden-desk imagesushito" src="../images/Sushito-hover.png" alt="example of sushito work">
-          <img class="mobile-image hidden-desk imagemakers" src="../images/Makers-hover.png" alt="example of makers work">
-          <img class="mobile-image hidden-desk imagesheep" src="../images/Sheep-hover.png" alt="example of sheep inc. work">
-          <img class="mobile-image hidden-desk imagesivvi" src="../images/Sivvi-hover.png" alt="example of Sivvi work">
-
-        </div>
-      </div>
-    </div>
-    </div>
-    <Footer />
-  </main-layout>
+      <Footer />
+    </main-layout>
+  </div>
 </template>
 
 <script>
@@ -141,8 +148,6 @@
           // var makersY = document.querySelector('#makers').getBoundingClientRect().top;
           var sheepY = document.querySelector('#sheep').getBoundingClientRect().top;
           var sivviY = document.querySelector('#sivvi').getBoundingClientRect().top;
-
-          console.log('made:', madeY, this.madeHover)
 
           switch (true) {
             case topshopY <= 400 && topshopY > 0:
@@ -352,6 +357,16 @@
             document.querySelector('.follower.sivvi').style.left = (e.pageX - 130) + "px";
             document.querySelector('.follower.sivvi').style.top = ( e.pageY + -90) + "px";
           });
+        }
+      },
+      enterPassword: function(val) {
+        if (val === "Port2020") {
+          this.allowed = true;
+          this.block = false; 
+          localStorage.setItem("allowed2", true);
+          location.reload();
+        } else {
+          this.tried = true;
         }
       }
     }, 
