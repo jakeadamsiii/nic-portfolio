@@ -5,7 +5,7 @@
       :tried="tried"
       @enterPassword="enterPassword"
     />
-    <main-layout :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, sushito: sushitoHover, makers: makersHover, netflix: netflixHover, magazine: magazineHover, sheep: sheepHover, sivvi: sivviHover}">
+    <main-layout v-if="allowed" :class="{asos: asosHover, topshop: topshopHover, made: madeHover, warehouse: warehouseHover, rollacoaster: rollacoasterHover, selfridges: selfridgesHover, harrods: harrodsHover, sushito: sushitoHover, makers: makersHover, netflix: netflixHover, magazine: magazineHover, sheep: sheepHover, sivvi: sivviHover}">
       <Nav />
       <div class="work" >
       <div v-if="isDesktop" class="follower asos hidden-tab"></div>
@@ -112,6 +112,7 @@
   export default {
     data: function () {
       return {
+        allowed: false,
         asosHover: false,
         topshopHover: false,
         madeHover: false,
@@ -377,6 +378,11 @@
       window.addEventListener('resize', function(e) {
         that.checkDesktop();
       });
+
+      if (localStorage.getItem("allowed2") === 'true') {
+        this.allowed = true;
+        this.block = false; 
+      }
     }
   }
 </script>
