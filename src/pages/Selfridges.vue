@@ -123,7 +123,7 @@
     },
      methods: {
       enterPassword: function(val) {
-        if (val === "NicPortfolio") {
+        if (val === "Port2020") {
           this.allowed = true;
           this.block = false; 
           localStorage.setItem("allowed", true);

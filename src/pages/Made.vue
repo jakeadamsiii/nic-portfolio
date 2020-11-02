@@ -51,10 +51,10 @@
     />
 
    <NextProject
-      :title="'Warehouse'"
+      :title="'Harrods'"
       :sub="'Next project'"
       :bg="'#F7F6F3'"
-      :link="'/warehouse'"
+      :link="'/harrods'"
     />
 
     <Footer />
@@ -121,7 +121,7 @@
     },
     methods: {
       enterPassword: function(val) {
-        if (val === "NicPortfolio") {
+        if (val === "Port2020") {
           this.allowed = true;
           this.block = false; 
           localStorage.setItem("allowed", true);
