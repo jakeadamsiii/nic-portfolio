@@ -56,7 +56,7 @@
       :imageBg="'#D5D1CD'"
       :image="require('../images/sivvi-mob11.png')"
       :head="'Improved menu and site navigation'"
-      :text="'Restructuring the full navigation across site made for a much cleared journey for customers.  Seporating product categories initially by gender gave a clearer structure to the navigation and allowed users to find specific product categories much quicker.'"
+      :text="'Restructuring the full navigation across site made for a much cleared journey for customers.  Separating product categories initially by gender gave a clearer structure to the navigation and allowed users to find specific product categories much quicker.'"
     />
 
     <FullImage 

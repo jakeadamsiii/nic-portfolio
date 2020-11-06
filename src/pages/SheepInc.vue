@@ -12,7 +12,7 @@
       :title="'Sheep Inc'"
       :categories="'UX design — UI Design'"
       :sub="'Homepage redesign'"
-      :para="'Homepage UI redesign and UX improvements, focusing on creating a resuable component libruary and improving the structure and hierarchy of the page.'"
+      :para="'Homepage UI redesign and UX improvements, focusing on creating a reusable component library and improving the structure and hierarchy of the page.'"
       :bg="'#F7F6F3'"
     />
 
