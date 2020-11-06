@@ -364,10 +364,10 @@
         }
       },
       enterPassword: function(val) {
-        if (val === "Port2020") {
+        if (val === "N0Acce55") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed2", true);
+          localStorage.setItem("allowed3", true);
           location.reload();
         } else {
           this.tried = true;
@@ -382,7 +382,7 @@
         that.checkDesktop();
       });
 
-      if (localStorage.getItem("allowed2") === 'true') {
+      if (localStorage.getItem("allowed3") === 'true') {
         this.allowed = true;
         this.block = false; 
       }
