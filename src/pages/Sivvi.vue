@@ -154,7 +154,7 @@
     },
     methods: {
       enterPassword: function(val) {
-        if (val === "N0Acce55") {
+        if (val === "Farfetch") {
           this.allowed = true;
           this.block = false; 
           localStorage.setItem("allowed3", true);
