@@ -162,10 +162,10 @@
     },
     methods: {
       enterPassword: function(val) {
-        if (val === "Farfetch") {
+        if (val === "Folio2020") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed3", true);
+          localStorage.setItem("allowed4", true);
           location.reload();
         } else {
           this.tried = true;
@@ -176,7 +176,7 @@
       MainLayout, PageHeading, Nav, ImageCopy, FullImage, TwoCentredImages, ProjectHeading, NextProject, Footer, passwordProtect
     },
     mounted: function() {
-      if (localStorage.getItem("allowed3") === 'true') {
+      if (localStorage.getItem("allowed4") === 'true') {
         this.allowed = true;
         this.block = false; 
       }
