@@ -4,20 +4,20 @@
       <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-2">
-            <h2 class="change" data-aos="fade" data-aos-duration="1000">{{ $props.title }}</h2>
+            <h2 class="change">{{ $props.title }}</h2>
           </div>
           <div class="col-3 hidden-sm">
-            <div class="line" data-aos="fade" data-aos-duration="1000"></div>
+            <div class="line"></div>
           </div>
           <div class="col-5" >
-            <p data-aos="fade" data-aos-duration="1000" v-if="$props.sub" class="sub">{{ $props.sub }}</p>
-            <p data-aos="fade" data-aos-duration="1000" v-if="$props.para" class="para">{{ $props.para }}</p>
-            <ul data-aos="fade" data-aos-duration="1000" class="list" v-if="$props.list">
+            <p v-if="$props.sub" class="sub">{{ $props.sub }}</p>
+            <p v-if="$props.para" class="para">{{ $props.para }}</p>
+            <ul class="list" v-if="$props.list">
               <li class="change" v-for="item in $props.list" >
                 {{item}}
               </li>
             </ul>
-            <ul data-aos="fade" data-aos-duration="1000" class="list-two" v-if="$props.list && $props.listTwo">
+            <ul class="list-two" v-if="$props.list && $props.listTwo">
               <li class="change" v-for="item in $props.listTwo" >
                 {{item}}
               </li>

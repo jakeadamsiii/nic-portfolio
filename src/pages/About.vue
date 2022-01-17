@@ -9,20 +9,20 @@
         <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-10">
-            <h1 data-aos="fade" data-aos-duration="1000">About</h1>
+            <h1 >About</h1>
           </div>
         </div>
         <div class="row">
           <div class="col-1 hidden-sm"></div>
           <div class="col-20">
-            <h2 data-aos="fade" data-aos-duration="1000">My experience</h2>
+            <h2 >My experience</h2>
           </div>
         </div>
 
         <div class="row">
           <div class="col-3 hidden-sm"></div>
           <div class="col-8">
-            <p @mouseover="hover = true" @mouseleave="hover = false" data-aos="fade" data-aos-duration="1000" data-aos-offset="-400" class="sub-header change">I am a <span>lead designer</span> with over <span>nine years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
+            <p @mouseover="hover = true" @mouseleave="hover = false"  class="sub-header change">I am a <span>lead designer</span> with over <span>nine years experience</span> designing for <span>retail brands, publication houses</span> and <span>design agencies.</span></p>
           </div>
         </div>
       </div>
@@ -31,11 +31,11 @@
     <div class="container" >
       <div class="row row-2">
         <div class="col-3 hidden-sm"></div>
-        <div class="col-2" data-aos="fade" data-aos-duration="1000">
+        <div class="col-2" >
           <p class="sub change">I have a diverse range of experience in a number of different disciplinaries including UI and UX design, print and publication design and art direction.</p>
         </div>
         <div class="col-1 hidden-sm"></div>
-        <div class="col-2" data-aos="fade" data-aos-duration="1000">
+        <div class="col-2" >
           <p class="para change">With my experience of designing in house for large fashion and lifestyle brands and my knowledge of ecommerce as a whole, I am greatly successful at designing effective solutions that have proved their value whilst taking into account the business needs and priorities.  I have a diverse background of experience and always excited by new and interesting projects.</p>
         </div>
       </div>
@@ -56,7 +56,7 @@
     />
 
     <div class="container" >
-      <div class="row  work-container work1" data-aos="fade" data-aos-duration="1000">
+      <div class="row  work-container work1" >
         <div class="col-5 hidden-sm"></div>
           <div class="flex">
           <div class="col-3">
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="row  work-container" data-aos="fade" data-aos-duration="1000">
+      <div class="row  work-container" >
         <div class="col-5 hidden-sm"></div>
           <div class="flex">
           <div class="col-3">
@@ -112,11 +112,11 @@
       }
     }, 
     mounted: function() {
-      document.addEventListener('mousemove', function(e) {
-        document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
-        document.querySelector('.follower').style.top = ( e.pageY ) + "px";
-      });
-    }
+      // document.addEventListener('mousemove', function(e) {
+      //   document.querySelector('.follower').style.left = (e.pageX + 20) + "px";
+      //   document.querySelector('.follower').style.top = ( e.pageY ) + "px";
+      // });
+    },
   }
 </script>
 
