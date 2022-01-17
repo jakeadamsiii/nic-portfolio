@@ -10,16 +10,16 @@
                 <div v-if="isDesktop" class="follower"></div>
                 <h2>Work</h2>
                 <ul class="work-list">
-                    <li class="work-li" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">
+                    <li class="work-li" >
                       <router-link to="/">
                         <span>01</span>
-                        <p class="underline">Harrods</p>
+                        <p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p>
                       </router-link>
                     </li>
-                    <li class="work-li" @mouseover="asosHover = true" @mouseleave="asosHover = false">
+                    <li class="work-li">
                       <router-link to="/">
                         <span>01</span>
-                        <p class="underline">Harrods</p>
+                        <p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">Harrods</p>
                       </router-link>
                     </li>
                     <li class="work-li">
@@ -157,6 +157,7 @@
     display: flex;
     color: #000;
     transition: color .5s ease; 
+    width: fit-content;
   }
 
   .work-li a:hover {
