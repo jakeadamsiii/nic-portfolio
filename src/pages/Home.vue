@@ -8,7 +8,7 @@
       hello
     </div>
 
-    <Footer />
+     
   </main-layout>
 </template>
 
@@ -17,7 +17,7 @@
   import Nav from '../components/Nav.vue';
   import VueScrollSnap from "vue-scroll-snap";
   import FallingImage from '../components/FallingImage.vue'
-  import Footer from '../components/Footer.vue'
+   
   import ProjectHeading from '../components/ProjectHeading.vue'
 
   export default {
@@ -38,7 +38,7 @@
       }
     },
     components: {
-      MainLayout, Nav, Footer,
+      MainLayout, Nav ,
     },
      methods: {
 

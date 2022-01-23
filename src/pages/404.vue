@@ -1,14 +1,29 @@
 <template>
-  <main-layout>
+  <main-layout class="error">
     <Nav />
 
-    <ProjectHeading 
-      :title="'404'"
-      :sub="'Page not found'"
-      :para="`Click below to return to the homepage whilst I fire my developer.`"
-      :error="true"
-    />
-
+    <div class="container" >
+        <div class="row" >
+          <div class="col-1 hidden-sm"></div>
+          <div class="col-10">
+            <div class="headings">
+              <h2>404</h2>
+              <h2>Page not found</h2>
+            </div>
+          </div>
+      </div>
+      <div class="row" >
+          <div class="col-2 hidden-sm"></div>
+          <div class="col-8">
+            <div class="copy">
+              <p>Sorry :( This page no longer exists</p>
+              <router-link to="/">
+                <p class="underline">GO BACK TO HOMEPAGE</p>
+              </router-link>
+            </div>
+          </div>
+      </div>
+    </div>
 
     <FallingImage 
       :left= "'0'"
@@ -80,9 +95,6 @@
       :delay= "'.8s'"
       :duration= "'1.9s'"
     />
-    <Footer 
-      :error="true"
-    />
   </main-layout>
 </template>
 
@@ -92,60 +104,98 @@
   import VLink from '../components/VLink.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
   import FallingImage from '../components/FallingImage.vue'
-  import Footer from '../components/Footer.vue'
+   
 
   export default {
     components: {
-      MainLayout, Nav, ProjectHeading, VLink, FallingImage, Footer
+      MainLayout, Nav, ProjectHeading, VLink, FallingImage 
     },
     mounted: function() {
-      //deal with animation issue
-      setTimeout(function(){ 
-        
-        document.querySelector('.home').classList.add('aos-animate');
-
-      }, 200);
     }
   }
 </script>
 
-<style>
+<style >
 
-  html, body {
-    overflow-x: hidden;
-  }
+html, body {
+  overflow: hidden;
+}
 
-.home {
-  font-size: 1rem;
-  text-decoration: underline;
+.error {
+  height: 100vh;
+  background: #000;
+}
+
+.error p,
+.error a,
+.error h2,
+.error li {
+  color: #fff!important;
+}
+
+.error .row {
+  height: auto;
+}
+
+.headings {
+  margin: 250px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.headings h2 {
+  font-family: 'David-ExtraLight';
+  font-size: 35px;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.copy {
+  margin: 70px 0 0 ;
+}
+
+.copy p {
+  font-family: 'David-Regular';
+  font-size: 20px;
+  margin: 0 0 40px;
+}
+
+.error .underline {
+  display: inline;
+  position: relative;
+  overflow: hidden;
+}
+
+.error .underline:after {
+  content: "";
   position: absolute;
-  top: -50px;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: -0.02em;
+  right: 0;
+  width: 0;
+  bottom: -5px;
+  background: #fff!important;
+  height: 2px;
+  transition-property: width;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 
-.main {
-  box-sizing: border-box;
-  background: #F7F6F3;
+.error .underline:hover:after {
+  left: 0;
+  right: auto;
+  width: 100%;
 }
 
-.container, .row {
-  height: unset!important;
-}
+  @media only screen and (min-width: 660px) {
 
-a {
-  color: black;
-  text-decoration: none;
-  font-family: 'Roboto', sans-serif;
-  letter-spacing: -0.02em;
-}
+    .headings h2 {
+      font-size: 64px;
+    }
 
-
-@media only screen and (max-width: 767px) {
-  .sub {
-    margin: 0 0 15px 0!important;
+    .headings {
+      flex-direction: row;
+    }
   }
-}
 
 
 </style>

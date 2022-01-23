@@ -55,7 +55,7 @@
       :link="'/topshop'"
     />
 
-    <Footer />
+     
 
   </main-layout>
   </div>
@@ -70,7 +70,7 @@
   import PageHeading from '../components/PageHeading.vue'
   import TwoCentredImages from '../components/TwoCentredImages.vue'
   import NextProject from '../components/NextProject.vue'
-  import Footer from '../components/Footer.vue'
+   
   import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
@@ -118,7 +118,7 @@
     },
 
     components: {
-      MainLayout, Nav, ProjectHeading, TwoCentredImages, ImageCopy, FullImage, PageHeading, NextProject, Footer, passwordProtect
+      MainLayout, Nav, ProjectHeading, TwoCentredImages, ImageCopy, FullImage, PageHeading, NextProject , passwordProtect
     },
     mounted: function() {
       if (localStorage.getItem("allowed4") === 'true') {

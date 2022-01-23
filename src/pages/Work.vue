@@ -64,14 +64,13 @@
           </div>
         </div>
       </section>
-    <Footer />
   </main-layout>
 </template>
 
 <script>
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
-  import Footer from '../components/Footer.vue'
+   
 
   export default {
     data: function () {
@@ -84,7 +83,7 @@
       }
     },
     components: {
-      MainLayout, Nav, Footer
+      MainLayout, Nav 
     },
     methods:{
       checkDesktop: function() {
@@ -94,24 +93,25 @@
           this.isDesktop = false;
         } else {
           //if desktop add follower div to follow cursor
+          let follower = document.querySelector('.follower');
           this.isDesktop = true;
           document.addEventListener('mousemove', function(e) {
-            document.querySelector('.follower').style.left = (e.pageX - 100) + "px";
-            document.querySelector('.follower').style.top = ( e.pageY + -90) + "px";
+            follower ? follower.style.left = (e.pageX - 100) + "px": null;
+            follower ? follower.style.top = ( e.pageY + -90) + "px": null;
             if (that.degrees <= 8 && that.forwards) {
               that.degrees = that.degrees + .5;
-              document.querySelector('.follower').style.transform = "rotate(" + that.degrees + "deg)";
+              follower ? follower.style.transform = "rotate(" + that.degrees + "deg)": null;
             } else if(that.degrees >= 8) {
               that.forwards = false;
               that.degrees = that.degrees - .5;
-              document.querySelector('.follower').style.transform = "rotate(" + that.degrees + "deg)";
+              follower ? follower.style.transform = "rotate(" + that.degrees + "deg)": null;
             } else if (that.degrees <= 0) {
               that.forwards = true;
               that.degrees = that.degrees + .5;
-              document.querySelector('.follower').style.transform = "rotate(" + that.degrees + "deg)";
+              follower ? follower.style.transform = "rotate(" + that.degrees + "deg)": null;
             } else {
               that.degrees = that.degrees - .5;
-              document.querySelector('.follower').style.transform = "rotate(" + that.degrees + "deg)";
+              follower ? follower.style.transform = "rotate(" + that.degrees + "deg)": null;
             }
             
           });
@@ -122,6 +122,12 @@
       var that = this;
       this.checkDesktop();
       window.addEventListener('resize', function(e) {
+        that.checkDesktop();
+      });
+    },
+    destroyed: function() {
+      var that = this;
+      window.removeEventListener('resize', function(e) {
         that.checkDesktop();
       });
     }
@@ -142,14 +148,23 @@
     margin: 50px 0 0 0;
   }
 
+  h2 {
+    font-size: 14px;
+    font-family: "David-Regular", sans-serif;
+    font-weight: 400;
+  }
+
   .work-li {
     margin: 0 0 30px;
     position: relative;
     float: left;
+    width: 100%;
   }
 
   .work-li span {
     font-size: 14px;
+    font-family: "David-ExtraLight", sans-serif;
+    letter-spacing: 1px;
   }
 
   .work-li a {
@@ -165,11 +180,19 @@
   }
 
   .work-li p {
-    font-size: 64px;
+    font-size: 35px;
     line-height: 0.8;
     display: inline;
     overflow: inherit;
     margin: 0 0 0 20px;
+    z-index: 1;
+    font-family: "David-ExtraLight", sans-serif;
+    text-transform: uppercase;
+  }
+
+  .work-li a:hover p,
+  .work-li a:hover span {
+    z-index: 3;
   }
 
   .underline {
@@ -221,14 +244,25 @@
 
   .harrods .follower {
     opacity: 1;
+    z-index: 2; 
     background: green;
   }
 
   .asos .follower {
     opacity: 1;
+    z-index: 2; 
     background: red;
   }
 
+  @media only screen and (min-width: 660px) {
+    h2 {
+      font-size: 20px;
+    }
+
+    .work-li p{
+      font-size: 64px;
+    }
+  }
 
   @media only screen and (min-width: 1024px) {
 

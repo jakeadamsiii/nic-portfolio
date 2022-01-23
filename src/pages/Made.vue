@@ -57,7 +57,7 @@
       :link="'/harrods'"
     />
 
-    <Footer />
+     
 
   </main-layout>
   </div>
@@ -71,7 +71,7 @@
   import FullImage from '../components/FullImage.vue'
   import PageHeading from '../components/PageHeading.vue'
   import NextProject from '../components/NextProject.vue'
-  import Footer from '../components/Footer.vue'
+   
   import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
@@ -133,7 +133,7 @@
     },
 
     components: {
-      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, NextProject, Footer, passwordProtect
+      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, NextProject , passwordProtect
     },
     mounted: function() {
       if (localStorage.getItem("allowed4") === 'true') {

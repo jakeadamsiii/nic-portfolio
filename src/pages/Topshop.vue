@@ -95,7 +95,7 @@
       :link="'/asos'"
     />
 
-    <Footer />
+     
 
   </main-layout>
   </div>
@@ -110,7 +110,7 @@
   import FullImage from '../components/FullImage.vue'
   import TwoCentredImages from '../components/TwoCentredImages.vue'
   import NextProject from '../components/NextProject.vue'
-  import Footer from '../components/Footer.vue'
+   
   import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
@@ -173,7 +173,7 @@
       }
     },
     components: {
-      MainLayout, PageHeading, Nav, ImageCopy, FullImage, TwoCentredImages, ProjectHeading, NextProject, Footer, passwordProtect
+      MainLayout, PageHeading, Nav, ImageCopy, FullImage, TwoCentredImages, ProjectHeading, NextProject , passwordProtect
     },
     mounted: function() {
       if (localStorage.getItem("allowed4") === 'true') {

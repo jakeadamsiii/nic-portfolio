@@ -1,5 +1,14 @@
 <template>
   <div class="main" >
+
+    <div class="cursor">
+      <div class="cursor__ball cursor__ball--small">
+        <svg height="15" width="15">
+          <circle cx="7" cy="7" r="7" stroke-width="0"></circle>
+        </svg>
+      </div>
+    </div>
+
     <slot></slot>
   </div>
 </template>
@@ -14,7 +23,43 @@
     },
     components: {
       VLink
-    }
+    },
+    mehtods: {
+    },
+    mounted: function() {
+      const app = this;
+      const cursor = document.querySelector('.cursor__ball--small');
+      let links = document.querySelectorAll('a');
+      // Listeners
+      window.addEventListener('mousemove', e => {
+        cursor.style.left = (e.screenX) + "px";
+        cursor.style.top = (e.screenY - 145) + "px";
+        cursor.classList.contains('in') ? null : cursor.classList.add('in');
+      });
+
+      window.addEventListener('scroll', e => {
+      });
+
+      window.addEventListener('click', e => {
+        cursor.classList.add("click");
+        setTimeout(() => {
+          cursor.classList.remove("click");
+        }, 150);
+      });
+
+      for (let i = 0; i < links.length; i++) {
+        links[i].addEventListener('mouseenter', e => {
+          cursor.style.transitionDuration = ".5s";
+          cursor.style.transform = "scale(2)";
+          
+        });
+
+        links[i].addEventListener('mouseleave', e => {
+          cursor.style.transform = null;
+          cursor.style.transitionDuration = null;
+        });
+      }
+    },
   }
 </script>
 
@@ -22,7 +67,7 @@
 
 
   html, body {
-    cursor: url(../images/mouse.png), default;
+    cursor: none;
     overflow-x: hidden;
     width: 100%;
     background: #F7F6F3;
@@ -32,17 +77,45 @@
   html, body, p, h1, h2, h3, a, div, ul, li {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'David-Regular', sans-serif;
   }
 
   a {
     color: inherit;
     text-decoration: none;
-    cursor: url(../images/hover.png), pointer;
+    cursor: none;
   }
 
   p {
     line-height: 1.2;
+  }
+
+  .cursor {
+    pointer-events: none;     
+  }
+
+  .cursor__ball {
+    position: fixed;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;
+    z-index: 1000;
+    transition: transform .15s ease, opacity .5s ease;
+    transform: scale(1);
+    transform-origin: center;
+    opacity: 0;
+  } 
+
+  .cursor__ball.in {
+    opacity: 1;
+  }
+
+  .cursor__ball.click {
+    transform: scale(1.5);
+  }
+
+  .cursor__ball circle {
+    fill: #f7f8fa;
   }
 
   .container {
