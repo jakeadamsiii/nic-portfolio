@@ -14,7 +14,6 @@
 </template>
 
 <script>
-  import VLink from '../components/VLink.vue'
 
   export default {
     data: function () {
@@ -22,9 +21,8 @@
       }
     },
     components: {
-      VLink
     },
-    mehtods: {
+    methods: {
     },
     mounted: function() {
       const app = this;
@@ -65,7 +63,6 @@
 
 <style scss>
 
-
   html, body {
     cursor: none;
     overflow-x: hidden;
@@ -78,6 +75,16 @@
     margin: 0;
     padding: 0;
     font-family: 'David-Regular', sans-serif;
+  }
+
+  ::-moz-selection {
+    color: white;
+    background: black;
+  }
+
+  ::selection {
+    color: white;
+    background: black;
   }
 
   a {

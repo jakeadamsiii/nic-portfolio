@@ -7,60 +7,52 @@
   />
   <main-layout v-if="allowed">
     <Nav />
-
+    
     <ProjectHeading 
       :title="'ASOS'"
-      :categories="'App design — UX design — UI Design'"
-      :sub="'Augmented reality app design'"
-      :para="'Augmented reality Make-up App design to coinside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
-      :bg="'#F7F6F3'"
+      :num="'05'"
+      :sub="'AUGMENTED REALITY MAKE-UP APP'"
     />
 
-    <FullImage 
-      :images="imageArray"
-      :bg="'#D5D1CD'"
-      :hero="true"
+    <HorizontalImage 
+      :bgImage="BgImageArray"
+      :Image="imageArray"
     />
 
-    <ImageCopy 
-      :right="false"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/asos-eyes.jpg')"
-      :head="'The Approach'"
-      :text="'Starting completely from scratch from the user journey, wireframes and finally the applied UI, ensuring a clean and simple experience for the user.'"
+    <Copy 
+      :title="'The Approach'"
+      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
+      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
     />
 
-    <PageHeading 
-      :sub="'Simplifying the UI design, creating a well designed and easy to use interface'"
-      :para="'Icons were very important in this project, being that there had to be around 30, each had to remain clear at small sizes and feel ASOS branded.  The focus of the UI had to be the camera element, so although important the menu needed to remain understated and easy to use.'"
-      :bg="'#F7F6F3'"
+    <HorizontalImage 
+      :bgImage="[]"
+      :Image="imageArray"
     />
 
-    <FullImage 
-      :images="imageArrayTwo"
-      :bg="'#D5D1CD'"
+    <HorizontalImage 
+      :bgImage="BgImageArray"
+      :Image="imageArray"
     />
 
-    <ImageCopy 
-      :right="true"
-      :alt="true"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/asos-purchase.png')"
-      :head="'Saved and pre-loaded looks'"
-      :text="'To enhance the shopping experience of the app, both curated content and the ability to save user generated content had to be integrated into the experience.  Pre-loaded looks and saved looks really enhance the experience to encourage users to return and always feel there is fresh content.'"
-      :headTwo="'Scan products'"
-      :textTwo="'Functionality that allowed users to scan the barcode of beauty products meant the app could be integrated into the customers everyday when it came to selecting beauty products.  Users were able to try on multiple products and purchase at the tap of a button.'"
+    <TrippleImage 
+      :Images="trippleImages"
     />
 
-   <NextProject
-      :title="'Sheep Inc'"
-      :sub="'Next project'"
-      :bg="'#F7F6F3'"
-      :link="'/sheepinc'"
+    <HorizontalImage 
+      :bgImage="BgImageArray"
+      :Image="imageArray"
     />
 
-    
-     
+    <LongImage 
+      :Image="bigImage"
+    />
+
+    <ImageGrid 
+      :Images="imageGrid"
+    />
+
+
   </main-layout>
   </div>
 </template>
@@ -69,10 +61,13 @@
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
-  import ImageCopy from '../components/ImageCopy.vue'
-  import FullImage from '../components/FullImage.vue'
-  import PageHeading from '../components/PageHeading.vue'
-  import NextProject from '../components/NextProject.vue'
+  import BgThreeImages from '../components/BgThreeImages.vue'
+  import HorizontalImage from '../components/HorizontalImage.vue'
+  import Copy from '../components/Copy.vue'
+  import LongImage from '../components/LongImage.vue'
+  import TrippleImage from '../components/TrippleImage.vue'
+  import Next from '../components/Next.vue'
+  import ImageGrid from '../components/ImageGrid.vue'
    
   import passwordProtect from '../components/PasswordProtect.vue'
 
@@ -83,50 +78,64 @@
         allowed: false,
         tried: false,
         block: true,
-        imageArray: [
+        BgImageArray: [
           {
-            src: require('../images/asos-drop-down.jpg'),
-            alt: "ASOS drop down"
-          },
-          {
-            src: require('../images/asos-firstscreen.jpg'),
-            alt: "ASOS first screen"
-          },
-          {
-            src: require('../images/asos-eyes.jpg'),
-            alt: "ASOS eyes"
-          },
-          {
-            src: require('../images/asos-application.jpg'),
-            alt: "ASOS application"
-          },
-          {
-            src: require('../images/asos-colour.jpg'),
-            alt: "ASOS colour"
-          },
-          {
-            src: require('../images/asos-overlay.jpg'),
-            alt: "ASOS overlay"
+            src: require('../images/bgtest.jpg'),
+            alt: "Background Test"
           }
         ],  
-        imageArrayTwo: [
+        imageArray: [
           {
-            src: require('../images/asos-drop-down.jpg'),
-            alt: "ASOS drop down"
+            src: require('../images/Dmaris.png'),
+            alt: "D maris bay hompepage"
+          },
+        ],  
+        bigImage: [
+          {
+            src: require('../images/longImage.png'),
+            alt: "D maris bay long hompepage"
+          },
+        ], 
+        trippleImages: [
+          {
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
           },
           {
-            src: require('../images/asos-complete.jpg'),
-            alt: "ASOS complete looks"
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
           },
           {
-            src: require('../images/asos-saved.jpg'),
-            alt: "ASOS saved looks"
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
+          },
+        ], 
+        imageGrid: [
+          {
+            src: require('../images/instagram.png'),
+            alt: "D maris bay long hompepage"
           },
           {
-            src: require('../images/asos-look1.jpg'),
-            alt: "ASOS look 1"
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
           },
-        ]   
+          {
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
+          },
+          {
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
+          },
+          {
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
+          },
+          {
+            src: require('../images/gram.png'),
+            alt: "D maris bay long hompepage"
+          },
+        ],  
       }
     },
      methods: {
@@ -143,7 +152,7 @@
     },
 
     components: {
-      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, NextProject , passwordProtect
+      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
       if (localStorage.getItem("allowed4") === 'true') {

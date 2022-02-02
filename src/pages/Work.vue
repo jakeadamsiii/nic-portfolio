@@ -1,4 +1,11 @@
 <template>
+<div>
+  <passwordProtect
+    :blocked="block"
+    :tried="tried"
+    @enterPassword="enterPassword"
+  />
+
   <main-layout >
     <Nav />
       <section class="work" :class="{asos: asosHover, harrods: harrodsHover}">
@@ -11,13 +18,13 @@
                 <h2>Work</h2>
                 <ul class="work-list">
                     <li class="work-li" >
-                      <router-link to="/">
+                      <router-link to="/harrods">
                         <span>01</span>
                         <p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p>
                       </router-link>
                     </li>
                     <li class="work-li">
-                      <router-link to="/">
+                      <router-link to="/harrods">
                         <span>01</span>
                         <p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">Harrods</p>
                       </router-link>
@@ -65,11 +72,13 @@
         </div>
       </section>
   </main-layout>
+  </div>
 </template>
 
 <script>
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
+  import passwordProtect from '../components/PasswordProtect.vue'
    
 
   export default {
@@ -80,10 +89,12 @@
         asosHover: false,
         degrees: 0,
         forwards: true,
+        tried: false,
+        block: true,
       }
     },
     components: {
-      MainLayout, Nav 
+      MainLayout, Nav, passwordProtect
     },
     methods:{
       checkDesktop: function() {
@@ -117,10 +128,26 @@
           });
         }
       },
+      enterPassword: function(val) {
+        if (val === "Folio2020") {
+          this.allowed = true;
+          this.block = false; 
+          localStorage.setItem("allowed4", true);
+          location.reload();
+        } else {
+          this.tried = true;
+        }
+      }
     }, 
     mounted: function() {
       var that = this;
       this.checkDesktop();
+
+      if (localStorage.getItem("allowed4") === 'true') {
+        this.allowed = true;
+        this.block = false; 
+      }
+
       window.addEventListener('resize', function(e) {
         that.checkDesktop();
       });
@@ -261,6 +288,10 @@
 
     .work-li p{
       font-size: 64px;
+    }
+
+    .work {
+      height: 100vh;
     }
   }
 

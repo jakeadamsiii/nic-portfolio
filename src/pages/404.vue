@@ -101,14 +101,13 @@
 <script>
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
-  import VLink from '../components/VLink.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
   import FallingImage from '../components/FallingImage.vue'
    
 
   export default {
     components: {
-      MainLayout, Nav, ProjectHeading, VLink, FallingImage 
+      MainLayout, Nav, ProjectHeading, FallingImage 
     },
     mounted: function() {
     }

@@ -10,68 +10,35 @@
 
     <ProjectHeading 
       :title="'Harrods'"
-      :categories="'UX design — UI Design'"
-      :sub="'Brand Activation'"
-      :para="'Following a full side redesign, where I worked alongside a branding agency to redefine the Harrods.com online experience, I was tasked with translating these concepts to commercially driving pages for brands such as Saint Laurent, Gucci and Burberry. '"
-      :bg="'#F7F6F3'"
+      :num="'01'"
+      :sub="'UX design — UI Design'"
+    />
+
+    <BgThreeImages 
+      :bgImage="BgImageArray"
+      :Images="ImagesArray"
+    />
+
+    <Copy 
+      :title="'The Approach'"
+      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
+      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+    />
+
+    <BgThreeImages 
+      :bgImage="[]"
+      :Images="ImagesArray"
+    />
+
+    <BgThreeImages 
+      :bgImage="BgImageArray"
+      :Images="ImagesArray"
     />
     
-    <FullImage 
-      :images="ImageArray"
-      :bg="'#D5D1CD'"
-      :hero="true"
+    <Next
+      :nextUrl="'/asos'"
+      :prevUrl="'/sivvi'"
     />
-
-    <ImageCopy 
-      :right="false"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/harrods5.jpg')"
-      :head="'The Approach'"
-      :text="'To seamlessly integrate brands into the new identity of harrods.com whilst maintaining both brand identities, creating an elevated experience similar to that of the store.'"
-    />
-
-    <PageHeading 
-      :sub="'Identifying the approach for each brand.'"
-      :para="'Treating each brand individually, I visited the store and identified textures, imagery and colours to imitate the store boutique experience and maintain Harrods unique luxury store feel.'"
-      :bg="'#F7F6F3'"
-    />
-
-   <TwoCentredImages 
-      :images="ImageArrayTwo"
-      :bg="'#D5D1CD'"
-      :bottomLeft="false"
-      :bottomRight="false"
-      :leftSmall="false"
-      :rightSmall="true"
-     />
-
-    <PageHeading 
-      :sub="'Integrating content throughout the site across product pages, brand pages and homepage'"
-      :para="'The approach was to Integrate content throughout the shopping experience, rather than holding editorial and brand stories in a completely separate area.  This meant creating placements throughout the site which felt integrated and relevant, allowing users to have a rich shopping experience.'"
-      :bg="'#F7F6F3'"
-    />
-
-    <TwoCentredImages 
-      :images="ImageArrayThree"
-      :bg="'#D5D1CD'"
-      :bottomLeft="false"
-      :bottomRight="false"
-     />
-
-    <FullImage 
-      :images="ImageArrayFour"
-      :bg="'#D5D1CD'"
-      :hero="false"
-    />
-
-   <NextProject
-      :title="'Warehouse'"
-      :sub="'Next project'"
-      :bg="'#F7F6F3'"
-      :link="'/warehouse'"
-    />
-
-       
 
   </main-layout>
   </div>
@@ -81,11 +48,9 @@
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
-  import ImageCopy from '../components/ImageCopy.vue'
-  import FullImage from '../components/FullImage.vue'
-  import PageHeading from '../components/PageHeading.vue'
-  import TwoCentredImages from '../components/TwoCentredImages.vue'
-  import NextProject from '../components/NextProject.vue'
+  import BgThreeImages from '../components/BgThreeImages.vue'
+  import Copy from '../components/Copy.vue'
+  import Next from '../components/Next.vue'
    
   import passwordProtect from '../components/PasswordProtect.vue'
 
@@ -96,62 +61,27 @@
         allowed: false,
         tried: false,
         block: true,
-        ImageArray: [
+        BgImageArray: [
           {
-            src: require('../images/harrods1.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods2.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods3.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods4.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/bgtest.jpg'),
+            alt: "Background Test"
           }
         ],  
-        ImageArrayTwo: [
+        ImagesArray: [
           {
-            src: require('../images/harrods6.jpg'),
-            alt: "Warehouse lookbook"
-          },
-         {
-            src: require('../images/harrods7.png'),
-            alt: "Warehouse lookbook"
-          }
-        ],
-        ImageArrayThree: [
-          {
-            src: require('../images/harrods8.jpg'),
-            alt: "Warehouse lookbook"
-          },
-         {
-            src: require('../images/harrods9.jpg'),
-            alt: "Warehouse lookbook"
-          }
-        ],
-        ImageArrayFour: [
-               {
-            src: require('../images/harrods10.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
           },
           {
-            src: require('../images/harrods11.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
           },
           {
-            src: require('../images/harrods12.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods13.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
           }
         ],  
+ 
       }
     },
 
@@ -168,7 +98,7 @@
       }
     },
     components: {
-      MainLayout, Nav, ProjectHeading, TwoCentredImages, ImageCopy, FullImage, PageHeading, NextProject , passwordProtect
+      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next
     },
     mounted: function() {
       if (localStorage.getItem("allowed4") === 'true') {
