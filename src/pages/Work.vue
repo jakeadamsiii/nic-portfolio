@@ -256,8 +256,8 @@
   /* follower styles */
 
   .follower {
-    height: 231px;
-    width: 315px;
+    height: 284px;
+    width: 350px;
     position: absolute;
     float: left;
     background: grey;
@@ -272,43 +272,43 @@
   .harrods .follower {
     opacity: 1;
     z-index: 2; 
-    background: green;
+    background-image: url("../images/Harrods.jpg");
   }
 
   .asos .follower {
     opacity: 1;
     z-index: 2; 
-    background: red;
+    background-image: url("../images/Asos.jpg");
   }
 
   .maris .follower {
     opacity: 1;
     z-index: 2; 
-    background: blue;
+    background-image: url("../images/DMaris.jpg");
   }
 
   .sani .follower {
     opacity: 1;
     z-index: 2; 
-    background: yellow;
+    background-image: url("../images/Sani.jpg");
   }
 
   .sivvi .follower {
     opacity: 1;
     z-index: 2; 
-    background: olive;
+    background-image: url("../images/Sivvi.jpg");
   }
 
   .apes .follower {
     opacity: 1;
     z-index: 2; 
-    background: orange;
+    background-image: url("../images/Apes.jpg");
   }
 
   .made .follower {
     opacity: 1;
     z-index: 2; 
-    background: fuchsia;
+    background-image: url("../images/Made.jpg");
   }
 
   @media only screen and (min-width: 660px) {

@@ -9,7 +9,7 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Harrods'"
+      :title="'D maris bay'"
       :num="'01'"
       :sub="'UX design — UI Design'"
     />
