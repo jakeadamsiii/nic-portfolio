@@ -128,10 +128,10 @@
         }
       },
       enterPassword: function(val) {
-        if (val === "Folio2020") {
+        if (val === "LoremIpsum") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed4", true);
+          localStorage.setItem("allowed5", true);
           location.reload();
         } else {
           this.tried = true;
@@ -142,7 +142,7 @@
       var that = this;
       this.checkDesktop();
 
-      if (localStorage.getItem("allowed4") === 'true') {
+      if (localStorage.getItem("allowed5") === 'true') {
         this.allowed = true;
         this.block = false; 
       }
