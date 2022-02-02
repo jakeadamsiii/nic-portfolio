@@ -9,14 +9,14 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Harrods'"
-      :num="'01'"
-      :sub="'UX design — UI Design'"
+      :title="'Made.com'"
+      :num="'04'"
+      :sub="'Wish List Functionality'"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageMade1"
+      :Images="MadeImages1"
     />
 
     <Copy 
@@ -26,18 +26,13 @@
     />
 
     <BgThreeImages 
-      :bgImage="[]"
-      :Images="ImagesArray"
-    />
-
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageMade2"
+      :Images="MadeImages2"
     />
     
     <Next
       :nextUrl="'/asos'"
-      :prevUrl="'/sivvi'"
+      :prevUrl="'/harrods'"
     />
 
   </main-layout>
@@ -65,27 +60,46 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageMade1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_Made_1.jpg'),
+            alt: "Background"
           }
         ],  
-        ImagesArray: [
+        MadeImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Made_1.png'),
+            alt: "Made Screens"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Made_2.png'),
+            alt: "Made Screens"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Made_3.png'),
+            alt: "Made Screens"
+          }
+        ],
+        BgImageMade2: [
+          {
+            src: require('../images/Background_Made_2.jpg'),
+            alt: "Background"
           }
         ],  
- 
+        MadeImages2: [
+          {
+            src: require('../images/Screen_Made_4.png'),
+            alt: "Made Screens"
+          },
+          {
+            src: require('../images/Screen_Made_5.png'),
+            alt: "Made Screens"
+          },
+          {
+            src: require('../images/Screen_Made_6.png'),
+            alt: "Made Screens"
+          }
+        ],  
       }
     },
 

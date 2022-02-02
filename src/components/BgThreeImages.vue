@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-three-image" ref="bgThreeImage" :class="{fit: $props.bgImage.length <= 0}">
+  <div class="bg-three-image" ref="bgThreeImage" :class="{fit: $props.bgImage.length <= 0, single: $props.Images.length === 1}">
     <div class="image-container" >
         <img v-if="$props.bgImage[0]" class="bg-image" style="top:0" :src="$props.bgImage[0].src" :alt="$props.bgImage[0].alt" />
         <div class="three-image-container">
@@ -68,6 +68,11 @@
     overflow: hidden;
   }
 
+  .three-image-container img {
+    border: 5px solid #000;
+    border-radius: 16px;
+  }
+
   .image-container {    
     height: 50vh;
     overflow: hidden;
@@ -89,6 +94,10 @@
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
+  }
+
+  .single .three-image-container {
+    justify-content: space-around;
   }
 
   .three-image-container img {

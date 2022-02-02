@@ -47,7 +47,8 @@
     display: flex;
     align-items: center;
     justify-content:center;
-    margin-top: 2px;
+    mar
+    gin-top: 2px;
   }
 
   img[src*=".jpg"] {

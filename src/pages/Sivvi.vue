@@ -9,14 +9,14 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Harrods'"
-      :num="'01'"
-      :sub="'UX design — UI Design'"
+      :title="'Sivvi'"
+      :num="'02'"
+      :sub="'APP DESIGN'"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageSivvi1"
+      :Images="SivviImages1"
     />
 
     <Copy 
@@ -27,17 +27,17 @@
 
     <BgThreeImages 
       :bgImage="[]"
-      :Images="ImagesArray"
+      :Images="SivviImages2"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageSivvi2"
+      :Images="SivviImages3"
     />
     
     <Next
-      :nextUrl="'/asos'"
-      :prevUrl="'/sivvi'"
+      :nextUrl="'/harrods'"
+      :prevUrl="'/d-maris-bay'"
     />
 
   </main-layout>
@@ -65,27 +65,60 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageSivvi1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_Sivvi_1.jpg'),
+            alt: "Background Sivvi"
           }
         ],  
-        ImagesArray: [
+        SivviImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sivvi_1.png'),
+            alt: "Sivvi Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sivvi_2.png'),
+            alt: "Sivvi Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sivvi_3.png'),
+            alt: "Sivvi Screen"
+          }
+        ],
+        SivviImages2: [
+          {
+            src: require('../images/Screen_Sivvi_4.png'),
+            alt: "Sivvi Screen"
+          },
+          {
+            src: require('../images/Screen_Sivvi_5.png'),
+            alt: "Sivvi Screen"
+          },
+          {
+            src: require('../images/Screen_Sivvi_6.png'),
+            alt: "Sivvi Screen"
+          }
+        ], 
+        BgImageSivvi2: [
+          {
+            src: require('../images/Background_Sivvi_2.jpg'),
+            alt: "Background Sivvi"
           }
         ],  
- 
+        SivviImages3: [
+          {
+            src: require('../images/Screen_Sivvi_7.png'),
+            alt: "Sivvi Screen"
+          },
+          {
+            src: require('../images/Screen_Sivvi_8.png'),
+            alt: "Sivvi Screen"
+          },
+          {
+            src: require('../images/Screen_Sivvi_9.png'),
+            alt: "Sivvi Screen"
+          }
+        ], 
       }
     },
 

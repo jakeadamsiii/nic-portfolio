@@ -67,6 +67,11 @@
     overflow: hidden;
   }
 
+  .three-image-container img {
+    border: 5px solid #000;
+    border-radius: 16px;
+  }
+
   .image-container {    
     height: 50vh;
     overflow: hidden;

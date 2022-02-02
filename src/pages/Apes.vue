@@ -9,14 +9,14 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Harrods'"
-      :num="'01'"
-      :sub="'UX design — UI Design'"
+      :title="'Apes Hill'"
+      :num="'06'"
+      :sub="'Brand Identity'"
     />
 
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+    <HorizontalImage 
+      :bgImage="BgImageApes1"
+      :Image="ApesImages1"
     />
 
     <Copy 
@@ -25,19 +25,9 @@
       :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
     />
 
-    <BgThreeImages 
-      :bgImage="[]"
-      :Images="ImagesArray"
-    />
-
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
-    />
-    
     <Next
-      :nextUrl="'/asos'"
-      :prevUrl="'/sivvi'"
+      :nextUrl="'/sani-resorts'"
+      :prevUrl="'/asos'"
     />
 
   </main-layout>
@@ -65,26 +55,18 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageApes1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_ApesHill_1.jpg'),
+            alt: "Background"
           }
         ],  
-        ImagesArray: [
+        ApesImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/VideoStill_ApesHill_1.jpg'),
+            alt: "Apes Hill Screen"
           }
-        ],  
+        ]
  
       }
     },

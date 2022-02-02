@@ -10,13 +10,13 @@
 
     <ProjectHeading 
       :title="'Harrods'"
-      :num="'01'"
-      :sub="'UX design — UI Design'"
+      :num="'03'"
+      :sub="'Website Redesign'"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageHarrods1"
+      :Images="HarrodsImages1"
     />
 
     <Copy 
@@ -25,18 +25,17 @@
       :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
     />
 
-    <BgThreeImages 
-      :bgImage="[]"
-      :Images="ImagesArray"
+    <HorizontalImage
+      :bgImage="BgImageHarrods2"
+      :Image="HarrodsImages2"
     />
 
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+    <LongImage 
+      :Image="HarrodsImages3"
     />
     
     <Next
-      :nextUrl="'/asos'"
+      :nextUrl="'/made'"
       :prevUrl="'/sivvi'"
     />
 
@@ -65,26 +64,44 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageHarrods1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_Harrods_1.jpg'),
+            alt: "Background Image"
           }
         ],  
-        ImagesArray: [
+        HarrodsImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Harrods_1.png'),
+            alt: "Harrods Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Harrods_2.png'),
+            alt: "Harrods Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Harrods_3.png'),
+            alt: "Harrods Screen"
           }
         ],  
+        BgImageHarrods2: [
+          {
+            src: require('../images/Background_Harrods_2.jpg'),
+            alt: "Background Image"
+          }
+        ],  
+        HarrodsImages2: [
+          {
+            src: require('../images/Screen_Harrods_4.png'),
+            alt: "Harrods Screen"
+          }
+        ], 
+        HarrodsImages3: [
+          {
+            src: require('../images/Screen_Harrods_5.png'),
+            alt: "Harrods Screen"
+          }
+        ],   
  
       }
     },

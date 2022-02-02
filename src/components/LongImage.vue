@@ -28,7 +28,9 @@
 img {
   width: 88%;
   margin: 50px auto;
-  display: block
+  display: block;
+  border: 5px solid #000;
+  border-radius: 16px;
 }
 
 @media  only screen and (min-width: 550px) {

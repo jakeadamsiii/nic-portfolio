@@ -11,12 +11,12 @@
     <ProjectHeading 
       :title="'D maris bay'"
       :num="'01'"
-      :sub="'UX design — UI Design'"
+      :sub="'WEBSITE DESIGN & ART DIRECTION'"
     />
 
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+    <HorizontalImage 
+      :bgImage="BgImageMaris1"
+      :Image="MarisImages1"
     />
 
     <Copy 
@@ -27,17 +27,34 @@
 
     <BgThreeImages 
       :bgImage="[]"
-      :Images="ImagesArray"
+      :Images="MarisImages2"
+    />
+
+    <HorizontalImage 
+      :bgImage="BgImageMaris2"
+      :Image="MarisImages3"
+    />
+
+    <TrippleImage 
+      :Images="MarisImages4"
+    />
+
+     <LongImage 
+      :Image="MarisImages5"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageMaris3"
+      :Images="MarisImages7"
     />
     
+    <ImageGrid 
+      :Images="MarisImages8"
+    />
+
     <Next
-      :nextUrl="'/asos'"
-      :prevUrl="'/sivvi'"
+      :nextUrl="'/sivvi'"
+      :prevUrl="'/sani-resorts'"
     />
 
   </main-layout>
@@ -65,27 +82,110 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageMaris1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_DMaris_1.jpg'),
+            alt: "Background"
           }
         ],  
-        ImagesArray: [
+        MarisImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_DMaris_1.png'),
+            alt: "D Maris Bay Screen"
           }
         ],  
- 
+        MarisImages2: [
+          {
+            src: require('../images/Screen_DMaris_2.png'),
+            alt: "D Maris Bay Screen"
+          },
+         {
+            src: require('../images/Screen_DMaris_3.png'),
+            alt: "D Maris Bay Screen"
+          },         
+          {
+            src: require('../images/Screen_DMaris_4.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ],
+        BgImageMaris2: [
+          {
+            src: require('../images/Background_DMaris_2.jpg'),
+            alt: "Background"
+          }
+        ],
+        MarisImages3: [
+          {
+            src: require('../images/Screen_DMaris_5.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ],
+        MarisImages4: [
+          {
+            src: require('../images/Screen_DMaris_6.png'),
+            alt: "D Maris Bay Screen"
+          },
+          {
+            src: require('../images/Screen_DMaris_7.png'),
+            alt: "D Maris Bay Screen"
+          },        
+          {
+            src: require('../images/Screen_DMaris_8.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ],
+         MarisImages5: [
+          {
+            src: require('../images/Screen_DMaris_9.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ],
+        BgImageMaris3: [
+          {
+            src: require('../images/Background_DMaris_3.jpg'),
+            alt: "D Maris Bay Screen"
+          }
+        ],  
+        MarisImages7: [
+          {
+            src: require('../images/Screen_DMaris_10.png'),
+            alt: "D Maris Bay Screen"
+          },
+         {
+            src: require('../images/Screen_DMaris_11.png'),
+            alt: "D Maris Bay Screen"
+          },         
+          {
+            src: require('../images/Screen_DMaris_12.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ],
+        MarisImages8: [
+          {
+            src: require('../images/Screen_DMaris_13.png'),
+            alt: "D Maris Bay Screen"
+          },
+         {
+            src: require('../images/Screen_DMaris_14.png'),
+            alt: "D Maris Bay Screen"
+          },         
+          {
+            src: require('../images/Screen_DMaris_15.png'),
+            alt: "D Maris Bay Screen"
+          },
+           {
+            src: require('../images/Screen_DMaris_16.png'),
+            alt: "D Maris Bay Screen"
+          },
+         {
+            src: require('../images/Screen_DMaris_17.png'),
+            alt: "D Maris Bay Screen"
+          },         
+          {
+            src: require('../images/Screen_DMaris_18.png'),
+            alt: "D Maris Bay Screen"
+          }
+        ]
       }
     },
 

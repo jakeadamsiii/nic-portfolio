@@ -9,14 +9,14 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Harrods'"
-      :num="'01'"
-      :sub="'UX design — UI Design'"
+      :title="'Sani Resorts'"
+      :num="'07'"
+      :sub="'Website Redesign'"
     />
 
     <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+      :bgImage="BgImageSani1"
+      :Images="SaniImages1"
     />
 
     <Copy 
@@ -25,19 +25,23 @@
       :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
     />
 
-    <BgThreeImages 
+   <HorizontalImage 
       :bgImage="[]"
-      :Images="ImagesArray"
+      :Image="SaniImages2"
     />
 
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="ImagesArray"
+   <BgThreeImages 
+      :bgImage="BgImageSani2"
+      :Images="SaniImages3"
     />
-    
+
+     <LongImage 
+      :Image="SaniImages4"
+    />
+
     <Next
-      :nextUrl="'/asos'"
-      :prevUrl="'/sivvi'"
+      :nextUrl="'/d-maris-bay'"
+      :prevUrl="'/apes-hill'"
     />
 
   </main-layout>
@@ -65,27 +69,58 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageSani1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_Sani_1.jpg'),
+            alt: "Background"
           }
         ],  
-        ImagesArray: [
+        SaniImages1: [
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sani_1.png'),
+            alt: "Sani Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sani_2.png'),
+            alt: "Sani Screen"
           },
           {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
+            src: require('../images/Screen_Sani_3.png'),
+            alt: "Sani Screen"
           }
         ],  
- 
+        SaniImages2: [
+          {
+            src: require('../images/Screen_Sani_4.png'),
+            alt: "Sani Screen"
+          }
+        ], 
+        BgImageSani2: [
+          {
+            src: require('../images/Background_Sani_2.jpg'),
+            alt: "Background"
+          }
+        ],  
+        SaniImages3: [
+          {
+            src: require('../images/Screen_Sani_5.png'),
+            alt: "Sani Screen"
+          },
+          {
+            src: require('../images/Screen_Sani_6.png'),
+            alt: "Sani Screen"
+          },
+          {
+            src: require('../images/Screen_Sani_7.png'),
+            alt: "Sani Screen"
+          }
+        ],  
+        SaniImages4: [
+          {
+            src: require('../images/Screen_Sani_8.png'),
+            alt: "Sani Screen"
+          }
+        ],  
       }
     },
 

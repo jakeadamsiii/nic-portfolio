@@ -14,9 +14,9 @@
       :sub="'AUGMENTED REALITY MAKE-UP APP'"
     />
 
-    <HorizontalImage 
-      :bgImage="BgImageArray"
-      :Image="imageArray"
+    <BgThreeImages
+      :bgImage="BgImageAsos1"
+      :Images="AsosImages1"
     />
 
     <Copy 
@@ -24,37 +24,15 @@
       :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
       :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
     />
-
-    <HorizontalImage 
-      :bgImage="[]"
-      :Image="imageArray"
+        
+    <BgThreeImages
+      :bgImage="BgImageAsos2"
+      :Images="AsosImages2"
     />
 
-    <HorizontalImage 
-      :bgImage="BgImageArray"
-      :Image="imageArray"
-    />
-
-    <TrippleImage 
-      :Images="trippleImages"
-    />
-
-    <HorizontalImage 
-      :bgImage="BgImageArray"
-      :Image="imageArray"
-    />
-
-    <LongImage 
-      :Image="bigImage"
-    />
-
-    <ImageGrid 
-      :Images="imageGrid"
-    />
-
-    <BgThreeImages 
-      :bgImage="BgImageArray"
-      :Images="PhoneImagesArray"
+    <Next
+      :nextUrl="'/apes-hill'"
+      :prevUrl="'/made'"
     />
 
 
@@ -83,78 +61,38 @@
         allowed: false,
         tried: false,
         block: true,
-        BgImageArray: [
+        BgImageAsos1: [
           {
-            src: require('../images/bgtest.jpg'),
-            alt: "Background Test"
+            src: require('../images/Background_ASOS_1.jpg'),
+            alt: "Background"
           }
         ],  
-        imageArray: [
+        AsosImages1: [
           {
-            src: require('../images/Dmaris.png'),
-            alt: "D maris bay hompepage"
+            src: require('../images/VideoStill_ASOS_1.jpg'),
+            alt: "Asos Screen"
+          },
+        ], 
+        BgImageAsos2: [
+          {
+            src: require('../images/Background_ASOS_2.jpg'),
+            alt: "Background"
+          }
+        ],  
+        AsosImages2: [
+          {
+            src: require('../images/Screen_ASOS_1.png'),
+            alt: "Asos Screen"
+          },
+          {
+            src: require('../images/Screen_ASOS_2.png'),
+            alt: "Asos Screen"
+          },
+          {
+            src: require('../images/Screen_ASOS_3.png'),
+            alt: "Asos Screen"
           },
         ],  
-        bigImage: [
-          {
-            src: require('../images/longImage.png'),
-            alt: "D maris bay long hompepage"
-          },
-        ], 
-        trippleImages: [
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-        ], 
-        imageGrid: [
-          {
-            src: require('../images/instagram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-          {
-            src: require('../images/gram.png'),
-            alt: "D maris bay long hompepage"
-          },
-        ], 
-        PhoneImagesArray: [
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          },
-          {
-            src: require('../images/sivvi-mobile.png'),
-            alt: "Background Test"
-          }
-        ],   
       }
     },
      methods: {
