@@ -48,13 +48,15 @@
     },
     mounted: function(){
       var app = this;
-      console.log(app.$props)
       if (app.$props.bgImage[0]) {
-        document.addEventListener("scroll", function() {
-          app.detectScrollDirection();
-        });
+        document.addEventListener("scroll", app.detectScrollDirection);
       }
-
+    },
+    beforeDestroy: function() {
+      var app = this;
+      if (app.$props.bgImage[0]) {
+        document.removeEventListener("scroll", app.detectScrollDirection);
+      }
     }
   }
 </script>
