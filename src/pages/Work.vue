@@ -8,7 +8,7 @@
 
   <main-layout >
     <Nav />
-      <section class="work" :class="{asos: asosHover, harrods: harrodsHover}">
+      <section class="work" :class="{asos: asosHover, harrods: harrodsHover, maris: marisHover, sivvi: sivviHover, made: madeHover, apes: apesHover, sani: saniHover}">
          <div class="container" >
            <div class="row" >
             <div class="col-1 hidden-sm"></div>
@@ -18,51 +18,45 @@
                 <h2>Work</h2>
                 <ul class="work-list">
                     <li class="work-li" >
-                      <router-link to="/harrods">
+                      <router-link to="/d-maris-bay">
                         <span>01</span>
+                        <p class="underline" @mouseover="marisHover = true" @mouseleave="marisHover = false">D Maris Bay</p>
+                      </router-link>
+                    </li>
+                    <li class="work-li">
+                      <router-link to="/sivvi">
+                        <span>02</span>
+                        <p class="underline" @mouseover="sivviHover = true" @mouseleave="sivviHover = false">Sivvi</p>
+                      </router-link>
+                    </li>
+                    <li class="work-li">
+                      <router-link to="/harrods">
+                        <span>03</span>
                         <p class="underline" @mouseover="harrodsHover = true" @mouseleave="harrodsHover = false">Harrods</p>
                       </router-link>
                     </li>
                     <li class="work-li">
-                      <router-link to="/harrods">
-                        <span>01</span>
-                        <p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">Harrods</p>
+                      <router-link to="/made">
+                        <span>04</span>
+                        <p class="underline" @mouseover="madeHover = true" @mouseleave="madeHover = false">Made.com</p>
                       </router-link>
                     </li>
                     <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
+                      <router-link to="/asos">
+                        <span>05</span>
+                        <p class="underline" @mouseover="asosHover = true" @mouseleave="asosHover = false">ASOS</p>
                       </router-link>
                     </li>
                     <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
+                      <router-link to="/apes-hill">
+                        <span>06</span>
+                        <p class="underline" @mouseover="apesHover = true" @mouseleave="apesHover = false">Apes Hill</p>
                       </router-link>
                     </li>
                     <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
-                      </router-link>
-                    </li>
-                    <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
-                      </router-link>
-                    </li>
-                    <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
-                      </router-link>
-                    </li>
-                    <li class="work-li">
-                      <router-link to="/">
-                        <span>01</span>
-                        <p class="underline">Harrods</p>
+                      <router-link to="/sani-resorts">
+                        <span>07</span>
+                        <p class="underline" @mouseover="saniHover = true" @mouseleave="saniHover = false">Sani resorts</p>
                       </router-link>
                     </li>
                 </ul>
@@ -87,6 +81,11 @@
         isDesktop: true,
         harrodsHover: false,
         asosHover: false,
+        madeHover: false,
+        apesHover: false,
+        marisHover: false,
+        sivviHover: false,
+        saniHover: false,
         degrees: 0,
         forwards: true,
         tried: false,
@@ -215,6 +214,7 @@
     z-index: 1;
     font-family: "David-ExtraLight", sans-serif;
     text-transform: uppercase;
+    white-space: normal; 
   }
 
   .work-li a:hover p,
@@ -281,13 +281,43 @@
     background: red;
   }
 
+  .maris .follower {
+    opacity: 1;
+    z-index: 2; 
+    background: blue;
+  }
+
+  .sani .follower {
+    opacity: 1;
+    z-index: 2; 
+    background: yellow;
+  }
+
+  .sivvi .follower {
+    opacity: 1;
+    z-index: 2; 
+    background: olive;
+  }
+
+  .apes .follower {
+    opacity: 1;
+    z-index: 2; 
+    background: orange;
+  }
+
+  .made .follower {
+    opacity: 1;
+    z-index: 2; 
+    background: fuchsia;
+  }
+
   @media only screen and (min-width: 660px) {
     h2 {
       font-size: 20px;
     }
 
     .work-li p{
-      font-size: 64px;
+      font-size: 50px;
     }
 
     .work {
@@ -299,6 +329,13 @@
 
     .work-li {
       width: 50%;
+    }
+  }
+
+  @media only screen and (min-width: 1200px) {
+
+    .work-li p{
+      font-size: 64px;
     }
   }
 

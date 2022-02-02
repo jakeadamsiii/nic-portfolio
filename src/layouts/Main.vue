@@ -66,6 +66,7 @@
   html, body {
     cursor: none;
     overflow-x: hidden;
+    overflow-y: auto;
     width: 100%;
     background: #F7F6F3;
   }

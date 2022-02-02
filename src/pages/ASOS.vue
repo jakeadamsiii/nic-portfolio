@@ -52,6 +52,11 @@
       :Images="imageGrid"
     />
 
+    <BgThreeImages 
+      :bgImage="BgImageArray"
+      :Images="PhoneImagesArray"
+    />
+
 
   </main-layout>
   </div>
@@ -135,7 +140,21 @@
             src: require('../images/gram.png'),
             alt: "D maris bay long hompepage"
           },
-        ],  
+        ], 
+        PhoneImagesArray: [
+          {
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
+          },
+          {
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
+          },
+          {
+            src: require('../images/sivvi-mobile.png'),
+            alt: "Background Test"
+          }
+        ],   
       }
     },
      methods: {

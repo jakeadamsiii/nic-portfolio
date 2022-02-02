@@ -85,9 +85,10 @@
   .three-image-container {
     display: flex;
     height: 100%;
-    width: 100%;
-    justify-content: space-evenly;
+    width: 88%;
+    justify-content: space-between;
     align-items: center;
+    margin: 0 auto;
   }
 
   .three-image-container img {
@@ -109,6 +110,10 @@
   .fit {
     margin-top: -10%;
   }
+
+  .three-image-container {
+    width: 75%;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -116,13 +121,9 @@
     margin-top: calc(-1* (100vh - 483px) / 2);
   }
 
-  .three-image-container img {
-    height: 483px;
-    width: 215px;
-  }
-
   .three-image-container {
     flex-direction: row;
+    width: 624px;
   }
 
   .image-container .bg-image {

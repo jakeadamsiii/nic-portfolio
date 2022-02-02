@@ -11,11 +11,12 @@
     content: "";
     position: fixed;
     left: 0;
+    top: 100%;
     background: #000;
     height: 100%;
     width: 100%;
-    transition-duration: .5s;
-    transition-property: all;
+    transition-duration: .75s;
+    transition-property: top;
     transition-timing-function: ease;
 }
 
@@ -24,7 +25,7 @@
 }
 
 .roll-leave-to::after {
-    top: 0;
+     top: 0%;
 }
 
 .roll-enter::after {
