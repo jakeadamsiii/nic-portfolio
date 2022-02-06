@@ -3,10 +3,10 @@
       <div class="container">
         <div class="row"> 
             <div class="col-1 hidden-sm"></div>
-            <div class="col-2">
-                <h2 v-if="$props.title">{{$props.title}}</h2>
+            <div class="col-2" v-if="$props.title">
+                <h2>{{$props.title}}</h2>
             </div>
-            <div class="col-8">
+            <div :class="{col8: $props.title, col10: !$props.title}">
                 <p v-if="$props.copy" class="copy">{{$props.copy}}</p>
                 <p v-if="$props.sub" class="sub">{{$props.sub}}</p>
             </div>

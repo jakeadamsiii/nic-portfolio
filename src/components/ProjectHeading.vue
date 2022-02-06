@@ -46,7 +46,7 @@
   }
 
   span {
-    font-family: 'David-Medium', sans-serif;
+    font-family: 'David-Regular', sans-serif;
     font-size: 20px;
     margin: 0 0 10px;
     text-align: center;
@@ -55,11 +55,12 @@
   }
 
   p {
-    font-family: 'David-Light', sans-serif;
+    font-family: 'David-ExtraLight', sans-serif;
     font-size: 20px;
     margin: 0 0 40px;
     text-align: center;
     text-transform: uppercase;
+    letter-spacing: .5px;
   }
 
   h1 {

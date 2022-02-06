@@ -30,8 +30,8 @@
       let links = document.querySelectorAll('a');
       // Listeners
       window.addEventListener('mousemove', e => {
-        cursor.style.left = (e.screenX) + "px";
-        cursor.style.top = (e.screenY - 145) + "px";
+        cursor.style.left = (e.clientX) + "px";
+        cursor.style.top = (e.clientY) + "px";
         cursor.classList.contains('in') ? null : cursor.classList.add('in');
       });
 
@@ -170,7 +170,9 @@
   .col-9,
   .col-10,
   .col-11,
-  .col-12 {
+  .col-12,
+  .col8,
+  .col10 {
     width: 88%;
   }
 
@@ -187,9 +189,9 @@
     .col-5 {width: 37.66%;}
     .col-6 {width: 46%;}
     .col-7 {width: 54.33%;}
-    .col-8 {width: 62.66%;}
+    .col-8, .col8 {width: 62.66%;}
     .col-9 {width: 71%;}
-    .col-10 {width: 79.33%;}
+    .col-10, .col10 {width: 79.33%;}
     .col-11 {width: 87.66%;}
     .col-12 {width: 96%;}
 

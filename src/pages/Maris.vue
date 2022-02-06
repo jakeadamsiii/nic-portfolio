@@ -14,9 +14,14 @@
       :sub="'WEBSITE DESIGN & ART DIRECTION'"
     />
 
-    <HorizontalImage 
+    <Video 
       :bgImage="BgImageMaris1"
-      :Image="MarisImages1"
+      :Video="Video"
+    />
+
+    <VideoMobile 
+      :bgImage="BgImageMaris1"
+      :Video="VideoMobile"
     />
 
     <Copy 
@@ -72,6 +77,8 @@
   import TrippleImage from '../components/TrippleImage.vue'
   import Next from '../components/Next.vue'
   import ImageGrid from '../components/ImageGrid.vue'
+  import Video from '../components/Video.vue'
+  import VideoMobile from '../components/VideoMobile.vue'
    
   import passwordProtect from '../components/PasswordProtect.vue'
 
@@ -185,6 +192,12 @@
             src: require('../images/Screen_DMaris_18.png'),
             alt: "D Maris Bay Screen"
           }
+        ],
+        Video: [
+          require('../images/INTRO.mp4')
+        ],
+        VideoMobile: [
+          require('../images/INTRO.mp4')
         ]
       }
     },
@@ -202,7 +215,7 @@
       }
     },
     components: {
-      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
+      MainLayout, Nav, Video, VideoMobile, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
       if (localStorage.getItem("allowed5") === 'true') {
