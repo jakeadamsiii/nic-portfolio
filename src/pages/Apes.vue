@@ -14,9 +14,9 @@
       :sub="'Brand Identity'"
     />
 
-    <HorizontalImage 
+     <Video 
       :bgImage="BgImageApes1"
-      :Image="ApesImages1"
+      :Video="Video"
     />
 
     <Copy 
@@ -50,6 +50,7 @@
   import TrippleImage from '../components/TrippleImage.vue'
   import Next from '../components/Next.vue'
   import ImageGrid from '../components/ImageGrid.vue'
+  import Video from '../components/Video.vue'
    
   import passwordProtect from '../components/PasswordProtect.vue'
 
@@ -77,6 +78,9 @@
             src: require('../images/Screen_ApesHill_1.png'),
             alt: "Apes Hill Screen"
           }
+        ],
+        Video: [
+          require('../images/ApesHill.mp4')
         ]
       }
     },
@@ -94,7 +98,7 @@
       }
     },
     components: {
-      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
+      MainLayout, Nav, ProjectHeading, Video, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
       if (localStorage.getItem("allowed5") === 'true') {

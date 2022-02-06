@@ -14,10 +14,11 @@
       :sub="'AUGMENTED REALITY MAKE-UP APP'"
     />
 
-    <BgThreeImages
+    <VideoMobile 
       :bgImage="BgImageAsos1"
-      :Images="AsosImages1"
-    />
+      :Video="VideoMobile"
+    /> 
+
 
     <Copy 
       :title="'The Approach'"
@@ -51,6 +52,7 @@
   import TrippleImage from '../components/TrippleImage.vue'
   import Next from '../components/Next.vue'
   import ImageGrid from '../components/ImageGrid.vue'
+  import VideoMobile from '../components/VideoMobile.vue'
    
   import passwordProtect from '../components/PasswordProtect.vue'
 
@@ -93,6 +95,9 @@
             alt: "Asos Screen"
           },
         ],  
+        VideoMobile: [
+          require('../images/ASOS.mp4'),
+        ]
       }
     },
      methods: {
@@ -109,7 +114,7 @@
     },
 
     components: {
-      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
+      MainLayout, Nav, ProjectHeading, VideoMobile, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
       if (localStorage.getItem("allowed5") === 'true') {

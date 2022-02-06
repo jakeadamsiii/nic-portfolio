@@ -74,7 +74,7 @@
     border: 5px solid #000;
     border-radius: 16px;
     position: relative;
-    width: 25%;
+    width: 37%;
   }
 
   .image-container {    
@@ -115,6 +115,10 @@
 @media  only screen and (min-width: 550px) {
   .fit {
     margin-top: -10%;
+  }
+
+  .video-container video {
+    width: 17%;
   }
   
 }
