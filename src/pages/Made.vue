@@ -21,8 +21,8 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :copy="`I was tasked with extending Made.com's existing Wishlist functionality from the app to the mobile web experience, while enhancing and improving it.`"
+      :sub="'In addition, I integrated functionality allowing products to be added from both PDP and PLP levels, as well as sorting and arranging into personalised groups, much like a pinboard.  In my design concept, I explored web augmented reality which would allow users to place products directly on their homes using their phone camera, instead of downloading an app.'" 
     />
 
     <BgThreeImages 

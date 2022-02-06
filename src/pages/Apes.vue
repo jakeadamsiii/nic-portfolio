@@ -21,8 +21,13 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :copy="'Creating the brand identity for Apes Hill, a luxury golf resort in Barbados, included logo, colour palette, typography and art direction. Working with strategy, I established clear design principles to form the basis of the brand identity.'"
+      :sub="`The laidback luxury feel of the brand set Apes Hill apart from its competitors.  This paradoxical approach I took involved combining typefraces that felt warm yet elegant, colour palettes that accentuated the resort's natural beauty and light-hearted art direction that enhanced the brand's playful side.`" 
+    />
+
+    <HorizontalImage 
+      :bgImage="ApesImages2"
+      :Image="[]"
     />
 
     <Next
@@ -66,8 +71,13 @@
             src: require('../images/VideoStill_ApesHill_1.jpg'),
             alt: "Apes Hill Screen"
           }
+        ],  
+        ApesImages2: [
+          {
+            src: require('../images/Screen_ApesHill_1.png'),
+            alt: "Apes Hill Screen"
+          }
         ]
- 
       }
     },
 

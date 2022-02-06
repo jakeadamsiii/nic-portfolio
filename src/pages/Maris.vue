@@ -24,10 +24,10 @@
       :Video="VideoMobile"
     />
 
-    <Copy 
-      :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+<Copy 
+      :title="''"
+      :copy="'D Maris Bay is a luxury resort located in Turkey, where Aegean Sea meets the Mediterranean.  The resort is secluded and immersed in nature, home to a number of exclusive sandy beaches, outdoor activities and fine dining restaurants.'"
+      :sub="`In order to improve the resort's online presence and increase online bookings, I was asked to elevate the resort's brand creative, art direction, and website design to reflect the luxury experience of the resort.`" 
     />
 
     <BgThreeImages 
@@ -38,6 +38,12 @@
     <HorizontalImage 
       :bgImage="BgImageMaris2"
       :Image="MarisImages3"
+    />
+
+    <Copy 
+      :title="'The Approach'"
+      :copy="'The overall objective was to enhance the D Maris Bay online experience, increasing bookings through the website overall by elevating the visual identity, structuring pages clearly, and simplifying user journeys.'"
+      :sub="'The sitemap was restructured to make it easier for users to navigate to their desired information, and improvements made to the booking process to require fewer clicks to checkout.  I created a comprehensive design system and module library that would facilitate building new pages and enhancing features in a consistent and efficient way.'" 
     />
 
     <TrippleImage 
@@ -52,7 +58,13 @@
       :bgImage="BgImageMaris3"
       :Images="MarisImages7"
     />
-    
+
+    <Copy 
+      :title="'Art Direction'"
+      :copy="'In my role as Art Director, I defined and mood boarded the overall direction for a 7-day photo shoot on the resort in Turkey, including casting, wardrobe styling, and make-up.'"
+      :sub="'In collaboration with the production team, we planned and shot over 100 images with 10 models to build the brand narrative for content across the website. Taking into account their purpose and placement to elevate the brand and ensure consistency with the brand aesthetic.'" 
+    />
+
     <ImageGrid 
       :Images="MarisImages8"
     />

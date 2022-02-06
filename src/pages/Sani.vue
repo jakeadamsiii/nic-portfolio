@@ -21,8 +21,8 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :copy="'The Sani resort is a unique luxury destination in Halkidiki, Greece, that offers five unique hotels and a world-class dining and entertainment experience. I was asked to improve the user experience of the website to increase conversions.'"
+      :sub="`Because of the resort's extensive offering, it was important to make it easy for guests to explore the different hotels, experiences, activities and restaurants beforehand, as well as pre-book activities.  With consideration given to the content and structure of the pages, a strong brand narrative was built with engaging autoplay videos and rich imagery across the site, as well as clear content hierarchy and defined calls to action.`" 
     />
 
    <HorizontalImage 

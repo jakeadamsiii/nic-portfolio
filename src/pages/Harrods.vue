@@ -21,8 +21,8 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :copy="'As part of a complete redesign of Harrods.com, I collaborated with a branding agency to create a new online experience, and was then tasked to translate these concepts into commercially driving pages for brands like Saint Laurent, Gucci and Burberry.'"
+      :sub="`The aim was to incorporate affiliated brands while maintaining both the brand's integrity and providing an elevated experience similar to that of the store.  My goal was to create a design that seamlessly integrated content across the whole user journey, creating a rich shopping experience for the user.`" 
     />
 
     <HorizontalImage

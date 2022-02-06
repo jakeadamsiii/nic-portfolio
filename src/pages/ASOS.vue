@@ -21,8 +21,8 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :copy="`To create an augmented reality make-up app to coincide with the launch of ASOS's new beauty range. Working with a 3rd party, I led the design and enhancement of their existing technology to build a bespoke experience for ASOS.`"
+      :sub="'Beginning from the user journey, wireframes, and finally the applied UI, I ensured a clean and simple experience for the user. It was important to include both brand curated content and user generated content into the experience. I also explored functionality that allowed users to scan barcodes of beauty products, try them on and purchase them at the click of a button.'" 
     />
         
     <BgThreeImages

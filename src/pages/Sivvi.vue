@@ -20,8 +20,9 @@
     />
 
     <Copy 
-      :copy="'Taking elements and functionality I knew already worked within the app, I created a robust solution for the site that incorporated a basic wishlist but with enhanced features.'"
-      :sub="'Allowing users to save products to an area which they could return to at a later date, easily adding from both PDP and PLP level, but also adding functionality so these products could be arranged and sorted into groups and easily moved around, much like a pin-board.'" 
+      :title="'The Approach'"
+      :copy="'Sivvi, leading fashion retailer in the UAE, Saudi Arabia and Egypt, was looking to improve its app experience.  My aim when leading the design of the app was to introduce a stronger brand identity, giving it a bold and modern look, setting it apart from competitors in a crowded and ever growing market.'"
+      :sub="`By utilising a 'dark mode' in the design, the app felt very different from its competitors. I reworked the entire structure of the app, eliminated unneeded content in order to simplify pages, restructured the navigation to better categorise product listings, and added native features to create an intuitive and seamless app experience.`" 
     />
 
     <BgThreeImages 

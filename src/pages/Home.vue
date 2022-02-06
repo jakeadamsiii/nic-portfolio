@@ -159,9 +159,8 @@
   .image-ghost {
     height: 400px;
     width: 88%;
-    border: 5px solid black;
-    border-radius: 10px;
-    background: green;
+    background-image: url(../images/Homepage.gif);
+    background-size: contain;
     position: absolute;
     left: 50%;
     transform: translate(-50%);
