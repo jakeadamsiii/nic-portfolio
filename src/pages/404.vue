@@ -117,7 +117,7 @@
 <style >
 
 html, body {
-  overflow: hidden;
+  overflow-y: hidden;
 }
 
 .error {
@@ -156,8 +156,9 @@ html, body {
 
 .copy p {
   font-family: 'David-Regular';
-  font-size: 20px;
+  font-size: 14px;
   margin: 0 0 40px;
+  letter-spacing: .8px;
 }
 
 .error .underline {
