@@ -1,7 +1,7 @@
 <template>
   <div class="bg-three-image" ref="bgThreeImage" :class="{fit: $props.bgImage.length <= 0, single: $props.Images.length === 1}">
     <div class="image-container" >
-        <img v-if="$props.bgImage[0]" class="bg-image" style="top:0" :src="$props.bgImage[0].src" :alt="$props.bgImage[0].alt" />
+        <div class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
         <div class="three-image-container">
           <img v-if="$props.Images[0]" :src="$props.Images[0].src" :alt="$props.Images[0].alt" />
           <img v-if="$props.Images[1]" :src="$props.Images[1].src" :alt="$props.Images[1].alt" />
@@ -88,6 +88,9 @@
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
   }
 
   .three-image-container {

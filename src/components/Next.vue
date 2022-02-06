@@ -41,7 +41,7 @@
 <style scoped>
 
 .next-buttons {
-  margin: 100px 0;
+  margin: 100px 0 40px;
   display: flex;
   justify-content: center;
   align-items: center;

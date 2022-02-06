@@ -41,7 +41,7 @@
 <style scoped>
 
   .image-grid {
-    margin: 75px auto 150px;
+    margin: 75px auto 210px;
     width: 88%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);

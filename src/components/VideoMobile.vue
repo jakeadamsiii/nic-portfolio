@@ -1,7 +1,7 @@
 <template>
   <div class="video" ref="video" :class="{fit: $props.bgImage.length <= 0}">
     <div class="image-container" >
-        <img v-if="$props.bgImage[0]" class="bg-image" style="top:0" :src="$props.bgImage[0].src" :alt="$props.bgImage[0].alt" />
+        <div class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
         <div class="video-container">
           <video v-if="$props.Video" autoplay muted loop>
             <source :src="$props.Video[0]" type="video/mp4">
@@ -89,6 +89,9 @@
     left: 50%;
     transform: translateX(-50%);
     height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: cover;
   }
 
   .video-container {
