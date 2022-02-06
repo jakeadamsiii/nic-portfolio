@@ -14,7 +14,7 @@
       :sub="'WEBSITE DESIGN & ART DIRECTION'"
     />
 
-    <Video 
+    <!-- <Video 
       :bgImage="BgImageMaris1"
       :Video="Video"
     />
@@ -22,9 +22,14 @@
     <VideoMobile 
       :bgImage="BgImageMaris1"
       :Video="VideoMobile"
+    /> -->
+
+    <HorizontalImage 
+      :bgImage="BgImageMaris1"
+      :Image="MarisImages1"
     />
 
-<Copy 
+  <Copy 
       :title="''"
       :copy="'D Maris Bay is a luxury resort located in Turkey, where Aegean Sea meets the Mediterranean.  The resort is secluded and immersed in nature, home to a number of exclusive sandy beaches, outdoor activities and fine dining restaurants.'"
       :sub="`In order to improve the resort's online presence and increase online bookings, I was asked to elevate the resort's brand creative, art direction, and website design to reflect the luxury experience of the resort.`" 

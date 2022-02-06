@@ -1,7 +1,7 @@
 <template>
   <div class="horizontal-image" ref="horizontalImage" :class="{fit: $props.bgImage.length <= 0}">
     <div class="image-container" >
-        <div class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
+        <div v-if="$props.bgImage.length > 0" class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
         <div class="three-image-container">
           <img v-if="$props.Image[0]" :src="$props.Image[0].src" :alt="$props.Image[0].alt" />
         </div>

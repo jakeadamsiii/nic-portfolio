@@ -1,7 +1,7 @@
 <template>
   <div class="video" ref="video" :class="{fit: $props.bgImage.length <= 0}">
     <div class="image-container" >
-        <div class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
+        <div v-if="$props.bgImage.length > 0" class="bg-image" :style="'background-image: url('+ $props.bgImage[0].src +')'"/>
         <div class="video-container">
           <video v-if="$props.Video" autoplay muted loop>
             <source :src="$props.Video[0]" type="video/mp4">
