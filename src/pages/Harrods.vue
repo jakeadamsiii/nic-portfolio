@@ -10,68 +10,34 @@
 
     <ProjectHeading 
       :title="'Harrods'"
-      :categories="'UX design — UI Design'"
-      :sub="'Brand Activation'"
-      :para="'Following a full side redesign, where I worked alongside a branding agency to redefine the Harrods.com online experience, I was tasked with translating these concepts to commercially driving pages for brands such as Saint Laurent, Gucci and Burberry. '"
-      :bg="'#F7F6F3'"
+      :num="'03'"
+      :sub="'Website Redesign'"
+    />
+
+    <BgThreeImages 
+      :bgImage="BgImageHarrods1"
+      :Images="HarrodsImages1"
+    />
+
+    <Copy 
+      :title="'The Approach'"
+      :copy="'As part of a complete redesign of Harrods.com, I collaborated with a branding agency to create a new online experience, and was then tasked to translate these concepts into commercially driving pages for brands like Saint Laurent, Gucci and Burberry.'"
+      :sub="`The aim was to incorporate affiliated brands while maintaining both the brand's integrity and providing an elevated experience similar to that of the store.  My goal was to create a design that seamlessly integrated content across the whole user journey, creating a rich shopping experience for the user.`" 
+    />
+
+    <HorizontalImage
+      :bgImage="BgImageHarrods2"
+      :Image="HarrodsImages2"
+    />
+
+    <LongImage 
+      :Image="HarrodsImages3"
     />
     
-    <FullImage 
-      :images="ImageArray"
-      :bg="'#D5D1CD'"
-      :hero="true"
+    <Next
+      :nextUrl="'/made'"
+      :prevUrl="'/sivvi'"
     />
-
-    <ImageCopy 
-      :right="false"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/harrods5.jpg')"
-      :head="'The Approach'"
-      :text="'To seamlessly integrate brands into the new identity of harrods.com whilst maintaining both brand identities, creating an elevated experience similar to that of the store.'"
-    />
-
-    <PageHeading 
-      :sub="'Identifying the approach for each brand.'"
-      :para="'Treating each brand individually, I visited the store and identified textures, imagery and colours to imitate the store boutique experience and maintain Harrods unique luxury store feel.'"
-      :bg="'#F7F6F3'"
-    />
-
-   <TwoCentredImages 
-      :images="ImageArrayTwo"
-      :bg="'#D5D1CD'"
-      :bottomLeft="false"
-      :bottomRight="false"
-      :leftSmall="false"
-      :rightSmall="true"
-     />
-
-    <PageHeading 
-      :sub="'Integrating content throughout the site across product pages, brand pages and homepage'"
-      :para="'The approach was to Integrate content throughout the shopping experience, rather than holding editorial and brand stories in a completely separate area.  This meant creating placements throughout the site which felt integrated and relevant, allowing users to have a rich shopping experience.'"
-      :bg="'#F7F6F3'"
-    />
-
-    <TwoCentredImages 
-      :images="ImageArrayThree"
-      :bg="'#D5D1CD'"
-      :bottomLeft="false"
-      :bottomRight="false"
-     />
-
-    <FullImage 
-      :images="ImageArrayFour"
-      :bg="'#D5D1CD'"
-      :hero="false"
-    />
-
-   <NextProject
-      :title="'Warehouse'"
-      :sub="'Next project'"
-      :bg="'#F7F6F3'"
-      :link="'/warehouse'"
-    />
-
-  <Footer />    
 
   </main-layout>
   </div>
@@ -81,12 +47,14 @@
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
-  import ImageCopy from '../components/ImageCopy.vue'
-  import FullImage from '../components/FullImage.vue'
-  import PageHeading from '../components/PageHeading.vue'
-  import TwoCentredImages from '../components/TwoCentredImages.vue'
-  import NextProject from '../components/NextProject.vue'
-  import Footer from '../components/Footer.vue'
+  import BgThreeImages from '../components/BgThreeImages.vue'
+  import HorizontalImage from '../components/HorizontalImage.vue'
+  import Copy from '../components/Copy.vue'
+  import LongImage from '../components/LongImage.vue'
+  import TrippleImage from '../components/TrippleImage.vue'
+  import Next from '../components/Next.vue'
+  import ImageGrid from '../components/ImageGrid.vue'
+   
   import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
@@ -96,71 +64,54 @@
         allowed: false,
         tried: false,
         block: true,
-        ImageArray: [
+        BgImageHarrods1: [
           {
-            src: require('../images/harrods1.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods2.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods3.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods4.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/Background_Harrods_1.jpg'),
+            alt: "Background Image"
           }
         ],  
-        ImageArrayTwo: [
+        HarrodsImages1: [
           {
-            src: require('../images/harrods6.jpg'),
-            alt: "Warehouse lookbook"
-          },
-         {
-            src: require('../images/harrods7.png'),
-            alt: "Warehouse lookbook"
-          }
-        ],
-        ImageArrayThree: [
-          {
-            src: require('../images/harrods8.jpg'),
-            alt: "Warehouse lookbook"
-          },
-         {
-            src: require('../images/harrods9.jpg'),
-            alt: "Warehouse lookbook"
-          }
-        ],
-        ImageArrayFour: [
-               {
-            src: require('../images/harrods10.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/Screen_Harrods_1.png'),
+            alt: "Harrods Screen"
           },
           {
-            src: require('../images/harrods11.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/Screen_Harrods_2.png'),
+            alt: "Harrods Screen"
           },
           {
-            src: require('../images/harrods12.jpg'),
-            alt: "Warehouse lookbook"
-          },
-          {
-            src: require('../images/harrods13.jpg'),
-            alt: "Warehouse lookbook"
+            src: require('../images/Screen_Harrods_3.png'),
+            alt: "Harrods Screen"
           }
         ],  
+        BgImageHarrods2: [
+          {
+            src: require('../images/Background_Harrods_2.jpg'),
+            alt: "Background Image"
+          }
+        ],  
+        HarrodsImages2: [
+          {
+            src: require('../images/Screen_Harrods_4.png'),
+            alt: "Harrods Screen"
+          }
+        ], 
+        HarrodsImages3: [
+          {
+            src: require('../images/Screen_Harrods_5.png'),
+            alt: "Harrods Screen"
+          }
+        ],   
+ 
       }
     },
 
     methods: {
       enterPassword: function(val) {
-        if (val === "Folio2020") {
+        if (val === "LoremIpsum") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed4", true);
+          localStorage.setItem("allowed5", true);
           location.reload();
         } else {
           this.tried = true;
@@ -168,10 +119,10 @@
       }
     },
     components: {
-      MainLayout, Nav, ProjectHeading, TwoCentredImages, ImageCopy, FullImage, PageHeading, NextProject, Footer, passwordProtect
+      MainLayout, Nav, ProjectHeading, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
-      if (localStorage.getItem("allowed4") === 'true') {
+      if (localStorage.getItem("allowed5") === 'true') {
         this.allowed = true;
         this.block = false; 
       }

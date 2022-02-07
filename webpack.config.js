@@ -28,7 +28,7 @@ module.exports = {
         loader: 'svg-inline-loader'
       },
       {
-        test: /\.(png|jpe?g|gif)$/i,
+        test: /\.(png|jpg|gif|svg|mp4)$/i,
         use: [
           {
             loader: 'file-loader',

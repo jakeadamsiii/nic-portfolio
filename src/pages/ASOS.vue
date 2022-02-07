@@ -7,60 +7,36 @@
   />
   <main-layout v-if="allowed">
     <Nav />
-
+    
     <ProjectHeading 
       :title="'ASOS'"
-      :categories="'App design — UX design — UI Design'"
-      :sub="'Augmented reality app design'"
-      :para="'Augmented reality Make-up App design to coinside with the launch of ASOS’s new beauty range.  Working with a 3rd party, I lead the design and enhancement of their existing technology to build a bespoke experience for ASOS.'"
-      :bg="'#F7F6F3'"
+      :num="'05'"
+      :sub="'AUGMENTED REALITY MAKE-UP APP'"
     />
 
-    <FullImage 
-      :images="imageArray"
-      :bg="'#D5D1CD'"
-      :hero="true"
+    <VideoMobile 
+      :bgImage="BgImageAsos1"
+      :Video="VideoMobile"
+    /> 
+
+
+    <Copy 
+      :title="'The Approach'"
+      :copy="`To create an augmented reality make-up app to coincide with the launch of ASOS's new beauty range. Working with a 3rd party, I led the design and enhancement of their existing technology to build a bespoke experience for ASOS.`"
+      :sub="'Beginning from the user journey, wireframes, and finally the applied UI, I ensured a clean and simple experience for the user. It was important to include both brand curated content and user generated content into the experience. I also explored functionality that allowed users to scan barcodes of beauty products, try them on and purchase them at the click of a button.'" 
+    />
+        
+    <BgThreeImages
+      :bgImage="BgImageAsos2"
+      :Images="AsosImages2"
     />
 
-    <ImageCopy 
-      :right="false"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/asos-eyes.jpg')"
-      :head="'The Approach'"
-      :text="'Starting completely from scratch from the user journey, wireframes and finally the applied UI, ensuring a clean and simple experience for the user.'"
+    <Next
+      :nextUrl="'/apes-hill'"
+      :prevUrl="'/made'"
     />
 
-    <PageHeading 
-      :sub="'Simplifying the UI design, creating a well designed and easy to use interface'"
-      :para="'Icons were very important in this project, being that there had to be around 30, each had to remain clear at small sizes and feel ASOS branded.  The focus of the UI had to be the camera element, so although important the menu needed to remain understated and easy to use.'"
-      :bg="'#F7F6F3'"
-    />
 
-    <FullImage 
-      :images="imageArrayTwo"
-      :bg="'#D5D1CD'"
-    />
-
-    <ImageCopy 
-      :right="true"
-      :alt="true"
-      :imageBg="'#D5D1CD'"
-      :image="require('../images/asos-purchase.png')"
-      :head="'Saved and pre-loaded looks'"
-      :text="'To enhance the shopping experience of the app, both curated content and the ability to save user generated content had to be integrated into the experience.  Pre-loaded looks and saved looks really enhance the experience to encourage users to return and always feel there is fresh content.'"
-      :headTwo="'Scan products'"
-      :textTwo="'Functionality that allowed users to scan the barcode of beauty products meant the app could be integrated into the customers everyday when it came to selecting beauty products.  Users were able to try on multiple products and purchase at the tap of a button.'"
-    />
-
-   <NextProject
-      :title="'Sheep Inc'"
-      :sub="'Next project'"
-      :bg="'#F7F6F3'"
-      :link="'/sheepinc'"
-    />
-
-    
-    <Footer />
   </main-layout>
   </div>
 </template>
@@ -69,11 +45,15 @@
   import MainLayout from '../layouts/Main.vue'
   import Nav from '../components/Nav.vue'
   import ProjectHeading from '../components/ProjectHeading.vue'
-  import ImageCopy from '../components/ImageCopy.vue'
-  import FullImage from '../components/FullImage.vue'
-  import PageHeading from '../components/PageHeading.vue'
-  import NextProject from '../components/NextProject.vue'
-  import Footer from '../components/Footer.vue'
+  import BgThreeImages from '../components/BgThreeImages.vue'
+  import HorizontalImage from '../components/HorizontalImage.vue'
+  import Copy from '../components/Copy.vue'
+  import LongImage from '../components/LongImage.vue'
+  import TrippleImage from '../components/TrippleImage.vue'
+  import Next from '../components/Next.vue'
+  import ImageGrid from '../components/ImageGrid.vue'
+  import VideoMobile from '../components/VideoMobile.vue'
+   
   import passwordProtect from '../components/PasswordProtect.vue'
 
   export default {
@@ -83,58 +63,49 @@
         allowed: false,
         tried: false,
         block: true,
-        imageArray: [
+        BgImageAsos1: [
           {
-            src: require('../images/asos-drop-down.jpg'),
-            alt: "ASOS drop down"
-          },
-          {
-            src: require('../images/asos-firstscreen.jpg'),
-            alt: "ASOS first screen"
-          },
-          {
-            src: require('../images/asos-eyes.jpg'),
-            alt: "ASOS eyes"
-          },
-          {
-            src: require('../images/asos-application.jpg'),
-            alt: "ASOS application"
-          },
-          {
-            src: require('../images/asos-colour.jpg'),
-            alt: "ASOS colour"
-          },
-          {
-            src: require('../images/asos-overlay.jpg'),
-            alt: "ASOS overlay"
+            src: require('../images/Background_ASOS_1.jpg'),
+            alt: "Background"
           }
         ],  
-        imageArrayTwo: [
+        AsosImages1: [
           {
-            src: require('../images/asos-drop-down.jpg'),
-            alt: "ASOS drop down"
+            src: require('../images/VideoStill_ASOS_1.jpg'),
+            alt: "Asos Screen"
+          },
+        ], 
+        BgImageAsos2: [
+          {
+            src: require('../images/Background_ASOS_2.jpg'),
+            alt: "Background"
+          }
+        ],  
+        AsosImages2: [
+          {
+            src: require('../images/Screen_ASOS_1.png'),
+            alt: "Asos Screen"
           },
           {
-            src: require('../images/asos-complete.jpg'),
-            alt: "ASOS complete looks"
+            src: require('../images/Screen_ASOS_2.png'),
+            alt: "Asos Screen"
           },
           {
-            src: require('../images/asos-saved.jpg'),
-            alt: "ASOS saved looks"
+            src: require('../images/Screen_ASOS_3.png'),
+            alt: "Asos Screen"
           },
-          {
-            src: require('../images/asos-look1.jpg'),
-            alt: "ASOS look 1"
-          },
-        ]   
+        ],  
+        VideoMobile: [
+          require('../images/ASOS.mp4'),
+        ]
       }
     },
      methods: {
       enterPassword: function(val) {
-        if (val === "Folio2020") {
+        if (val === "LoremIpsum") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed4", true);
+          localStorage.setItem("allowed5", true);
           location.reload();
         } else {
           this.tried = true;
@@ -143,10 +114,10 @@
     },
 
     components: {
-      MainLayout, Nav, ProjectHeading, ImageCopy, FullImage, PageHeading, NextProject, Footer, passwordProtect
+      MainLayout, Nav, ProjectHeading, VideoMobile, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
-      if (localStorage.getItem("allowed4") === 'true') {
+      if (localStorage.getItem("allowed5") === 'true') {
         this.allowed = true;
         this.block = false; 
       }

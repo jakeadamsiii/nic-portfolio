@@ -10,9 +10,8 @@
     "deploy": "surge --project . --domain vue-2-simple-routing-example.surge.sh"
   },
   "dependencies": {
-    "aos": "^2.3.4",
     "vue": "^2.3.3",
-    "vue-router": "^3.1.6",
+    "vue-router": "^3.5.3",
     "vue-scroll-snap": "^0.1.7"
   },
   "devDependencies": {

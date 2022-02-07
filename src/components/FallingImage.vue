@@ -29,18 +29,14 @@
 
 <style >
   .falling-image {
-    height: 40px;
-    width: 40px;
+    height: 50px;
+    width: 50px;
     position: absolute;
-    top: -40px;
+    top: -50px;
     left: 0;
     background-image: url("../images/bad.png");
     background-size: contain;
     z-index: 0;
-  }
-
-  .falling-image.home {
-    background-image: url("../images/smile.png");
   }
 
   .falling-image.mob {

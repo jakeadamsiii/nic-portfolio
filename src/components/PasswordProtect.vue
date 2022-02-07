@@ -3,26 +3,28 @@
 
     <p class="home-icon">Nic Roberts.</p>
 
-
-    <form>
-      <label for="pass">Enter password</label>
-      <div>
-        <input type="password" id="pass" name="password" required>
-        <button>
-          <svg width="31px" height="25px" viewBox="0 0 31 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-              <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Desktop_Menu-Copy" transform="translate(-856.000000, -384.000000)" stroke="#000000" stroke-width="2">
-                      <g id="Group" transform="translate(871.000000, 396.000000) rotate(-225.000000) translate(-871.000000, -396.000000) translate(860.000000, 385.000000)">
-                          <path d="M0.893398282,0.600505063 L21.7438724,20.8093486" id="Line"></path>
-                          <polyline id="Path" points="0.792893219 16.7071068 0.792893219 0.707106781 16.8930703 0.369866719"></polyline>
-                      </g>
-                  </g>
-              </g>
-          </svg>
-        </button>
+    <div class="container" >
+      <div class="row" >
+        <div class="col-1 hidden-sm"></div>
+        <div class="col-10">
+          <form>
+            <label for="pass">Enter password</label>
+            <div class="input-container">
+              <input type="text" id="pass" name="password" required>
+              <span autofocus tabindex="0" class="input" role="textbox" contenteditable></span>
+              <button>
+                Enter
+                <svg width="82" height="73" viewBox="0 0 82 73" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50.5 1H71C76.5228 1 81 5.47715 81 11V49C81 54.5228 76.5228 59 71 59H1" stroke="white"/>
+                  <path d="M11 48L1 60L11 72" stroke="white"/>
+                </svg>
+              </button>
+            </div>
+            <p class="error" :class="{show: $props.tried}">Nope, try again</p>
+          </form>
+        </div>
       </div>
-      <p :class="{show: $props.tried}">Nope, please try again</p>
-    </form>
+    </div>
   </div>
 </template>
 
@@ -32,7 +34,6 @@
 
     data: function () {
       return {
-
       }
     },
     props: {
@@ -41,16 +42,35 @@
     },
     components: {
     },
-    mounted: function() {
-      var that = this;
-
-      document.querySelector('form').addEventListener('submit', function(e){
-        var val = document.querySelector('input').value;
+    methods: {
+      formSubmit(e) {
+        var val = document.querySelector('.input').textContent;
         e.preventDefault();
-        that.$emit('enterPassword', val);
+        this.$emit('enterPassword', val);
+      }
+    },
+    mounted: function() {
+      var app = this;
+      const input = document.querySelector('.input');
+
+      document.querySelector('button').addEventListener('click', (e) => {
+        app.formSubmit(e);
       });
 
-      document.querySelector('input').focus();
+      document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+      });
+
+      input.addEventListener("keypress", (e) => {
+        if(e.charCode === 13) {
+          app.formSubmit(e);
+        } 
+      });
+
+      setTimeout(() => {
+        input.focus();
+      }, 100);
+      
     }
   }
 </script>
@@ -61,61 +81,101 @@
   position: fixed;
   height: 100vh;
   width: 100vw;
-  background: #F7F6F3;
-  z-index: 100;
-  border-top: 2px solid #000;
-  cursor: url(../images/mouse.png), default;
+  background: #000;
+  z-index: 999;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-  max-width: 350px;
-  margin: 0 auto;
+  margin: 250px 0 0;
+  width: 100%;
 }
 
-div {
-  width: 100%;
-  display:flex;
+.input-container {
+  margin: 40px 0 0;
+  display: flex;
 }
 
 label {
-  font-size: 24px;
-  font-family: 'spectral-light', serif;
-  letter-spacing: -1px;
+  font-size: 35px;
+  font-family: "David-ExtraLight", sans-serif;
   font-weight: 400;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
+  text-transform: uppercase;
+  color: #fff;
 }
 
 input {
-  width: 80vw;
-  height: 50px;
-  font-size: 20px;
-  border:1px solid #fff;
-  padding: 0 0 0 20px;
-  margin: 0;
-  border: none;
-  background: #fff;
-  max-width: 90vw;
+  display: none;
 }
 
-input:focus {
+span {
+  font-size: 20px;
+  margin: 0;
+  border: none;
+  background: none;
+  color: #fff;
+  cursor: none;
+  padding: 0;
+  width: min-content;
+  font-size: 35px;
+  font-family: "David-ExtraLight", sans-serif;
+  caret-color: transparent;
+  min-width: 50px;
+  max-width: calc(660px - 6%);
+  height: 77px;
+  display: inline-block;
+  overflow: scroll;
+  position: relative;
+}
+
+span:after {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background: #fff;
+  position: absolute; 
+  bottom: 0;
+  right: 0;
+  -webkit-animation: 1s blink step-end infinite;
+  -moz-animation: 1s blink step-end infinite;
+  -ms-animation: 1s blink step-end infinite;
+  -o-animation: 1s blink step-end infinite;
+  animation: 1s blink step-end infinite;
+}
+
+span:focus {
   outline: none;
 }
 
 button {
   padding: 0 20px;
-  margin: 0;
   border: none;
   border-left: none;
-  cursor: url(../images/hover.png), pointer; 
-  background: #fff;
+  background: none;
   outline: none;
   position: relative;
   z-index: 2;
+  font-family: "David-Regular", sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  padding-top: 16px;
+  margin: 0 0 0 10px;
+}
+
+button svg {
+  position: absolute;
+  top: 16px;
+  right: 0;
+}
+
+.error {
+  color: #FB7070;
+  font-size: 20px;
+  font-family: "David-ExtraLight", sans-serif;
+  margin: 20px 0 0;
+
 }
 
 p {
@@ -125,35 +185,45 @@ p {
   opacity: 0;
   transition: opacity .5s ease;
   letter-spacing: -0.02em;
+  color: #fff;
 }
 
 p.show {
   opacity: 1;
 }
 
-
 .home-icon {
-  padding: 0;
-  margin:0;
+  font-family: 'David-Regular', sans-serif;
+  font-size: 14px;
   text-decoration: none;
-  position: absolute; 
-  top:0;
-  left: 6%;
-  opacity:1;
-  font-family: 'Roboto-medium', sans-serif;
-  font-size: 16px;
-  line-height: 90px;
-  letter-spacing: 2px;
+  letter-spacing: .8px;
   text-transform: uppercase;
+  pointer-events: auto;
+  opacity: 1;
+  top: 40px;
+  left: 6%;
+  position: absolute;
+  margin: 0;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 660px) {
+
+  label, span {
+    font-size: 64px;
+  }
+
+  .error {
+    font-size: 35px;
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
   .home-icon {
-    left: 2%;
+    left: 40px;
   }
-  input {
-    width: 355px;
-  }
+
 }
   
 </style>
@@ -161,6 +231,15 @@ p.show {
 
 body {
   margin: 0;
+}
+
+@keyframes blink {
+  from, to {
+    background: transparent;
+  }
+  50% {
+    background: #fff;
+  }
 }
 </style>
 
