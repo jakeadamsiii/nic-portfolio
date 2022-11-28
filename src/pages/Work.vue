@@ -8,7 +8,7 @@
 
   <main-layout >
     <Nav />
-      <section class="work" :class="{asos: asosHover, harrods: harrodsHover, maris: marisHover, sivvi: sivviHover, made: madeHover, apes: apesHover, sani: saniHover}">
+      <section class="work" :class="{asos: asosHover, harrods: harrodsHover, maris: marisHover, sivvi: sivviHover, made: madeHover, apes: apesHover, sani: saniHover, soho: sohoHover}">
          <div class="container" >
            <div class="row" >
             <div class="col-1 hidden-sm"></div>
@@ -59,6 +59,12 @@
                         <p class="underline" @mouseover="saniHover = true" @mouseleave="saniHover = false">Sani resorts</p>
                       </router-link>
                     </li>
+                    <li class="work-li">
+                      <router-link to="/soho-house">
+                        <span>08</span>
+                        <p class="underline" @mouseover="sohoHover = true" @mouseleave="sohoHover = false">Soho House</p>
+                      </router-link>
+                    </li>
                 </ul>
               </div>
             </div>
@@ -86,6 +92,7 @@
         marisHover: false,
         sivviHover: false,
         saniHover: false,
+        sohoHover: false,
         degrees: 0,
         forwards: true,
         tried: false,
@@ -291,6 +298,12 @@
     opacity: 1;
     z-index: 2; 
     background-image: url("../images/Sani.jpg");
+  }
+
+  .soho .follower {
+    opacity: 1;
+    z-index: 2; 
+    background-image: url("../images/sohohouse.jpg");
   }
 
   .sivvi .follower {

@@ -76,7 +76,7 @@
 
     <Next
       :nextUrl="'/sivvi'"
-      :prevUrl="'/sani-resorts'"
+      :prevUrl="'/soho-house'"
     />
 
   </main-layout>

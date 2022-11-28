@@ -8,6 +8,7 @@ import ASOS from './pages/ASOS.vue'
 import Maris from './pages/Maris.vue'
 import Made from './pages/Made.vue'
 import Sani from './pages/Sani.vue'
+import Soho from './pages/Soho.vue'
 import Sivvi from './pages/Sivvi.vue'
 import Apes from './pages/Apes.vue'
 import NotFound from './pages/404.vue'
@@ -24,6 +25,7 @@ const routes=[
   {path: '/d-maris-bay', component: Maris},
   {path: '/made', component: Made},
   {path: '/sani-resorts', component: Sani},
+  {path: '/soho-house', component: Soho},
   {path: '/sivvi', component: Sivvi},
   {path: '/apes-hill', component: Apes},
   {path: '*', component: NotFound}

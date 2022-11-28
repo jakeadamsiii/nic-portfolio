@@ -134,6 +134,7 @@
 @media only screen and (min-width: 1024px) {
   .fit {
     margin-top: calc(-1* (100vh - 483px) / 2);
+    width: 100%;
   }
 
   .three-image-container {

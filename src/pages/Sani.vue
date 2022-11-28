@@ -40,7 +40,7 @@
     />
 
     <Next
-      :nextUrl="'/d-maris-bay'"
+      :nextUrl="'/soho-house'"
       :prevUrl="'/apes-hill'"
     />
 
