@@ -18,7 +18,7 @@
             </div>
             <div class="col-6">
               <div class="flex">
-                <p>I have over 10 years of experience creating branding and digital products for lifestyle and retail brands.</p>
+                <p>11+ years experience leading and building teams, delivering successful user experience and beautifully designed products for a number of established and start-up brands.</p>
                 <p>Having worked both in-house and agency side for a number of successful brands, I have gained real insight and knowledge into what makes a great product.  I am skilled in designing effective solutions, with an emphasis on user and business needs, that are simple and beautifully designed.</p>
               </div>
             </div>
@@ -33,7 +33,7 @@
               <ul class="skills-list">
                 <li>UI Design</li>
                 <li>UX Design</li>
-                <li>Digital Product Design</li>
+                <li>Product Design</li>
                 <li>Prototyping</li>
                 <li>Visual Design</li>
                 <li>Branding</li>
@@ -61,11 +61,11 @@
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
               <ul class="clients-list">
-                <li><span>01</span>Topshop</li>
+                <li><span>01</span>Soho House</li>
                 <li><span>02</span>Harrods</li>
                 <li><span>03</span>ASOS</li>
                 <li><span>04</span>Made.com</li>
-                <li><span>05</span>Sivvi</li>
+                <li><span>05</span>Topshop</li>
                 <li><span>06</span>Stylus</li>
                 <li><span>07</span>Warehouse</li>
                 <li><span>08</span>Belmond</li>
@@ -78,7 +78,7 @@
                 <li><span>15</span>Selfridges</li>
                 <li><span>16</span>Apes Hill</li>
                 <li><span>17</span>1883 Magazine</li>
-                <li><span>18</span>Rollacoaster</li>
+                <li><span>18</span>Sivvi</li>
                 <li><span>19</span>Topman</li>
                 <li><span>20</span>Knight Frank</li>
               </ul>
