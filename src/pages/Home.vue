@@ -6,7 +6,7 @@
       :isHomepage="true"
     />
 
-    <div class="home" :class="{maris: marisHover, sivvi: sivviHover, sani: saniHover, soho: sohoHover}">>  
+    <div class="home" :class="{maris: marisHover, sivvi: sivviHover, sani: saniHover, soho: sohoHover}"> 
       <div v-if="isDesktop" class="follower"></div>
 
       <div class="scroll-container">
