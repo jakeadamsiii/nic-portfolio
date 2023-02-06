@@ -9,7 +9,7 @@
     <Nav />
 
     <ProjectHeading 
-      :title="'Sani Resorts'"
+      :title="'Sani Resort'"
       :num="'07'"
       :sub="'Website Redesign'"
     />

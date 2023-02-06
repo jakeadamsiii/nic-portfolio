@@ -73,7 +73,7 @@
                 <li><span>10</span>Avant Arte</li>
                 <li><span>11</span>Flowerbx</li>
                 <li><span>12</span>D Maris Bay</li>
-                <li><span>13</span>Sani Resorts</li>
+                <li><span>13</span>Sani Resort</li>
                 <li><span>14</span>Sheep Inc.</li>
                 <li><span>15</span>Selfridges</li>
                 <li><span>16</span>Apes Hill</li>
