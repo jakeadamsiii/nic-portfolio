@@ -87,10 +87,10 @@
 
     methods: {
       enterPassword: function(val) {
-        if (val === "LoremIpsum") {
+        if (val === "Kerning2023") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed5", true);
+          localStorage.setItem("allowed6", true);
           location.reload();
         } else {
           this.tried = true;
@@ -101,7 +101,7 @@
       MainLayout, Nav, ProjectHeading, Video, BgThreeImages, passwordProtect, Copy, Next, HorizontalImage, ImageGrid, TrippleImage, LongImage
     },
     mounted: function() {
-      if (localStorage.getItem("allowed5") === 'true') {
+      if (localStorage.getItem("allowed6") === 'true') {
         this.allowed = true;
         this.block = false; 
       }

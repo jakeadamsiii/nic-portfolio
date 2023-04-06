@@ -135,10 +135,10 @@
         }
       },
       enterPassword: function(val) {
-        if (val === "LoremIpsum") {
+        if (val === "Kerning2023") {
           this.allowed = true;
           this.block = false; 
-          localStorage.setItem("allowed5", true);
+          localStorage.setItem("allowed6", true);
           location.reload();
         } else {
           this.tried = true;
@@ -149,7 +149,7 @@
       var that = this;
       this.checkDesktop();
 
-      if (localStorage.getItem("allowed5") === 'true') {
+      if (localStorage.getItem("allowed6") === 'true') {
         this.allowed = true;
         this.block = false; 
       }
