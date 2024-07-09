@@ -10,10 +10,10 @@
       <div v-if="isDesktop" class="follower"></div>
 
       <div class="scroll-container">
-        <div class="scroll left top"><h2>Lead designer</h2></div>
+        <div class="scroll left top"><h2>Design Leader</h2></div>
         <div class="scroll right top"><h2> &#160;&</h2></div>
         <div class="scroll left bottom"><h2>Art</h2></div>
-        <div class="scroll right bottom"><h2> &#160;director</h2></div>
+        <div class="scroll right bottom"><h2> &#160;Director</h2></div>
 
       </div>
 

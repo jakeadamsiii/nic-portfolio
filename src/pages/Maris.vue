@@ -32,7 +32,7 @@
   <Copy 
       :title="''"
       :copy="'D Maris Bay is a luxury resort located in Turkey, where Aegean Sea meets the Mediterranean.  The resort is secluded and immersed in nature, home to a number of exclusive sandy beaches, outdoor activities and fine dining restaurants.'"
-      :sub="`In order to improve the resort's online presence and increase online bookings, I was asked to elevate the resort's brand creative, art direction, and website design to reflect the luxury experience of the resort.`" 
+      :sub="`However, despite the resort's exceptional offerings, its online presence did not adequately reflect the luxury and modernity that guests experience on-site. This discrepancy posed a challenge in attracting potential guests and converting website visits into bookings.`" 
     />
 
     <BgThreeImages 
@@ -47,9 +47,28 @@
 
     <Copy 
       :title="'The Approach'"
-      :copy="'The overall objective was to enhance the D Maris Bay online experience, increasing bookings through the website overall by elevating the visual identity, structuring pages clearly, and simplifying user journeys.'"
-      :sub="'The sitemap was restructured to make it easier for users to navigate to their desired information, and improvements made to the booking process to require fewer clicks to checkout.  I created a comprehensive design system and module library that would facilitate building new pages and enhancing features in a consistent and efficient way.'" 
+      :copy="'The primary objective was to revamp the online presence of D Maris Bay to better reflect the resorts luxury and modern experience, thereby increasing online bookings.'"
+      :sub="'The approach included:'" 
+      :copyHtml="`
+        <ul class='main-list'>
+          <li>
+            <p>Website Structure and Navigation: A clear and intuitive website structure was essential to improve user experience. </p>
+            <ul class='sub-list'>
+              <li>Sitemap Restructuring: Simplifying the sitemap to ensure users can easily find information. Key sections included accommodations, dining, activities, and booking.</li>
+              <li>User-Centric Navigation: Designing a navigation system that is intuitive, ensuring users can effortlessly move from one section to another.</li>
+            </ul>
+          </li>
+          <li>
+            <p>Visual Identity and Art Direction: The first step was to elevate the visual identity of the resort's online presence.</p>
+            <ul class='sub-list'>
+              <li>High-Quality Imagery: Showcasing the resort's stunning beaches, serene natural surroundings, and luxurious amenities through high-resolution images.</li>
+              <li>Modern Aesthetic: Incorporating contemporary design elements and a sophisticated color palette to evoke a sense of luxury and exclusivity.</li>
+              <li>Consistent Branding: Ensuring that all visual elements align with the brand’s identity, providing a cohesive and immersive user experience.</li>
+            </ul>
+          </li>
+        </ul>`"
     />
+
 
     <TrippleImage 
       :Images="MarisImages4"
@@ -57,6 +76,35 @@
 
      <LongImage 
       :Image="MarisImages5"
+    />
+
+    <Copy 
+      :title="'Implementation'"
+      :copy="'To bring the strategy to life, the following actions were taken:'"
+      :sub="''" 
+      :copyHtml="`
+        <ul class='main-list'>
+          <li>
+            <p>Design System and Module Library:</p>
+            <ul class='sub-list'>
+              <li>A comprehensive design system and module library were created to ensure consistency and flexibility. This allowed for the easy creation of new pages and enhancement of existing features.</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Content Strategy:</p>
+            <ul class='sub-list'>
+              <li>Crafting compelling content that highlights the unique aspects of the resort, including detailed descriptions of accommodations, dining options, and activities.</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>UX/UI Enhancements:</p>
+            <ul class='sub-list'>
+              <li>Implementing UX/UI best practices to ensure a user-friendly experience. This included optimizing load times, ensuring accessibility, and enhancing visual appeal.</li>
+            </ul>
+          </li>
+        </ul>`"
     />
 
     <BgThreeImages 
@@ -72,6 +120,35 @@
 
     <ImageGrid 
       :Images="MarisImages8"
+    />
+
+    <Copy 
+      :title="'The Results'"
+      :copy="'The revamped online presence of D Maris Bay resulted in significant improvements:'"
+      :sub="''" 
+      :copyHtml="`
+        <ul class='main-list'>
+          <li>
+            <p>Increased Bookings:</p>
+            <ul class='sub-list'>
+              <li>The primary book button, simplified booking bar and enhanced user experience led to a notable increase in online bookings.</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Enhanced User Engagement:</p>
+            <ul class='sub-list'>
+              <li>The modern visual identity and improved navigation resulted in longer site visits and lower bounce rates.</li>
+            </ul>
+          </li>
+
+          <li>
+            <p>Brand Perception:</p>
+            <ul class='sub-list'>
+              <li>The new website successfully communicated the luxury and exclusivity of D Maris Bay, aligning online perception with the on-site experience.</li>
+            </ul>
+          </li>
+        </ul>`"
     />
 
     <Next
@@ -221,7 +298,7 @@
 
     methods: {
       enterPassword: function(val) {
-        if (val === "Kerning2023") {
+        if (val === "Portfolio2024") {
           this.allowed = true;
           this.block = false; 
           localStorage.setItem("allowed6", true);

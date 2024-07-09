@@ -9,6 +9,7 @@
             <div :class="{col8: $props.title, col10: !$props.title}">
                 <p v-if="$props.copy" class="copy">{{$props.copy}}</p>
                 <p v-if="$props.sub" class="sub">{{$props.sub}}</p>
+                <p v-if="$props.copyHtml" class="html" v-html="$props.copyHtml"></p>
             </div>
         </div>
       </div>
@@ -27,6 +28,7 @@
         title: String,
         copy: String,
         sub: String,
+        copyHtml: String
     },
     methods: {
      
@@ -58,6 +60,10 @@ h2 {
 .sub {
     font-size: 14px;
     font-family: "David-ExtraLight", sans-serif;
+}
+
+.html {
+  margin: 20px 0 0;
 }
 
 @media only screen and (min-width: 660px) {

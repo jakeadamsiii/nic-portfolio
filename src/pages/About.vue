@@ -7,7 +7,7 @@
           <div class="row" >
             <div class="col-1 hidden-sm"></div>
             <div class="col-10">
-                <h1>London based Lead Designer & Art Director.</h1>
+                <h1>Innovative & results-driven Product Design Leader.</h1>
             </div>
           </div>
 
@@ -18,8 +18,8 @@
             </div>
             <div class="col-6">
               <div class="flex">
-                <p>11+ years experience leading and building teams, delivering successful user experience and beautifully designed products for a number of established and start-up brands.</p>
-                <p>Having worked both in-house and agency side for a number of successful brands, I have gained real insight and knowledge into what makes a great product.  I am skilled in designing effective solutions, with an emphasis on user and business needs, that are simple and beautifully designed.</p>
+                <p>13+ years of experience designing and building, leading and growing design teams. My expertise spans UX, UI, and interaction design, with a strong emphasis on strategy and creative direction.</p>
+                <p>Throughout my career, I have successfully led cross-functional teams, seamlessly integrating user research and insights into the design process to inform business decisions and create impactful solutions. My passion for fostering team growth and creativity has enabled me to develop strong product design teams that deliver solutions aligned with brand values while meeting diverse user needs. I am dedicated to driving innovative thinking, pushing boundaries, and continually inspiring my team to achieve excellence.</p>
               </div>
             </div>
           </div>
@@ -31,21 +31,23 @@
             </div>
             <div class="col-6">
               <ul class="skills-list">
+                <li>Product Design</li>
                 <li>UI Design</li>
                 <li>UX Design</li>
-                <li>Product Design</li>
+                <li>Interaction Design</li>
+                <li>Design Systems</li>
+                <li>Team Leadership & Management</li>
+                <li>Strategic Planning</li>
+                <li>Accessibility</li>
                 <li>Prototyping</li>
-                <li>Visual Design</li>
-                <li>Branding</li>
-                <li>Typography</li>
-                <li>Art Direction</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Video Editing</li>
                 <li>Animation</li>
+                <li>Journey Mapping</li>
+                <li>User Testing</li>
+                <li>Research</li>
+                <li>Creative Direction</li>
+                <li>Typography</li>
                 <li>Iconography</li>
-                <li>Print design</li>
-                <li>Packaging Design</li>
+                <li>Art Direction</li>
               </ul>
             </div>
           </div>
@@ -61,15 +63,15 @@
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
               <ul class="clients-list">
-                <li><span>01</span>Soho House</li>
-                <li><span>02</span>Harrods</li>
-                <li><span>03</span>ASOS</li>
-                <li><span>04</span>Made.com</li>
-                <li><span>05</span>Topshop</li>
-                <li><span>06</span>Stylus</li>
-                <li><span>07</span>Warehouse</li>
-                <li><span>08</span>Belmond</li>
-                <li><span>09</span>Style Swap</li>
+                <li><span>01</span>Burberry</li>
+                <li><span>02</span>Soho House</li>
+                <li><span>03</span>Harrods</li>
+                <li><span>04</span>ASOS</li>
+                <li><span>05</span>Made.com</li>
+                <li><span>06</span>Topshop</li>
+                <li><span>07</span>Stylus</li>
+                <li><span>08</span>Warehouse</li>
+                <li><span>09</span>Belmond</li>
                 <li><span>10</span>Avant Arte</li>
                 <li><span>11</span>Flowerbx</li>
                 <li><span>12</span>D Maris Bay</li>
@@ -77,10 +79,8 @@
                 <li><span>14</span>Sheep Inc.</li>
                 <li><span>15</span>Selfridges</li>
                 <li><span>16</span>Apes Hill</li>
-                <li><span>17</span>1883 Magazine</li>
-                <li><span>18</span>Sivvi</li>
-                <li><span>19</span>Topman</li>
-                <li><span>20</span>Knight Frank</li>
+                <li><span>17</span>Sivvi</li>
+                <li><span>18</span>Topman</li>
               </ul>
             </div>
           </div>
@@ -88,7 +88,7 @@
           <div class="row CV">
             <div class="col-2 hidden-sm"></div>
             <div class="col-9">
-              <a class="underline" href="../../2022-CV-Nic-Roberts.pdf" target="_blank">View my CV</a>
+              <a class="underline" href="../../NicRobertsCV2024.pdf" target="_blank">View my CV</a>
             </div>
           </div>
 

@@ -176,6 +176,27 @@
     width: 88%;
   }
 
+  .main-list {
+    padding-left: 16px;
+    list-style: decimal;
+  }
+
+  .main-list li p {
+    font-family: "David-Light", sans-serif;
+    font-size: 16px;
+    margin: 0 0 20px;
+  }
+
+  .sub-list li {
+    font-size: 14px;
+    font-family: "David-ExtraLight", sans-serif;
+    padding: 0 0 10px;
+  }
+
+  .sub-list li:last-of-type {
+    padding: 0 0 20px;
+  }
+
   @media only screen and (min-width: 1024px) {
 
     .container {

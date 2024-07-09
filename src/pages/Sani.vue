@@ -126,7 +126,7 @@
 
     methods: {
       enterPassword: function(val) {
-        if (val === "Kerning2023") {
+        if (val === "Portfolio2024") {
           this.allowed = true;
           this.block = false; 
           localStorage.setItem("allowed6", true);
